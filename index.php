@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="stylesheet" src="semantic.css">
     <title>Document</title>
+
+    
 </head>
 <body>
-<<<<<<< HEAD
+
+    <?php 
+        include 'header.php';
+    ?>
+
 
     <!-- test for developbranch -->
     
-=======
-<!-- bbb --k>
-    aa
->>>>>>> cb058a775a62e828aa19fff8c49143b770953a32
 </body>
 </html>
