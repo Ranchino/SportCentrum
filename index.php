@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     <!-- this is a new test -->    
+=======
+    <!--Ahmed sugere -->
+>>>>>>> 8b069c27ffb057645eb3d7fc3f16af67e834fba6
 </body>
 </html>
