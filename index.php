@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="stylesheet" src="/semantic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Document</title>
-
-    
 </head>
+<<<<<<< HEAD
 <body>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,5 +25,10 @@
     <!-- test for developbranch -->
     
 >>>>>>> da4f14b01c3423522fcc6315876fd0c24c1e9390
+=======
+<body >
+    <button type="button" >Testar</button>
+>>>>>>> 1908d6f73169b212f1592ea8671d2271730a318f
 </body>
+    <script scr="./ajaxscript.js"></script>
 </html>
