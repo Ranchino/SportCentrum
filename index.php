@@ -7,9 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-<!-- bbb -->
-<!-- bbbb2 
-    ddd
+<body >
+    <button type="button" >Testar</button>
 </body>
+    <script scr="./ajaxscript.js"></script>
 </html>
