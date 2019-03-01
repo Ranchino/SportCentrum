@@ -9,6 +9,12 @@
     <title>Document</title>
 </head>
 <body >
-    <button type="button" id="info" name="test" onclick="test()">Testar</button>
+    <!-- <button type="button" id="info" name="test" onclick="test()">Testar</button> -->
+    <form id="info">
+        <h1>Log in Here</h1><br>
+        <input type="text" name="username"><br>
+        <input type="text" name="password"><br>
+        <input type="submit"  name="clickedButton" onclick="return test()" value="click here">
+    </form>
 </body>
 </html>

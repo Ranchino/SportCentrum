@@ -2,14 +2,16 @@
 function test(){
     var test = $("#info").serialize();
     $.ajax({
-        type: 'POST',
-        url: '../Handler/requestHandler.php',
+        method: 'POST',
+        datatype: 'json',
+        url: './Handler/requestHandler.php',
         data: test, 
-        succsess: function(data) {
+        success: function(data) {
             console.log(data);
         },
         error: function checkerror(error){
             console.log(error);
         }
     });
+    return false;
 }
