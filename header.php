@@ -7,9 +7,8 @@
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="index.php" class="w3-bar-item w3-button">Men</a>
     <a href="womenSite.php" class="w3-bar-item w3-button">Women</a>
-    <a onclick="myAccFunc()" href="childrenSite.php" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-      Children
-    </a>
+    <a href="childrenSite.php" class="w3-bar-item w3-button">Children</a>
+
 
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
@@ -18,7 +17,7 @@
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <div class="w3-bar-item w3-padding-24 w3-wide">SportCentrum</div>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
@@ -33,7 +32,6 @@
   
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
-    <p class="w3-left">Sports Collection</p>
     <p class="w3-right">
       <i class="fa fa-shopping-cart w3-margin-right"></i>
       <i class="fa fa-search"></i>
