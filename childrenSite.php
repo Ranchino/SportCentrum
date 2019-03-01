@@ -23,7 +23,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
    <!-- Image header -->
    <div class="w3-display-container w3-container" style="height: 50em;">
-    <img src="./Images/menMainPicture.jpg" style="width:100%; height: 40em;">
+    <img src="./Images/childrenMainPicture.jpg" style="width:100%; height: 40em;">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
       <h1 class="w3-jumbo w3-hide-small" style=" color: black; background-color: white; margin-left: -0.5em;">New arrivals</h1>
       <h1 class="w3-hide-large w3-hide-medium" >New arrivals</h1>
