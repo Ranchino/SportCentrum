@@ -2,7 +2,7 @@
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide" style="color: blue;"><b>SportCentrum</b></h3>
+    <h3 class="w3-wide" style="color: lightblue;">SportCentrum</h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="index.php" class="w3-bar-item w3-button">Men</a>
@@ -33,7 +33,8 @@
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-      <i class="fa fa-shopping-cart w3-margin-right"></i>
-      <i class="fa fa-search"></i>
+      <button class="register-button">Register</button>
+      <button class="login-button">Login</button>
+
     </p>
   </header>
