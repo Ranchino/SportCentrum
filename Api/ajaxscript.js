@@ -1,4 +1,3 @@
-
 function test(){
     var test = $("#info").serialize();
     $.ajax({

@@ -1,6 +1,6 @@
 <?php
-    include_once("adminHandler.php");
-    include_once("userHandler.php");
+    include_once("./adminHandler.php");
+    include_once("./userHandler.php");
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if(isset($_POST['username']) && isset($_POST["password"])){
