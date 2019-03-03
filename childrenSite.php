@@ -88,7 +88,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </div>
   </footer>
 
-  <div class="w3-black w3-center w3-padding-24">Art by SportCentrum</div>
+  <div class="w3-black w3-center w3-padding-24">SportCentrum</div>
 
   <!-- End page content -->
 </div>
