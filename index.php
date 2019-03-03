@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <title>SportCentrum</title>
 <meta charset="UTF-8">
@@ -135,5 +134,6 @@ function w3_close() {
 
 
 
+>>>>>>> 01bddebfdd7763973143c57114486b6f4cb25c53
 </body>
 </html>
