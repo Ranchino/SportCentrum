@@ -7,7 +7,7 @@ class Admin {
     public function logInAdmin(){
         $query = $this->database->connection->prepare("SELECT password, mail FROM admin;");
         $query->execute();
-        $result = $query->fetchObject();
+        $result = $query->fetchAll(PDO::FETCH_OBJ);
 
         if (empty($result)) {
             return "Det gick inte att hämta password eller mail!";
