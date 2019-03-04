@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./Api/ajaxscript.js"></script>
+    <script src="./Api/loginRegister.js"></script>
     <title>Document</title>
 </head>
 <body >
@@ -22,7 +22,7 @@ session_start();
         <input type="submit"  name="clickedButton" onclick="return test()" value="click here">
 </form><br>
 <!-- Register new user here -->
-<!-- <form id="registering">
+<form id="registering">
         <h1>Register in Here New User </h1><br>
         <label>Mail</label><br>
         <input type="text" name="mail"><br>
@@ -34,7 +34,7 @@ session_start();
             <option value="nej">Nej</option>
         </select><br>
         <input type="submit"  name="isClicked" onclick="return registerNewUser()" value="Register me">
-</form> -->
+</form>
 
 <?php
 //Working on redirect
