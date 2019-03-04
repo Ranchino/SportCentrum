@@ -12,6 +12,8 @@
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+.register-button {font-family: "Roboto", sans-serif; border-radius: 10px; background-color: lightblue; font-size: 15px; outline: none;}
+.login-button {font-family: "Roboto", sans-serif; border-radius: 10px; background-color: lightblue; font-size: 15px; outline: none;}
 </style>
 
 <body class="w3-content" style="max-width:1200px">
@@ -87,7 +89,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </div>
   </footer>
 
-  <div class="w3-black w3-center w3-padding-24">Art by SportCentrum</div>
+  <div class="w3-black w3-center w3-padding-24">SportCentrum</div>
 
   <!-- End page content -->
 </div>
@@ -134,6 +136,5 @@ function w3_close() {
 
 
 
->>>>>>> 01bddebfdd7763973143c57114486b6f4cb25c53
 </body>
 </html>
