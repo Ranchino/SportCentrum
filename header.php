@@ -8,6 +8,8 @@
     <a href="index.php" class="w3-bar-item w3-button">Men</a>
     <a href="womenSite.php" class="w3-bar-item w3-button">Women</a>
     <a href="childrenSite.php" class="w3-bar-item w3-button">Children</a>
+    <a href="accessoriesSite.php" class="w3-bar-item w3-button">Accessories</a>
+
 
 
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
