@@ -19,6 +19,7 @@ echo "
         <input type='submit' value='Leta Efter' name='submit'>
     </form>
 ";
+//Kolla option value
 if(isset($_GET['submit'])){
   $var = $_GET['linkSite'];
   //When there is view in the url

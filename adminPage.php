@@ -29,11 +29,20 @@
         <input type="submit"  class="logout-button" name="isLogOut" value="Logout">
     </form>
     <?php
+      if(isset($_SESSION['rol'])){
+        if($_SESSION['rol'] == 'user') {
+            header("Location: userPage.php");
+            die();
+        }       
+    }
     if(isset($_POST['isLogOut'])){
         //echo   $_SESSION['rol'];
-        unset($_SESSION['rol']);
-        header("Location: login.php");
-        die();   
+        if($_SESSION['rol'] == "admin") {
+
+          unset($_SESSION['rol']);
+          header("Location: login.php");
+          die();   
+        }
     }
     ?>
       <button class="switch-user-button">Switch User</button>
