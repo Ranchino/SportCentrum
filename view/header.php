@@ -6,19 +6,22 @@
     <i class="fa fa-shopping-cart" style="font-size:40px;"></i>
 
   </div>
-  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-  <?php
-echo "
-    <form method='get'>
-        <select name='linkSite'>
+  <div class="w3-padding-64 w3-large w3-text-grey">
+
+
+    <form method='get' style="margin-left: 0.5em; margin-bottom: 0.1em;">
+        <select name='linkSite' style="background-color: white;">
             <option value='women'>Women</option>
             <option value='men'>Men</option>
             <option value='children'>Children</option>
             <option value='accessories'>accessories</option>
         </select>
-        <input type='submit' value='Leta Efter' name='submit'>
+        <input type='submit' value='Search' name='submit' style="border-radius: 0.5em; font-family: Montserrat, sans-serif; outline: none; font-size: 12px; background-color: #4CAF50;
+color: white;" >
     </form>
-";
+
+
+<?php
 if(isset($_GET['submit'])){
   $var = $_GET['linkSite'];
   //When there is view in the url
@@ -54,6 +57,7 @@ if(isset($_GET['submit'])){
   }
 }
 ?>
+
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
   <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
