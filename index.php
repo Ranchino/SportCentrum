@@ -136,6 +136,14 @@ window.onclick = function(event) {
   }
 }
 
+$(document).ready(function(){
+  $('.registerHere').click(function(){
+    $('#loginShow').hide();
+    $('#registerAccount').show();
+  });
+
+
+
 </script>
 
 </body>
