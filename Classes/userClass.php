@@ -1,5 +1,5 @@
 <?php
-include_once("./dbcHandler.php");
+include_once("../Classes/dbcClass.php");
 class User {
     function __construct(){
         $this->database = new DatabaseController();

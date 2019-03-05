@@ -13,11 +13,24 @@
         <input type="submit"  name="isClicked" value="Go back!">
     </form>
     <?php
+    //Working on redirect
+    if(isset($_SESSION['rol'])){
+        if($_SESSION['rol'] == 'admin') {
+            header("Location: adminPage.php");
+            die();
+        } 
+
+        
+    }
+
     if(isset($_POST['isClicked'])){
         //echo   $_SESSION['rol'];
-        unset($_SESSION['rol']);
-        header("Location: login.php");
-        die();   
+        if($_SESSION['rol'] == "user") {
+
+            unset($_SESSION['rol']);
+            header("Location: login.php");
+            die();   
+          }   
     }
     ?>
     <!-- Here we are going to specify the user and select the order and data for this user -->

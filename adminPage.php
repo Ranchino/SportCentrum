@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css-files/adminStyleSheet.css">
+<script src="../Scripts/productPage.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body class="w3-light-grey">
@@ -29,11 +30,20 @@
         <input type="submit"  class="logout-button" name="isLogOut" value="Logout">
     </form>
     <?php
+      if(isset($_SESSION['rol'])){
+        if($_SESSION['rol'] == 'user') {
+            header("Location: userPage.php");
+            die();
+        }       
+    }
     if(isset($_POST['isLogOut'])){
         //echo   $_SESSION['rol'];
-        unset($_SESSION['rol']);
-        header("Location: login.php");
-        die();   
+        if($_SESSION['rol'] == "admin") {
+
+          unset($_SESSION['rol']);
+          header("Location: login.php");
+          die();   
+        }
     }
     ?>
       <button class="switch-user-button">Switch User</button>
