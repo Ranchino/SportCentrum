@@ -2,7 +2,9 @@
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide" style="color: lightblue;">SportCentrum</h3>
+    <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
+    <i class="fa fa-shopping-cart" style="font-size:40px;"></i>
+
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="index.php" class="w3-bar-item w3-button">Men</a>
@@ -35,9 +37,10 @@
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-<button onclick="showLoginModal()" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
+      <button onclick="showLoginModal()" style="width:auto;">Login</button>
+      
+      
+    <div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php">
 
