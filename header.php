@@ -2,7 +2,9 @@
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide" style="color: lightblue;">SportCentrum</h3>
+    <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
+    <i class="fa fa-shopping-cart" style="font-size:40px;"></i>
+
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="index.php" class="w3-bar-item w3-button">Men</a>
@@ -35,38 +37,57 @@
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-
-<!-- Button to open the modal login form -->
-<button onclick="document.getElementById('id01').style.display='block'">Login or Register</button>
-
-<!-- The Modal -->
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'" 
-class="close" title="Close Modal">&times;</span>
-
-  <!-- Modal Content -->
+      <button onclick="showLoginModal()" style="width:auto;">Login</button>
+      
+      
+    <div id="id01" class="modal">
+  
   <form class="modal-content animate" action="/action_page.php">
 
-    <div class="container">
+    <div class="container" id="loginShow">
+    <h3>Sign In</h3>
+
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">Login</button>
-      <button type="submit">Register</button>
-
+        
+      <button type="submit">Sign In</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+    
+    <div class="container" id="registerAccount">
+      <h3>Register</h3>
+      <label for="email"><b>Enter email</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Register</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Newsletter
       </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="registerHere">No account? <a href="#" onclick="switchToRegisterForm()">Register here!</a></span>
+      <span class="signInHere">Already have an Account? <a href="#" onclick="switchToLoginForm()">Sign In!</a></span>
+
     </div>
   </form>
 </div>
 
+
     </p>
   </header>
+
+
+
