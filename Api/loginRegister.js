@@ -6,7 +6,17 @@ function test(){
         datatype: 'json',
         url: './Handler/requestHandler.php',
         data: test, 
-        success: data => { alert(data) },
+        success: data => { 
+            if(data == "admin") {
+
+                window.location.href ="./adminPage.php";
+            }else if(data == "user"){
+                window.location.href ="./userPage.php";
+            } else {
+                alert(data);
+                window.location.href ="./login.php";
+            }
+        },
         error: error => { console.log(error)}
     });
     return false;

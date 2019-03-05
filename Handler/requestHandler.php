@@ -1,30 +1,49 @@
 <?php
+session_start();
 include_once("./adminHandler.php");
 include_once("./userHandler.php");
 $admin = new Admin();
 $user = new User();
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //Here we check the sign in for both user and admin
-    if(isset($_POST['username']) && isset($_POST["password"])){
-        $password = $_POST['password'];
-        $username = $_POST['username'];
-        $userInfo = $user->logInUser();
-        $adminInfo = $admin->logInAdmin();
-        foreach($userInfo as $user) {
-            if($user->password == $password && $user->mail == $username) {
-                echo json_encode("Du har loggats in");
-                return;
-            }    
+    if(isset($_SESSION['rol'])){
+        if($_SESSION['rol'] == 'admin') {
+            header("Location: adminPage.php");
+            die();
+        } 
+        if($_SESSION['rol'] == 'user'){
+            header("Location: userPage.php");
+            die();
         }
-        foreach($adminInfo as $admin) {
-            if($admin->password == $password && $admin->mail == $username) {
-                echo json_encode("Du har loggats in");
-                return;
-            }    
+
+    }else {
+        if(isset($_POST['username']) && isset($_POST["password"])){
+            $password = $_POST['password'];
+            $username = $_POST['username'];
+            $userInfo = $user->logInUser();
+            $adminInfo = $admin->logInAdmin();
+            foreach($userInfo as $user) {
+                if($user->password == $password && $user->mail == $username) {
+                    //echo json_encode("Du har loggats in");
+                    $rol = "user";
+                    $_SESSION['rol'] = $rol;
+                    echo json_encode($rol);
+                    return;
+                }    
+            }
+            foreach($adminInfo as $admin) {
+                if($admin->password == $password && $admin->mail == $username) {
+                    //echo json_encode("Du har loggats in");
+                    $rol = "admin";
+                    $_SESSION['rol'] = $rol;
+                    echo json_encode($rol);
+                    return;
+                }    
+            }
+            echo json_encode("Det gick inte att loggas in");
+            return;               
+        //Here we register new user
         }
-        echo json_encode("Det gick inte att loggas in");
-        return;               
-    //Here we register new user
     }
     if(!empty($_POST['passwordRegister']) && !empty($_POST['mail']) && !empty($_POST['nyhetsbrev'])) {
         $password = $_POST['passwordRegister'];

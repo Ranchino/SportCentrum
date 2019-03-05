@@ -5,13 +5,53 @@
     <h3 class="w3-wide" style="color: lightblue;">SportCentrum</h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-    <a href="index.php" class="w3-bar-item w3-button">Men</a>
-    <a href="womenSite.php" class="w3-bar-item w3-button">Women</a>
-    <a href="childrenSite.php" class="w3-bar-item w3-button">Children</a>
-    <a href="accessoriesSite.php" class="w3-bar-item w3-button">Accessories</a>
-
-
-
+  <?php
+echo "
+    <form method='get'>
+        <select name='linkSite'>
+            <option value='women'>Women</option>
+            <option value='men'>Men</option>
+            <option value='children'>Children</option>
+            <option value='accessories'>accessories</option>
+        </select>
+        <input type='submit' value='Leta Efter' name='submit'>
+    </form>
+";
+if(isset($_GET['submit'])){
+  $var = $_GET['linkSite'];
+  //When there is view in the url
+  if (stripos($_SERVER['REQUEST_URI'],'/view/') !== false) {
+    if($var == "women"){
+      header("Location: ./womenSite.php");
+    }
+    if($var == "children"){
+      header("Location: ./childrenSite.php");
+    }
+    if($var == "men"){
+      header("Location: ../index.php");
+    }
+    if($var == "accessories"){
+      header("Location: ./accessoriesSite.php");
+    }
+  }
+  //When there is no view 
+  else {
+    if($var == "women"){
+      header("Location: ./view/womenSite.php");
+    }
+    if($var == "children"){
+      header("Location: ./view/childrenSite.php");
+    }
+    if($var == "men"){
+      header("Location: ./index.php");
+    }
+    if($var == "accessories"){
+      header("Location: ./view/accessoriesSite.php");
+    }
+    
+  }
+}
+?>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
   <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>

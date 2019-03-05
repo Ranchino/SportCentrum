@@ -10,7 +10,7 @@
 <body class="w3-content" style="max-width:1200px">
 
 <?php 
-  include 'header.php';
+  include './view/header.php';
 ?>
 
    <!-- Image header -->

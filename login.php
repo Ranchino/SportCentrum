@@ -38,17 +38,17 @@ session_start();
 
 <?php
 //Working on redirect
-/* if(isset($_SESSION['rol'])){
-    if($_SESSION['rol'] == 'Admin') {
-        header("Location: adminSite.php");
-        die;
+if(isset($_SESSION['rol'])){
+    if($_SESSION['rol'] == 'admin') {
+        header("Location: adminPage.php");
+        die();
     } 
     if($_SESSION['rol'] == 'user'){
-        header("Location: index.php");
-        die;
+        header("Location: userPage.php");
+        die();
     }
     
-} */
+}
 ?>
 </body>
 </html>

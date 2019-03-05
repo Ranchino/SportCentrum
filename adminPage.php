@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html>
 <title>Admin</title>
@@ -23,7 +24,17 @@
     </div>
     <div class="w3-col s8 w3-bar">
       <span>Welcome, <strong>Admin</strong></span><br>
-      <button class="logout-button">Logout</button>
+      <form method="post">
+        <input type="submit"  class="logout-button" name="isLogOut" value="Logout">
+    </form>
+    <?php
+    if(isset($_POST['isLogOut'])){
+        //echo   $_SESSION['rol'];
+        unset($_SESSION['rol']);
+        header("Location: login.php");
+        die();   
+    }
+    ?>
       <button class="switch-user-button">Switch User</button>
     </div>
   </div>
