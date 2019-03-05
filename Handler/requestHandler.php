@@ -2,6 +2,8 @@
 session_start();
 include_once("./adminHandler.php");
 include_once("./userHandler.php");
+include_once("./productHandler.php");
+
 $admin = new Admin();
 $user = new User();
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -66,6 +68,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     } else {
 
         echo json_encode("Det gick inte att registera dig");
+    }
+    if(isset($_POST['test'])) {
+        echo json_encode('vi är på producct');
+    }else {
+        echo json_encode('vi är inte på producct');
     }
 
 }else{

@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css-files/styleSheet.css">
+<script src="./Scripts/productPage.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <body class="w3-content" style="max-width:1200px">
 
 <?php 
@@ -14,8 +16,8 @@
 ?>
 
    <!-- Image header -->
-   <div class="w3-display-container w3-container" style="height: 50em;">
-    <img src="./Images/menMainPicture.jpg" style="width:100%; height: 40em;">
+   <div class="w3-display-container w3-container">
+    <img src="./Images/menMainPicture.jpg" style="width:100%; height: auto; margin-bottom: 10em;" >
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
       <h1 class="w3-jumbo w3-hide-small" style=" color: black; background-color: white; margin-left: -0.5em;">New arrivals</h1>
       <h1 class="w3-hide-large w3-hide-medium" >New arrivals</h1>
@@ -98,45 +100,6 @@
   </div>
 </div>
 
-<script>
-
-// Accordion 
-function myAccFunc() {
-    var x = document.getElementById("demoAcc");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-  
-  // Click on the "Jeans" link on page load to open the accordion for demo purposes
-  document.getElementById("myBtn").click();
-  
-  
-  // Open and close sidebar
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-    document.getElementById("login").style.display = "block";
-  }
-   
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
-
-  // Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-</script>
 
 </body>
 </html>
