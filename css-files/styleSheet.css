@@ -37,7 +37,8 @@ input[type=text], input[type=password] {
     border-radius: 10px;
     font-size: 10px;
   }
-  
+
+
   button:hover {
     opacity: 0.8;
   }
