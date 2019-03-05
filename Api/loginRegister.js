@@ -1,3 +1,4 @@
+//Function for login for Both user/admin
 function test(){
     var test = $("#info").serialize();
     $.ajax({
@@ -5,17 +6,13 @@ function test(){
         datatype: 'json',
         url: './Handler/requestHandler.php',
         data: test, 
-        success: function(data) {
-            alert(data)
-        },
-        error: function checkerror(error){
-            console.log(error);
-        }
+        success: data => { alert(data) },
+        error: error => { console.log(error)}
     });
     return false;
 }
 
-
+//Function for sign in new user here
 function registerNewUser() {
     var registerForm = $("#registering").serialize();
     $.ajax({
@@ -23,12 +20,10 @@ function registerNewUser() {
         datatype: 'json',
         url: './Handler/requestHandler.php',
         data: registerForm, 
-        success: function(data) {
-            console.log(data)
-        },
-        error: function checkerror(error){
-            console.log(error);
-        }
+        success: data => { alert(data) },
+        error: error => { 
+            alert(error)
+            console.log(error); }
     });
     return false;
 
