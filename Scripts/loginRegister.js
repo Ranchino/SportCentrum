@@ -4,7 +4,7 @@ function test(){
     $.ajax({
         method: 'POST',
         datatype: 'json',
-        url: './Handler/requestHandler.php',
+        url: './Api/userRequest.php',
         data: test, 
         success: data => { 
             if(data == "admin") {

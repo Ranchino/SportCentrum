@@ -20,7 +20,6 @@
 color: white;" >
     </form>
 
-
 <?php
 if(isset($_GET['submit'])){
   $var = $_GET['linkSite'];
