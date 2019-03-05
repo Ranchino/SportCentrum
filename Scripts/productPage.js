@@ -4,7 +4,6 @@ function myAccFunc() {
     if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
     } else {
-        console.log("hello");
       x.className = x.className.replace(" w3-show", "");
     }
   }
