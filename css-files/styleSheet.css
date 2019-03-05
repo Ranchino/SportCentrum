@@ -75,10 +75,6 @@ input[type=text], input[type=password] {
     padding-top: 20px;
   }
 
-  #registerAccount {
-      display: none;
-  }
-
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;

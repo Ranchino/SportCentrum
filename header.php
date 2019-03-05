@@ -35,34 +35,36 @@
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<button onclick="showLoginModal()" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php">
 
     <div class="container" id="loginShow">
+    <h3>Sign In</h3>
+
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
         
-      <button type="submit">Login</button>
+      <button type="submit">Sign In</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
     </div>
-
     
     <div class="container" id="registerAccount">
-      <label for="uname"><b>Username</b></label>
+      <h3>Register</h3>
+      <label for="email"><b>Enter email</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
         
-      <button type="submit">Login</button>
+      <button type="submit">Register</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -73,7 +75,9 @@
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span>No account? <a href="#" class="registerHere">Register here!</a></span>
+      <span class="registerHere">No account? <a href="#" onclick="switchToRegisterForm()">Register here!</a></span>
+      <span class="signInHere">Already have an Account? <a href="#" onclick="switchToLoginForm()">Sign In!</a></span>
+
     </div>
   </form>
 </div>
