@@ -104,8 +104,8 @@ if(isset($_GET['submit'])){
     
     <div class="container" id="registerAccount">
       <h3>Register</h3>
-      <label for="email"><b>Enter email</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>

@@ -56,6 +56,9 @@ function switchToLoginForm() {
     $('.signInHere').hide();
 }
 
+    function stayOnSelectedGenre() {
+        
+    }
 // $(document).ready(function(){
 //   $('.registerHere').click(function(){
 //     

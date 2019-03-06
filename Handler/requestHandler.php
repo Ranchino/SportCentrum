@@ -70,9 +70,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo json_encode("Det gick inte att registera dig");
     }
     if(isset($_POST['test'])) {
-        echo json_encode('vi är på producct');
+        echo json_encode('vi är på product');
     }else {
-        echo json_encode('vi är inte på producct');
+        echo json_encode('vi är inte på product');
     }
 
 }else{
