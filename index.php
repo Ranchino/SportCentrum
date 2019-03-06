@@ -19,7 +19,7 @@
    <div class="w3-display-container w3-container">
     <img src="./Images/menMainPicture.jpg" style="width:100%; height: auto; margin-bottom: 10em;" >
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-    <h1 style="background-color: white; color: black; border-radius: 10px; opacity: 0.7;"> New Collection</h1>
+    <h1 style="background-color: white; color: black; border-radius: 10px; opacity: 0.7;"> New Collection 2019</h1>
     <h4 style="background-color: white; color: black; border-radius: 10px; width: 38%; opacity: 0.7;"> Get Yours Today!</h4>
      </div>
   </div>
