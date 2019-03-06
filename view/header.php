@@ -14,9 +14,9 @@
             <option value='women'>Women</option>
             <option value='men'>Men</option>
             <option value='children'>Children</option>
-            <option value='accessories'>accessories</option>
+            <option value='accessories'>Accessories</option>
         </select>
-        <input type='submit' value='Search' name='submit' style="border-radius: 0.5em; font-family: Montserrat, sans-serif; outline: none; font-size: 12px; background-color: #4CAF50;
+        <input type='submit' value='Go to' name='submit' style="border-radius: 0.5em; font-family: Montserrat, sans-serif; outline: none; font-size: 12px; background-color: #4CAF50;
 color: white;" >
     </form>
 
@@ -57,9 +57,7 @@ if(isset($_GET['submit'])){
 }
 ?>
 
-  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
-  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>
 
 <!-- Top menu on small screens -->
@@ -104,8 +102,8 @@ if(isset($_GET['submit'])){
     
     <div class="container" id="registerAccount">
       <h3>Register</h3>
-      <label for="email"><b>Enter email</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
