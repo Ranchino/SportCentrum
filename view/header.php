@@ -86,7 +86,7 @@ if(isset($_GET['submit'])){
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
-  <!-- Top header -->
+
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
       <button onclick="showLoginModal()" style="width:auto;">Login</button>
@@ -110,7 +110,6 @@ if(isset($_GET['submit'])){
     
   </form>
 
-  <div style="width: 100%;">
   <form id="registering">
     <div class="container" id="registerAccount">
       <h3 style="background-color: white;">Register As User or Admin</h3>
@@ -120,18 +119,18 @@ if(isset($_GET['submit'])){
       <label for="passwordRegister"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="passwordRegister" required>
       <label for="rol"><b>Role</b></label>
-      <select name="rol" id="chooseRole">
-      <option value="User">User</option>
-      <option value="Admin">Admin</option>
+      <select name="rol">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
       </select>
       <label  style="background-color: white;">
         <input type="checkbox" checked="checked" name="nyhetsbrev"> Newsletter
       </label>
 
+      
       <input type="submit"  name="isRegistered" onclick="return registerNewUser()" value="Register" style="background-color: lightgreen; border-radius: 0.5em;">
-    </div>
+      </div>
     </form>
-</div>
 
     <div class="container" style="background-color: white; text-align: center;">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>

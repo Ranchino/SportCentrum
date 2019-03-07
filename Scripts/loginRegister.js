@@ -12,7 +12,7 @@ function test(){
                 window.location.href ="./view/userPage.php";
             } else if(info == "0") {
                 alert("Välkommen Admin!")
-                window.location.href ="./view/AdminPage.php";
+                window.location.href ="./view/adminPage.php";
             }else {
                 alert(data)
                 window.location.href ="./index.php";
