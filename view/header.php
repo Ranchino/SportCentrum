@@ -67,7 +67,7 @@ if(isset($_GET['submit'])){
 
 ?>
 <!-- Jag ska tänke lite angående footer länken då det får vara så länge -->
-  <a class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding"  onclick="document.getElementById('contact').style.display='block'">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
 </nav>
 
