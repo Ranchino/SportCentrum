@@ -29,5 +29,13 @@
 
   <?php include_once("./view/footer.php") ?>
 
+
+  <script>
+  
+  function testSomething() {
+    console.log("hello");
+  }
+  
+  </script>
 </body>
 </html>

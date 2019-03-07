@@ -21,6 +21,7 @@ color: white;" >
     </form>
 
 <?php
+/*
 if(isset($_GET['submit'])){
   $var = $_GET['linkSite'];
   //When there is view in the url
@@ -61,7 +62,7 @@ if(isset($_GET['submit'])){
 
     
   }
-}
+}*/
 ?>
 <!-- Jag ska tänke lite angående footer länken då det får vara så länge -->
   <a class="w3-bar-item w3-button w3-padding">Contact</a> 

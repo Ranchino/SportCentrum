@@ -1,5 +1,6 @@
 // Accordion 
 function getTheseProducts(){
+    console.log("hej")
   
     var test = $("#productPage").serialize();
     $.ajax({
@@ -8,17 +9,28 @@ function getTheseProducts(){
         url: './Api/productRequest.php',
         data: test, 
         success: function checkData(data){
-          alert(data)
+          printOutSpecefi(data)
         },
         error: error => { console.log(data)}
     });
     return false;
+}
+function printOutSpecefi(data){
+    console.log(typeof data)
+    /*for(var i = 0; i<data.length; i++){
+        console.log(data[i])
+    }*/
+
 }
 
 
 
 
 
+
+
+
+/* ------ */
 function myAccFunc() {
     var x = document.getElementById("demoAcc");
     if (x.className.indexOf("w3-show") == -1) {
