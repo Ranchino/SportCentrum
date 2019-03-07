@@ -136,7 +136,7 @@ if(isset($_GET['submit'])){
     <div class="container" style="background-color: white; text-align: center;">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="registerHere">No account? <a href="#" onclick="switchToRegisterForm()">Register here!</a></span>
-      <span class="signInHere">Already have an Account? <a href="#" onclick="switchToLoginForm()">Sign In!</a></span>
+      <span class="signInHere" style="margin-bottom: 3em;">Already have an Account? <a href="#" onclick="switchToLoginForm()">Sign In!</a></span>
 
     </div>
 </div>
