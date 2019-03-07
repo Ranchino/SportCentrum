@@ -19,46 +19,18 @@
 
    <!-- Image header -->
    <div class="w3-display-container w3-container" style="height: 50em;">
-    <img src="../Images/accessories.jpg" style="width:100%; height: 30em;">
+    <img src="../Images/accessories.jpg" style="width:100%; height: auto;">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-      <h1 class="w3-jumbo w3-hide-small" style=" color: black; background-color: white; margin-left: -0.5em;">New arrivals</h1>
-      <h1 class="w3-hide-large w3-hide-medium" >New arrivals</h1>
-      <h1 class="w3-hide-small" style=" color: black; background-color: white; margin-left: -1em;">Collection 2019</h1>
+    <h1 style="background-color: white; color: black; border-radius: 10px; opacity: 0.7;"> New Collection 2019</h1>
+    <h4 style="background-color: white; color: black; border-radius: 10px; width: 38%; opacity: 0.7;"> Get Yours Today!</h4>
 <!--       <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
  -->    </div>
   </div>
  
+  <?php 
 
   
-  <?php include_once("./footer.php") ?>
-
-
-<script>
-// Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
-
-
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+include_once("./footer.php") ?>
 
 
 
