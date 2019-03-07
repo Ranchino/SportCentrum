@@ -1,4 +1,24 @@
 // Accordion 
+function getTheseProducts(){
+  
+    var test = $("#productPage").serialize();
+    $.ajax({
+        type: 'POST',
+        datatype: 'json',
+        url: './Api/productRequest.php',
+        data: test, 
+        success: function checkData(data){
+          alert(data)
+        },
+        error: error => { console.log(data)}
+    });
+    return false;
+}
+
+
+
+
+
 function myAccFunc() {
     var x = document.getElementById("demoAcc");
     if (x.className.indexOf("w3-show") == -1) {
@@ -9,7 +29,7 @@ function myAccFunc() {
   }
   
   // Click on the "Jeans" link on page load to open the accordion for demo purposes
-  document.getElementById("myBtn").click();
+  //document.getElementById("myBtn").click();
   
   
   // Open and close sidebar

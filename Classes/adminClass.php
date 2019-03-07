@@ -10,9 +10,23 @@ class Admin {
         $result = $query->fetchAll(PDO::FETCH_OBJ);
 
         if (empty($result)) {
-            return "Det gick inte att hämta password eller mail!";
+            return "Det gick inte";
         }
         return $result;
+    }
+
+    public function insertNewAdmin($hash, $mail){
+        $query = $this->database->connection->prepare
+        ("INSERT INTO admin (mail, password) VALUES(:mail,:password);");
+        $result = $query->execute(array(
+            ":mail"=>$mail,
+            ":password"=>$hash,
+        ));
+        if (empty($result)) {
+            return "Det gick inte att lägga till new admin";
+        }
+        return $result;
+
     }
 }
 ?>

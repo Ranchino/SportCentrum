@@ -15,11 +15,11 @@ class User {
         return $result;
        
     }
-    public function insertNewUser($password, $mail, $nyhetsbrev){
+    public function insertNewUser($hash, $mail, $nyhetsbrev){
         $query = $this->database->connection->prepare
         ("INSERT INTO user (password, mail,nyhetsBrev) VALUES(:password,:mail,:nyhetsBrev);");
         $result = $query->execute(array(
-            ":password"=>$password,
+            ":password"=>$hash,
             ":mail"=>$mail,
             ":nyhetsBrev"=>$nyhetsbrev
         ));
@@ -29,6 +29,7 @@ class User {
         return $result;
 
     }
+
 }
 
 ?>

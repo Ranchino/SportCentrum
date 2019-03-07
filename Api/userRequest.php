@@ -1,72 +1,97 @@
 <?php
-session_start();
 include_once("../Classes/adminClass.php");
 include_once("../Classes/userClass.php");
 $admin = new Admin();
 $user = new User();
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    //Here we check the sign in for both user and admin
-    if(isset($_SESSION['rol'])){
-        if($_SESSION['rol'] == 'admin') {
-            header("Location: adminPage.php");
-            die();
-        } 
-        if($_SESSION['rol'] == 'user'){
-            header("Location: userPage.php");
-            die();
-        }
-
-    }else {
+$method = isset($_SERVER['REQUEST_METHOD']);
+if($method){
+    if($method == 'POST') {
         if(isset($_POST['username']) && isset($_POST["password"])){
             $password = $_POST['password'];
             $username = $_POST['username'];
             $userInfo = $user->logInUser();
             $adminInfo = $admin->logInAdmin();
+            
             foreach($userInfo as $user) {
-                if($user->password == $password && $user->mail == $username) {
-                    //echo json_encode("Du har loggats in");
-                    $rol = "user";
-                    $_SESSION['rol'] = $rol;
-                    echo json_encode($rol);
-                    return;
-                }    
+                if (password_verify($password, $user->password) && $user->mail == $username){
+                    $theuserCheck = 1;
+                    echo json_encode($theuserCheck);
+                    return;  
+                }
             }
             foreach($adminInfo as $admin) {
-                if($admin->password == $password && $admin->mail == $username) {
+                if(password_verify($password, $admin->password) && $admin->mail == $username) {
                     //echo json_encode("Du har loggats in");
-                    $rol = "admin";
-                    $_SESSION['rol'] = $rol;
-                    echo json_encode($rol);
+                    $theAdminCheck = 0;
+                    echo json_encode($theAdminCheck );
                     return;
                 }    
             }
             echo json_encode("Det gick inte att loggas in");
             return;               
+        }
         //Here we register new user
-        }
-    }
-    if(!empty($_POST['passwordRegister']) && !empty($_POST['mail']) && !empty($_POST['nyhetsbrev'])) {
-        $password = $_POST['passwordRegister'];
-        $mail = $_POST['mail'];
-        if($_POST['nyhetsbrev'] == "ja") {
-            $nyhetsbrev = 1;
-        }else {
-            $nyhetsbrev = 0;
-        }
-        $allUsers = $user->logInUser();
-        foreach($allUsers as $person) {
-            if($person->password == $password && $person->mail == $mail) {
-                echo json_encode("Du finns redan i systement.");
-                return;
+        
+        if(!empty($_POST['passwordRegister']) && !empty($_POST['mail']) && !empty($_POST['rol'] )) {
+            $password = $_POST['passwordRegister'];
+            $rol = $_POST['rol'];
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            
+            $verifiedPass = password_verify($password, $hash);
+            $mail = $_POST['mail'];
+            //Here we check the value of nyhetsbrev
+            if(isset($_POST['nyhetsbrev'])) {
+                $nyhetsbrev = 1;
+            }else {
+                $nyhetsbrev = 0;
             }
-   
-        }
-        $addedNew = $user->insertNewUser($password, $mail, $nyhetsbrev);
-        echo json_encode($addedNew);
-    } else {
 
-        echo json_encode("Det gick inte att registera dig");
+            //Here we check  the rol and based on that register we
+           if($rol == "user") {
+               
+                //Here we check the insert of new user and stop the inster if there is one
+               $allUsers = $user->logInUser();
+               foreach($allUsers as $person) {
+                   if (password_verify($password, $person->password) && $person->mail == $mail) {
+                           echo json_encode("Du finns redan i systement.");
+                           die();
+                   }
+          
+               }
+               if (password_verify($password, $hash)){
+                   $addedNewUser = $user->insertNewUser($hash, $mail, $nyhetsbrev);
+                   echo json_encode($addedNewUser);
+               }
+           }else {
+
+                //Here we check the insert of new admin and stop the inster if there is one
+                $getAllAdmin = $admin->logInAdmin();
+                
+                if($getAllAdmin == "Det gick inte") {
+                    if (password_verify($password, $hash)){
+                        $addedNewAdmin = $admin->insertNewAdmin($hash, $mail);
+                        echo json_encode($addedNewAdmin);
+                    }
+                    
+                } else {
+                    echo json_encode("Vi har redan en admin!");
+
+                }
+    
+
+           }
+
+
+
+        } else {
+            echo json_encode("Det gick inte att registera dig");
+        }
+  
+    }else {
+        echo json_encode("Now you are using another method");
     }
 
+}else{
+    echo json_encode("We do not find any method");
 }
 ?>

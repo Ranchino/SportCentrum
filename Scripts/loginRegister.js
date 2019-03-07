@@ -1,4 +1,3 @@
-//Function for login for Both user/admin
 function test(){
     var test = $("#info").serialize();
     $.ajax({
@@ -6,18 +5,20 @@ function test(){
         datatype: 'json',
         url: './Api/userRequest.php',
         data: test, 
-        success: data => { 
-            if(data == "admin") {
-
-                window.location.href ="./adminPage.php";
-            }else if(data == "user"){
-                window.location.href ="./userPage.php";
-            } else {
-                alert(data);
-                window.location.href ="./login.php";
+        success: data =>{ 
+            var info = data;
+            if(info == "1") {
+                alert("Välkommen User!")
+                window.location.href ="./view/userPage.php";
+            } else if(info == "0") {
+                alert("Välkommen Admin!")
+                window.location.href ="./view/AdminPage.php";
+            }else {
+                alert(data)
+                window.location.href ="./index.php";
             }
         },
-        error: error => { console.log(error)}
+        error: error => { alert(error)}
     });
     return false;
 }
@@ -28,12 +29,18 @@ function registerNewUser() {
     $.ajax({
         method: 'POST',
         datatype: 'json',
-        url: './Handler/requestHandler.php',
+        url: './Api/userRequest.php',
         data: registerForm, 
-        success: data => { alert(data) },
-        error: error => { 
-            alert(error)
-            console.log(error); }
+        success: data => { 
+            if(data == "true") {
+                alert("Nu har vi registerat dig");
+                window.location.href ="./index.php";
+            }else {
+                alert(data)
+            }
+
+        },
+        error: error => { alert(error)}
     });
     return false;
 
