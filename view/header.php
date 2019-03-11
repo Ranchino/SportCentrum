@@ -79,13 +79,13 @@ color: white;" >
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
   
-  <!-- Top header -->
+
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
       <button onclick="showLoginModal()" style="width:auto;">Login</button>
       
       
-    <div id="id01" class="modal" style="background-color: black;">
+    <div id="id01" class="modal" style="background-color: white;">
   
   <form class="modal-content animate" id="info">
 
@@ -98,10 +98,11 @@ color: white;" >
       <label for="password"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="password" required>
       
-      <input type="submit"  name="clickedButton" onclick="return test()" value="Sign In">
+      <input type="submit"  name="clickedButton" onclick="return test()" value="Sign In" style="background-color: lightgreen; border-radius: 0.5em;">
     </div>
     
   </form>
+
   <form id="registering">
     <div class="container" id="registerAccount">
       <h3 style="background-color: white;">Register As User or Admin</h3>
@@ -110,23 +111,24 @@ color: white;" >
 
       <label for="passwordRegister"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="passwordRegister" required>
-      <label for="rol"><b>Enter Rol</b></label>
-      <select name="rol" id="">
-      <option value="user">user</option>
-      <option value="admin">admin</option>
+      <label for="rol"><b>Role</b></label>
+      <select name="rol">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
       </select>
       <label  style="background-color: white;">
         <input type="checkbox" checked="checked" name="nyhetsbrev"> Newsletter
       </label>
 
-      <input type="submit"  name="isRegistered" onclick="return registerNewUser()" value="Register">
-    </div>
+      
+      <input type="submit"  name="isRegistered" onclick="return registerNewUser()" value="Register" style="background-color: lightgreen; border-radius: 0.5em;">
+      </div>
     </form>
 
-    <div class="container" style="background-color:#f1f1f1">
+    <div class="container" style="background-color: white; text-align: center;">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="registerHere">No account? <a href="#" onclick="switchToRegisterForm()">Register here!</a></span>
-      <span class="signInHere">Already have an Account? <a href="#" onclick="switchToLoginForm()">Sign In!</a></span>
+      <span class="signInHere" style="margin-bottom: 3em;">Already have an Account? <a href="#" onclick="switchToLoginForm()">Sign In!</a></span>
 
     </div>
 </div>
