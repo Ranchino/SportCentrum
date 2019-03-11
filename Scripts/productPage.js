@@ -1,36 +1,122 @@
-// Accordion 
+var categoryName;
 function getTheseProducts(){
-    console.log("hej")
-  
-    var test = $("#productPage").serialize();
+  var url = new URL (window.location.href);
+  categoryName = url.searchParams.get("categoryName");
     $.ajax({
-        type: 'POST',
-        datatype: 'json',
-        url: './Api/productRequest.php',
-        data: test, 
-        success: function checkData(data){
-          printOutSpecefi(data)
+        type: 'get',
+        dataType:'json',
+        url: '../Api/productRequests/getProduct.php',
+        data: {categoryName:categoryName}, 
+        success: data => {
+          document.getElementById("linksOption").value = categoryName;
+          var title = document.querySelector("h1.title");
+          title.innerHTML = "Welcome To " + categoryName +"'s Cloth!"
+          printOutProducts(data)
+          
         },
-        error: error => { console.log(data)}
+        error: error => { console.log(error)}
     });
-    return false;
-}
-function printOutSpecefi(data){
-    console.log(typeof data)
-    /*for(var i = 0; i<data.length; i++){
-        console.log(data[i])
-    }*/
 
 }
+//Here we print out all products
+function printOutProducts(categoryInfo) {
+
+  var section = document.querySelector("section#content");
+  //var template = document.querySelector("template");
+  for(var i = 0; i<categoryInfo.length; i++){
+/*     var clone = template.content.cloneNode(true);
+    var h1 = clone.querySelectorAll("h1");
+    h1[0].innerHTML = categoryInfo[i].productName;
+
+    var img = clone.querySelectorAll("img");
 
 
+    var button = clone.querySelectorAll("button");
+    button[0].innerHTML = "Add To ShoppingCart";
+    var test = JSON.stringify(categoryInfo[i])
+    button[0].onclick=function() { addProductToSession(test) }
+    //Based on the category we set the picture src on that map
+    if(categoryInfo[i].categoryName == "children"){
+      img[0].src = "../Images/kidsClothes/"+categoryInfo[i].pictureUrl;
+    }else if(categoryInfo[i].categoryName == "women") {
+      img[0].src = "../Images/womensClothes/"+categoryInfo[i].pictureUrl;
+    } else if(categoryInfo[i].categoryName == "men") {
+      img[0].src = "../Images/mensClothes/"+categoryInfo[i].pictureUrl;
+    }else {
+      img[0].src = "../Images/accessories/"+categoryInfo[i].pictureUrl;
+    }
+    var h2 = clone.querySelectorAll("h2");
+    h2[0].innerHTML = categoryInfo[i].unitPrice + " SEK";
+    //template.parentNode.appendChild(clone)
+
+    template.appendChild(clone) */
 
 
+    var divForSingleProduct = createSingleDiv();
+    divForSingleProduct.appendChild(createTitle(categoryInfo[i]));
+    divForSingleProduct.appendChild(createImg(categoryInfo[i]))
+    divForSingleProduct.appendChild(createPrice(categoryInfo[i]));
+    divForSingleProduct.appendChild(createPutButton(categoryInfo[i]));
+    section.appendChild(divForSingleProduct);
+  }
 
 
+}
+function createSingleDiv(){
+  var singlDiv = document.createElement("div");
+  singlDiv.style.width = "100%";
+  singlDiv.style.textAlign = "center";
+  singlDiv.style.position= "relative";
+  return singlDiv 
+}
 
+function createTitle(categoryInfo){
+  var h4 = document.createElement("h4")
+  h4.innerText = categoryInfo.productName;
+  return h4
+}
+function createImg(categoryInfo){
+  var img = document.createElement("img")
+  if(categoryInfo.categoryName == "children"){
+    img.src = "../Images/kidsClothes/"+categoryInfo.pictureUrl;
+  }else if(categoryInfo.categoryName == "women") {
+    img.src = "../Images/womensClothes/"+categoryInfo.pictureUrl;
+  } else if(categoryInfo.categoryName == "men") {
+    img.src = "../Images/mensClothes/"+categoryInfo.pictureUrl;
+  }else {
+    img.src = "../Images/accessories/"+categoryInfo.pictureUrl;
+  }
+  return img
+}
+function createPrice(categoryInfo){
+  var h4 = document.createElement("h4")
+  h4.innerText = categoryInfo.unitPrice +"kr";
+  return h4
+}
+function createPutButton(categoryInfo){
+  var putButton = document.createElement("button");
+  putButton.innerText = "Add Product To Shoppingcart";
+  putButton.onclick = function(){ addProduct(categoryInfo)}
+  return putButton
+}
+function addProduct(categoryInfo){
+  var productAdded = [];
+  productAdded.push(categoryInfo)
+  console.log(productAdded)
+}
 
-/* ------ */
+//Here we check where is the header if it is from start page the we add view otherwise no
+function redirectForm() {
+  var url = new URL (window.location.href);
+  var categoryName = url.searchParams.get("categoryName");
+  if(categoryName){
+    document.getElementById("productPage").action = "./productPage.php";
+
+  }else{
+    document.getElementById("productPage").action = "./view/productPage.php";
+  }
+
+}
 function myAccFunc() {
     var x = document.getElementById("demoAcc");
     if (x.className.indexOf("w3-show") == -1) {
@@ -39,6 +125,9 @@ function myAccFunc() {
       x.className = x.className.replace(" w3-show", "");
     }
   }
+
+
+  
   
   // Click on the "Jeans" link on page load to open the accordion for demo purposes
   //document.getElementById("myBtn").click();
@@ -87,8 +176,3 @@ function switchToLoginForm() {
     $('#registerAccount').hide();
     $('.signInHere').hide();
 }
-
-// $(document).ready(function(){
-//   $('.registerHere').click(function(){
-//     
-//   });

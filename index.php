@@ -12,6 +12,7 @@
 <script src="./Scripts/loginRegister.js"></script>
 
 
+
 <body class="w3-content" style="max-width:1200px">
 
 <?php 
@@ -26,16 +27,14 @@
     <h4 style="background-color: white; color: black; border-radius: 10px; width: 38%; opacity: 0.7;"> Get Yours Today!</h4>
      </div>
   </div>
+  <!-- section is the whole content and the div has four pictures -->
+  <section id="content">
+  <div></div>
+  
+  
+  </section>
 
   <?php include_once("./view/footer.php") ?>
 
-
-  <script>
-  
-  function testSomething() {
-    console.log("hello");
-  }
-  
-  </script>
 </body>
 </html>
