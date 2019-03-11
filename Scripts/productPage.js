@@ -10,7 +10,7 @@ function getTheseProducts(){
         success: data => {
           document.getElementById("linksOption").value = categoryName;
           var title = document.querySelector("h2.title");
-          title.innerHTML = "" + categoryName +"s Clothing"
+          title.innerHTML = "" + categoryName +"s Clothing";
           printOutProducts(data)
           
         },
