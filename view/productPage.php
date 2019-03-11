@@ -17,7 +17,7 @@
 
 <body class="w3-content" style="max-width:1200px" onload="getTheseProducts()">
 <?php 
- /*  include './header.php'; */
+  include './header.php';
   ?>
   <h2 class="title"></h2>
   <a href="../index.php" style="color: blue; font-weight: 900%;">Want To Go to Start Page!</a>
