@@ -10,6 +10,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./Scripts/productPage.js"></script>
 <script src="./Scripts/loginRegister.js"></script>
+<script src="./Scripts/sendNewsletter.js"></script>
+
 
 
 
