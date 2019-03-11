@@ -55,11 +55,9 @@ input[type=text], input[type=password] {
   button {
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 7px 10px;
     border: none;
     cursor: pointer;
-    width: 100%;
     outline: none;
     border-radius: 10px;
     font-size: 10px;
@@ -79,6 +77,57 @@ input[type=text], input[type=password] {
   /* Center the image and position the close button */
   .container {
     padding: 16px;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  section h4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  section img {
+    width: 35em;
+    height: 35em;
+  }
+
+  section div {
+    width: 100%; 
+    text-align: center;
+    margin-bottom: 10em;
+  }
+
+  h1.h1-collection-style-text {
+    background-color: white; 
+    color: black; 
+    border-radius: 10px; 
+    opacity: 0.9;
+  }
+
+  h4.h4-collection-style-text {
+    background-color: white; 
+    color: black; 
+    border-radius: 10px; 
+    width: 18.5%; 
+    opacity: 0.9;
+  }
+
+  .img-for-index {
+    width:100%; 
+    height: auto; 
+    margin-bottom: 10em;
+    margin-left: 0;
+  }
+
+  .go-back-tag {
+    font-size: 1.5em;
+    position: fixed;
+    margin-top: 5.2em;
+    float: right;
   }
   
   span.psw {

@@ -9,8 +9,8 @@ function getTheseProducts(){
         data: {categoryName:categoryName}, 
         success: data => {
           document.getElementById("linksOption").value = categoryName;
-          var title = document.querySelector("h1.title");
-          title.innerHTML = "Welcome To " + categoryName +"'s Cloth!"
+          var title = document.querySelector("h2.title");
+          title.innerHTML = "" + categoryName +"s Clothing";
           printOutProducts(data)
           
         },
@@ -64,9 +64,6 @@ function printOutProducts(categoryInfo) {
 }
 function createSingleDiv(){
   var singlDiv = document.createElement("div");
-  singlDiv.style.width = "100%";
-  singlDiv.style.textAlign = "center";
-  singlDiv.style.position= "relative";
   return singlDiv 
 }
 
@@ -88,21 +85,37 @@ function createImg(categoryInfo){
   }
   return img
 }
+
 function createPrice(categoryInfo){
   var h4 = document.createElement("h4")
   h4.innerText = categoryInfo.unitPrice +"kr";
+  h4.classList.add()
   return h4
 }
+
 function createPutButton(categoryInfo){
   var putButton = document.createElement("button");
   putButton.innerText = "Add Product To Shoppingcart";
   putButton.onclick = function(){ addProduct(categoryInfo)}
   return putButton
 }
+//Here we want to add 
+var choosenProductArray = [];
 function addProduct(categoryInfo){
-  var productAdded = [];
-  productAdded.push(categoryInfo)
-  console.log(productAdded)
+  choosenProductArray.push(categoryInfo)
+  $.ajax({
+    type:'JSON',
+    method: 'POST',
+    url: '../Api/productRequests/addProduct.php',
+    data: {choosenProducts: JSON.stringify(choosenProductArray)},
+    success: data => {
+      console.log(data);
+    },
+    error: error => {
+      alert(error);
+    }
+  })
+  console.log(choosenProductArray)
 }
 
 //Here we check where is the header if it is from start page the we add view otherwise no
@@ -116,6 +129,23 @@ function redirectForm() {
     document.getElementById("productPage").action = "./view/productPage.php";
   }
 
+}
+
+//Here we redirect the shoppingCart since it is on start page and product page
+var url = new URL (window.location.href);
+var categoryName = url.searchParams.get("categoryName");
+function redirectTheShoppingCart(url){
+    var url;
+    if(categoryName) {
+        url= window.location.href = './shoppingCart.php';
+        
+    }else {
+        url = window.location.href = './view/shoppingCart.php';
+    }
+  
+    return url;
+      
+    
 }
 function myAccFunc() {
     var x = document.getElementById("demoAcc");
@@ -131,48 +161,3 @@ function myAccFunc() {
   
   // Click on the "Jeans" link on page load to open the accordion for demo purposes
   //document.getElementById("myBtn").click();
-  
-  
-  // Open and close sidebar
-  function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-    document.getElementById("login").style.display = "block";
-  }
-   
-  function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-  }
-
-  // Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-function showLoginModal() {
-    document.getElementById('id01').style.display='block'
-    $('#loginShow').show();
-    $('#registerAccount').hide();
-    $('.signInHere').hide();
-}
-
-function switchToRegisterForm() {
-    $('#loginShow').hide();
-    $('.registerHere').hide();
-    $('#registerAccount').show();
-    $('.signInHere').show();
-
-}
-
-function switchToLoginForm() {
-    $('#loginShow').show();
-    $('.registerHere').show();
-    $('#registerAccount').hide();
-    $('.signInHere').hide();
-}
