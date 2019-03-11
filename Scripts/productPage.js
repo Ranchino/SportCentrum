@@ -99,10 +99,23 @@ function createPutButton(categoryInfo){
   putButton.onclick = function(){ addProduct(categoryInfo)}
   return putButton
 }
+//Here we want to add 
+var choosenProductArray = [];
 function addProduct(categoryInfo){
-  var productAdded = [];
-  productAdded.push(categoryInfo)
-  console.log(productAdded)
+  choosenProductArray.push(categoryInfo)
+  $.ajax({
+    type:'JSON',
+    method: 'POST',
+    url: '../Api/productRequests/addProduct.php',
+    data: {choosenProducts: JSON.stringify(choosenProductArray)},
+    success: data => {
+      console.log(data);
+    },
+    error: error => {
+      alert(error);
+    }
+  })
+  console.log(choosenProductArray)
 }
 
 //Here we check where is the header if it is from start page the we add view otherwise no
@@ -116,6 +129,23 @@ function redirectForm() {
     document.getElementById("productPage").action = "./view/productPage.php";
   }
 
+}
+
+//Here we redirect the shoppingCart since it is on start page and product page
+var url = new URL (window.location.href);
+var categoryName = url.searchParams.get("categoryName");
+function redirectTheShoppingCart(url){
+    var url;
+    if(categoryName) {
+        url= window.location.href = './shoppingCart.php';
+        
+    }else {
+        url = window.location.href = './view/shoppingCart.php';
+    }
+  
+    return url;
+      
+    
 }
 function myAccFunc() {
     var x = document.getElementById("demoAcc");

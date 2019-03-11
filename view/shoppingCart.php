@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <html>
 <title>SportCentrum</title>
 <meta charset="UTF-8">
@@ -12,15 +14,23 @@
 <script src="../Scripts/loginRegister.js"></script>
 
 
-<body class="w3-content" style="max-width:1200px" onload="getTheseProducts()">
+
+<body>
+
 <?php 
   include './header.php';
-  ?>
-  <a href="../index.php" style="color: blue; font-weight: 900%;">Want To Go to Start Page!</a>
-<h1 class="title"></h1>
-<section id="content">
-</section>
+?>
+
+
+<?php
+if(isset($_SESSION['choosen'])){
+    print_r($_SESSION['choosen']);
+} else {
+
+    echo json_encode("There is not session saved");
+}
+
+?>
 
 </body>
-
 </html>
