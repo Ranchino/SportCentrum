@@ -8,7 +8,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css-files/adminStyleSheet.css">
+<link rel="stylesheet" href="./css-files/style-mobile.css">
+<link rel="stylesheet" href="./css-files/style-tablet.css">
 <script src="../Scripts/productPage.js"></script>
+<script src="./Scripts/w3-school.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body class="w3-light-grey">

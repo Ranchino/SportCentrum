@@ -7,7 +7,7 @@ class Shipping  {
     {
         $this->database = new DatabaseController();
     }
-    public function shipping()
+    public function ShippersList()
     {
       $query =  $this->database->connection->prepare("SELECT CompanyName, SippingPrice, ShippingMethod");
       $query->execute();

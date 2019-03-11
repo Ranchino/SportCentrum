@@ -2,7 +2,7 @@
 class DatabaseController {
     function __construct(){
         //Localhost
-        $dns = 'mysql:host=localhost;dbname=sportcentrum;';
+        $dns = 'mysql:host=localhost;dbname=sportcentrum;charset=utf8';
         $user = 'root';
         $password = '';
         try {
