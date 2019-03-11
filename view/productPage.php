@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../css-files/style-tablet.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../Scripts/productPage.js"></script>
-<script src="./Scripts/w3-school.js"></script>
+<script src="../Scripts/w3-school.js"></script>
 <script src="../Scripts/loginRegister.js"></script>
 
 
