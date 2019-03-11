@@ -1,23 +1,23 @@
 <?php
+$dsn = 'mysql:hosy=localhost;dbname=sportcentrum';
+$username = 'root';
+$password = '';
 
-include_once("../Classes/dbcClass.php");
+try{
+    // connect to mysql
+    $con = new PDO($dsn,$username,$password, NULL);
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (Exception $ex) {
+    echo 'Not Connected '.$ex->getMessage();
+}
+// mysql select query
+$stmt = $con->prepare('SELECT * FROM shippers');
+$stmt->execute();
+$result = $stmt->fetchAll();
 
-class Shipping  {
-    function __construct()
-    {
-        $this->database = new DatabaseController();
-    }
-    public function ShippersList()
-    {
-      $query =  $this->database->connection->prepare("SELECT CompanyName, SippingPrice, ShippingMethod");
-      $query->execute();
-      $result = $query->fetchAll(PDO::FETCH_OBJ);
-
-        if (empty($result)) {
-            return "Det gick inte att hämta leverantörer";
-        }
-        return $result;
-    }
+foreach ($result as $ship)
+{
+    echo $ship['CompanyName'].' - '.$ship['ShippingPrice'].'kr'.' - '.$ship['ShippingMethod'].'<br>';
 }
 
 ?>
