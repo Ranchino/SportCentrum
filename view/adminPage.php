@@ -115,19 +115,22 @@
     </div>
   </div>
 
-
-  <div id="content">
-    <template id="newsTemp">
-      <h3>Newsletter subscribers:</h3>
-        <table id="newsletter">
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>E-Mail</th>
-            <th>Phone number</th>
-          </tr>
-        </table>
-    </template>
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div id="tempForm" style='text-align:center'> 
+        <template id="templeSub">
+          <h3><b>Newsletter subscribers:</b></h3>
+            <table class="w3-table w3-striped w3-white" id="newsletter" >
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-Mail</th>
+                <th>Phone number</th>
+              </tr>
+            </table>
+        </template>
+      </div>
+    </div>
   </div>
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">

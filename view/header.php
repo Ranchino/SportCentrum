@@ -11,8 +11,8 @@
 
     <form id="productPage" style="margin-left: 0.5em; margin-bottom: 0.1em;">
         <select name='categoryName' style="background-color: white;" id="linksOption">
-            <option value='women'>Women</option>
-            <option value='men'>Men</option>
+          <option value='men'>Men</option>
+          <option value='women'>Women</option>
             <option value='children'>Children</option>
             <option value='accessories'>Accessories</option>
             <option value='allProducts'>All Products</option>
