@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="../css-files/styleSheet.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../Scripts/productPage.js"></script>
+<script src="./Scripts/w3-school.js"></script>
 <script src="../Scripts/loginRegister.js"></script>
 
 
@@ -16,8 +17,8 @@
 <?php 
   include './header.php';
   ?>
-  <a href="../index.php" style="color: blue; font-weight: 900%;">Want To Go to Start Page!</a>
-<h1 class="title"></h1>
+  <a href="../index.php" class="go-back-tag">Go back</a>
+<h2 class="title"></h2>
 <!-- <template id="template" style="display: flex; flex-direction: column;">
   <h1></h1>
   <img />
