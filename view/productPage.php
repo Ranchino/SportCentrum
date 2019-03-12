@@ -15,15 +15,19 @@
 <script src="../Scripts/loginRegister.js"></script>
 
 
-<body class="w3-content" style="max-width:1200px" onload="getTheseProducts()">
+<body class="w3-content" onload="getTheseProducts()">
 <?php 
   include './header.php';
   ?>
+  <a href="../index.php" class="go-back-tag">Go back</a>
   <h2 class="title"></h2>
-  <a href="../index.php" style="color: blue; font-weight: 900%;">Want To Go to Start Page!</a>
 <h1 class="title"></h1>
 <section id="content">
 </section>
+
+<?php 
+include './footer.php';
+?>
 
 </body>
 
