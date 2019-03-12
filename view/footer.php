@@ -44,12 +44,6 @@
         <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
         <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
         <br>
-        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
-        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
-        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
-        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
-        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
       </div>
     </div>
   </footer>

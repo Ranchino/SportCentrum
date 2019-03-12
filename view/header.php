@@ -2,11 +2,13 @@
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
+    <a id="sportcentrum-title" href="index.php">
+    SportCentrum
+</a><br>
     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()"></i>
 
   </div>
-  <div class="w3-padding-64 w3-large w3-text-grey">
+  <div class="w3-padding-32 w3-large w3-text-grey">
 
 
     <form id="productPage" style="margin-left: 0.5em; margin-bottom: 0.1em;">
@@ -66,7 +68,7 @@ color: white;" >
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">SportCentrum</div>
+  <a id="sportcentrum-title" class="w3-bar-item w3-padding-24 w3-wide" href="index.php">SportCentrum</a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 

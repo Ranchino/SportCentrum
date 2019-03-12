@@ -17,6 +17,12 @@
         text-decoration: none;
         background-color: #4CAF50;
     }
+
+    #sportcentrum-title {
+        text-decoration: none;
+        font-size: 1em;
+        font-family: "Roboto", sans-serif;
+      }
       
     h4 {
         font-weight: bold;
