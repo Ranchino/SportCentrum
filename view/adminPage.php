@@ -11,10 +11,11 @@
 <link rel="stylesheet" href="./css-files/style-mobile.css">
 <link rel="stylesheet" href="./css-files/style-tablet.css">
 <script src="../Scripts/productPage.js"></script>
+<script src="../Scripts/newsletterView.js"></script>
 <script src="./Scripts/w3-school.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<body class="w3-light-grey">
+<body class="w3-light-grey" onload="refreshPage()">
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
@@ -52,12 +53,10 @@
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Add Products</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Delete Products</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Change Products</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Handle Orders</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Update Products in stock</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Subscribers</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  Newsletter</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    <button onclick=viewNewsletter() class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  Newsletter</button>
+    
   </div>
 </nav>
 
@@ -118,10 +117,23 @@
 
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-third">
-        <h5>Gothenburg, Eketrägatan 19A</h5>
-        <img src="./Images/gothenburg.jpg" style="width:100%" alt="Google Regional Map">
+      <div id="tempForm" style='text-align:center'> 
+        <template id="templeSub">
+          <h3><b>Newsletter subscribers:</b></h3>
+            <table class="w3-table w3-striped w3-white" id="newsletter" >
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-Mail</th>
+                <th>Phone number</th>
+              </tr>
+            </table>
+        </template>
       </div>
+    </div>
+  </div>
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-twothird">
         <h5>Feeds</h5>
         <table class="w3-table w3-striped w3-white">

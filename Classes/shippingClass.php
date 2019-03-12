@@ -2,14 +2,14 @@
 
 include_once("../Classes/dbcClass.php");
 
-class Shipping  {
+class Shipper  {
     function __construct()
     {
         $this->database = new DatabaseController();
     }
-    public function ShippersList()
+    public function getShippersLists()
     {
-      $query =  $this->database->connection->prepare("SELECT CompanyName, SippingPrice, ShippingMethod");
+      $query =  $this->database->connection->prepare("SELECT CompanyName, SippingPrice, ShippingMethod FROM shippers");
       $query->execute();
       $result = $query->fetchAll(PDO::FETCH_OBJ);
 
