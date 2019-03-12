@@ -28,8 +28,20 @@ function insertNewsletter(){
     formdata.append("lastname", lastname);
     formdata.append("mail", mail);
     formdata.append("phone", phone);
-
-    makeRequest( "./Api/sendNewsletterRequest.php", "POST", formdata, function(response) {
+    
+    var url = new URL (window.location.href);
+    var categoryName = url.searchParams.get("categoryName");
+    function checkUrl(url){
+        var url;
+        if(categoryName) {
+            url= '../Api/sendNewsletterRequest.php';
+            
+        }else {
+            url = './Api/sendNewsletterRequest.php';
+        }
+        return url;
+    }
+    makeRequest( checkUrl(url), "POST", formdata, function(response) {
         if(response){
             alert("Nu är du ansluten till nyhetsbrev!");
         }else{
