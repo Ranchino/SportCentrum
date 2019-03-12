@@ -14,15 +14,12 @@ function makeRequest(url, method, formdata, callback){
 }
 
 function viewNewsletter(){
-    var requestData = new FormData();
-    requestData.append("collection", "newsletter");
-    requestData.append("action", "get");
-    
-    makeRequest("../Api/viewNewsletter.php", "POST", requestData, function(response) {
+    makeRequest("../Api/viewNewsletter.php", "GET", null, function(response) {
         console.log(response);
         var contentBox = document.getElementById("tempForm");
         var templeSub = document.getElementById("templeSub");
         var clone = document.importNode(templeSub.content, true);
+        contentBox.innerHTML = "";
         contentBox.appendChild(clone);
 
         var newsTable = document.getElementById("newsletter");
