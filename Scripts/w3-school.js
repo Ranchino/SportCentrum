@@ -41,3 +41,23 @@ function switchToLoginForm() {
     $('#registerAccount').hide();
     $('.signInHere').hide();
 }
+
+
+// fade in back-top
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 800) {
+            $('.go-back-tag').fadeOut();
+        } else {
+            $('.go-back-tag').fadeIn();
+        }
+    });
+
+    // scroll body to 0px on click
+/*     $('.go-back-tag').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1600);
+        return false;
+    }); */
+});

@@ -15,13 +15,13 @@
     .go-back-tag {
       font-weight: 900;
       font-family: "Roboto", sans-serif;
-      font-size: 1.3em;
+      font-size: 1em;
       margin-left: 0.5em;
-      margin-top: -4em;
-      background-color: white;
+      margin-top: -4.5em;
+      background-color: #4CAF50;
       border-radius: 0.3em;
       opacity: 0.9;
-
+      text-decoration: none;
     }
     
     h4 {
