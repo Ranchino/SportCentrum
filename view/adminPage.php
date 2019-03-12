@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="./css-files/style-tablet.css">
 <script src="../Scripts/productPage.js"></script>
 <script src="../Scripts/newsletterView.js"></script>
+<script src="../Scripts/orderView.js"></script>
 <script src="./Scripts/w3-school.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -54,7 +55,7 @@
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Delete Products</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Change Products</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Update Products in stock</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+    <button onclick=viewOrder() class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</button>
     <button onclick=viewNewsletter() class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  Newsletter</button>
     
   </div>
@@ -126,6 +127,32 @@
                 <th>Last Name</th>
                 <th>E-Mail</th>
                 <th>Phone number</th>
+              </tr>
+            </table>
+        </template>
+      </div>
+    </div>
+  </div>
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div id="orderForm" style='text-align:center'> 
+        <template id="templeOrder">
+          <h3><b>All orders:</b></h3>
+            <table class="w3-table w3-striped w3-white" id="orders" >
+              <tr>
+                <th>Order ID</th>
+                <th>Shipper ID</th>
+                <th>Customer ID</th>
+                <th>Ship FirstName</th>
+                <th>Ship LastName</th>
+                <th>Shipp Adress</th>
+                <th>Shipp PostelCode</th>
+                <th>Shipp City</th>
+                <th>Shipp Mail</th>
+                <th>Shipp PhoneNo</th>
+                <th>Shipp Date</th>
+                <th>Total Price</th>
+                <th>Order Date</th>
               </tr>
             </table>
         </template>
