@@ -115,6 +115,19 @@ input[type=text], input[type=password] {
     opacity: 0.9;
   }
 
+  #sportcentrum-title {
+    text-decoration: none;
+    font-size: 2em;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .w3-sidebar {
+    border: 1px solid #4CAF50;
+    margin-left: -7.9em;
+    border-radius: 0.5em;
+    height: 20em;
+  }
+
   .img-for-index {
     width:100%; 
     height: auto; 
