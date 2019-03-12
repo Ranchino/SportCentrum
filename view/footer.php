@@ -5,20 +5,21 @@
     <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
     <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
   </div>
-  
+
+
   <!-- Footer -->
   <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
     <div class="w3-row-padding">
       <div class="w3-col s4">
         <h4>Contact</h4>
         <p>Questions? Go ahead.</p>
-        <form action="/action_page.php" method="Post" target="_blank">
+        <form id="formu">
           <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
           <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
           <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
           <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
-          <button type="submit" class="w3-button w3-block w3-black">Send</button>
-        </form>
+          <button type="submit" class="w3-button w3-block w3-black" onclick="submitContactForm()">Send</button>
+    </form>
       </div>
 
       <div class="w3-col s4">
@@ -55,22 +56,6 @@
 
 
   <!-- End page content -->
-</div>
-
-<!-- Contact Modal -->
-<div id="contact" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
-    <div class="w3-container w3-white w3-center">
-      <i onclick="document.getElementById('contact').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
-      <h2 class="w3-wide">Contact</h2>
-      <p>If you have any questions feel free to contact us!</p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Surname"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Lastname"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Phonenumber"></p>
-      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('contact').style.display='none'">Contact</button>
-    </div>
-  </div>
 </div>
 
 

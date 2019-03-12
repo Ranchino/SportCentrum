@@ -10,6 +10,10 @@ function w3_open() {
     document.getElementById("myOverlay").style.display = "none";
   }
 
+  function submitContactForm() {
+    alert("Your message has been recieved!");
+  } 
+
   // Get the modal
 var modal = document.getElementById('id01');
 
