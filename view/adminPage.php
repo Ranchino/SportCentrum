@@ -7,13 +7,15 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./css-files/adminStyleSheet.css">
-<link rel="stylesheet" href="./css-files/style-mobile.css">
-<link rel="stylesheet" href="./css-files/style-tablet.css">
+<link rel="stylesheet" href="../css-files/adminStyleSheet.css">
+<link rel="stylesheet" href="../css-files/adminStyleMobile.css">
+<link rel="stylesheet" href="../css-files/adminStyleTablet.css">
+<link rel="stylesheet" href="../css-files/style-mobile.css">
+<link rel="stylesheet" href="../css-files/style-tablet.css">
 <script src="../Scripts/productPage.js"></script>
 <script src="../Scripts/newsletterView.js"></script>
 <script src="../Scripts/orderView.js"></script>
-<script src="./Scripts/w3-school.js"></script>
+<script src="../Scripts/w3-school.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body class="w3-light-grey" onload="refreshPage()">
@@ -133,11 +135,13 @@
       </div>
     </div>
   </div>
+
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">
       <div id="orderForm" style='text-align:center'> 
         <template id="templeOrder">
           <h3><b>All orders:</b></h3>
+          <div class="w3-responsive">
             <table class="w3-table w3-striped w3-white" id="orders" >
               <tr>
                 <th>Order ID</th>
@@ -145,16 +149,17 @@
                 <th>Customer ID</th>
                 <th>Ship FirstName</th>
                 <th>Ship LastName</th>
-                <th>Shipp Adress</th>
-                <th>Shipp PostelCode</th>
-                <th>Shipp City</th>
-                <th>Shipp Mail</th>
-                <th>Shipp PhoneNo</th>
-                <th>Shipp Date</th>
+                <th>Ship Adress</th>
+                <th>Ship PostelCode</th>
+                <th>Ship City</th>
+                <th>Ship Mail</th>
+                <th>Ship PhoneNo</th>
+                <th>Ship Date</th>
                 <th>Total Price</th>
                 <th>Order Date</th>
               </tr>
             </table>
+          </div>
         </template>
       </div>
     </div>
