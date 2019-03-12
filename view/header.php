@@ -60,7 +60,7 @@ color: white;" >
   }
 } */
 ?>
-  <a class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a class="w3-bar-item w3-button w3-padding" href="#footer">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
 </nav>
 
