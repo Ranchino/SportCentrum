@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="../css-files/styleSheet.css">
 <link rel="stylesheet" href="../css-files/style-mobile.css">
 <link rel="stylesheet" href="../css-files/style-tablet.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../Scripts/productPage.js"></script>
 <script src="../Scripts/w3-school.js"></script>
@@ -16,10 +17,12 @@
 
 
 <body class="w3-content" onload="getTheseProducts()">
+
 <?php 
   include './header.php';
   ?>
-  <a href="../index.php" class="go-back-tag">Go back</a>
+
+  <a href="../index.php" class="go-back-tag">Go Back </a>
   <h2 class="title"></h2>
 <h1 class="title"></h1>
 <section id="content">
