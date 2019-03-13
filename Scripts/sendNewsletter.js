@@ -29,14 +29,13 @@ function insertNewsletter(){
     formdata.append("mail", mail);
     formdata.append("phone", phone);
     
-<<<<<<< HEAD
     if(firstname === "" || lastname === "" || mail === "" || phone === "") {
         window.alert("Please fill in the required fields!");
     } else {
-        makeRequest( "../Api/sendNewsletterRequest.php", "POST", formdata, function(response) {
-=======
+
     var url = new URL (window.location.href);
     var categoryName = url.searchParams.get("categoryName");
+    
     function checkUrl(url){
         var url;
         if(categoryName) {
@@ -47,14 +46,13 @@ function insertNewsletter(){
         }
         return url;
     }
-    makeRequest( checkUrl(url), "POST", formdata, function(response) {
->>>>>>> cfc9810e6209e38c08a212c5fe56b9daf9963f9e
+
+    makeRequest(checkUrl(url), "POST", formdata, function(response) {
         if(response){
             alert("Thanks for choosing our newsletter!");
         }else{
             alert("det gick fel!");
         }
-    });
-
-    }
+    })
+}
 }

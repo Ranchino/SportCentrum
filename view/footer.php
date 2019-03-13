@@ -14,11 +14,11 @@
         <h4>Contact</h4>
         <p>Questions? Go ahead.</p>
         <form id="formu">
-          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
-          <button type="submit" class="w3-button w3-block w3-black" onclick="submitContactForm()">Send</button>
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" id ="contactName" name="Name"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" id="contactMail" name="Email"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" id="contactSubject" name="Subject"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" id="contactMessage" name="Message"></p>
+          <button type="button" type="submit" class="w3-button w3-block w3-black" onclick="submitContactForm()">Send</button>
     </form>
       </div>
 
