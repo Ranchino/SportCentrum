@@ -1,0 +1,62 @@
+/* phone */
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 1.3em;
+        margin-bottom: 3em;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+    }
+
+    #content img {
+        height: 20em;
+        width: 20em;
+        border-top: 1px solid green;
+        border-bottom: 1px solid green;
+    }
+
+    .w3-sidebar {
+        margin-left: 0em;
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+
+/* tablet */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+
+}
+
+
+
+/* wider tablet */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .w3-sidebar {
+        margin-left: 0em;
+        font-family: "Roboto", sans-serif;
+    }
+
+    #content {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+
+    #content img {
+        height: 20em;
+        width: 20em;
+        border-top: 1px solid green;
+        border-bottom: 1px solid green;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        margin-bottom: 3em;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+
+
+/* desktop */
