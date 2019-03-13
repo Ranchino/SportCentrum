@@ -64,7 +64,7 @@
         <p><input class="w3-input w3-border" type="text" placeholder="Surname" name="firstName" id="firstName"></p>
         <p><input class="w3-input w3-border" type="text" placeholder="Lastname" name="lastName" id="lastName"></p>
         <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" name="mail" id="mail"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Phonenumber" name="phoneNo" id="phone"></p>
+        <p><input class="w3-input w3-border" type="number" placeholder="Phonenumber" name="phoneNo" id="phone"></p>
         <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" type="submit" name="sendNewsletter" onclick="insertNewsletter()">Subscribe</button>
       </form>
     </div>

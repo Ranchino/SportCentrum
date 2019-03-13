@@ -9,10 +9,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
         $lastName = $_POST['lastname'];
         $mail = $_POST['mail'];
         $phone = $_POST['phone'];
-
+        
         $sendNews = $newsletter->sendNewsLetter($firstName, $lastName, $mail, $phone);
         echo json_encode($sendNews);
-
+        
     }else{
         echo json_encode("Vi hittar inte värdet av firstname");
     }

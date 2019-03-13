@@ -28,12 +28,17 @@ function insertNewsletter(){
     formdata.append("lastname", lastname);
     formdata.append("mail", mail);
     formdata.append("phone", phone);
-
-    makeRequest( "./Api/sendNewsletterRequest.php", "POST", formdata, function(response) {
+    
+    if(firstname === "" || lastname === "" || mail === "" || phone === "") {
+        window.alert("Please fill in the required fields!");
+    } else {
+        makeRequest( "../Api/sendNewsletterRequest.php", "POST", formdata, function(response) {
         if(response){
-            alert("Nu är du ansluten till nyhetsbrev!");
+            alert("Thanks for choosing our newsletter!");
         }else{
             alert("det gick fel!");
         }
     });
+
+    }
 }
