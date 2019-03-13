@@ -1,3 +1,4 @@
+<?php session_start()?>
 <html>
 <title>SportCentrum</title>
 <meta charset="UTF-8">
@@ -14,6 +15,7 @@
 <script src="./Scripts/w3-school.js"></script>
 <script src="./Scripts/loginRegister.js"></script>
 <script src="./Scripts/sendNewsletter.js"></script>
+<script src="./Scripts/shoppingCart.js"></script>
 
 
 

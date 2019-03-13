@@ -1,3 +1,4 @@
+<?php session_start()?>
 <html>
 <title>SportCentrum</title>
 <meta charset="UTF-8">
@@ -13,6 +14,7 @@
 <script src="../Scripts/productPage.js"></script>
 <script src="../Scripts/w3-school.js"></script>
 <script src="../Scripts/loginRegister.js"></script>
+<script src="../Scripts/shoppingCart.js"></script>
 
 
 <body class="w3-content" style="max-width:1200px" onload="getTheseProducts()">

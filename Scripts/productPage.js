@@ -1,4 +1,5 @@
 var categoryName;
+var allInfo;
 function getTheseProducts(){
   var url = new URL (window.location.href);
   categoryName = url.searchParams.get("categoryName");
@@ -11,7 +12,9 @@ function getTheseProducts(){
           document.getElementById("linksOption").value = categoryName;
           var title = document.querySelector("h2.title");
           title.innerHTML = "" + categoryName +"s Clothing";
-          printOutProducts(data)
+          allInfo = data;
+          printOutProducts(allInfo)
+         
           
         },
         error: error => { console.log(error)}
@@ -88,11 +91,11 @@ function createImg(categoryInfo){
 
 function createPrice(categoryInfo){
   var h4 = document.createElement("h4")
-  h4.innerText = categoryInfo.unitPrice +"kr";
+  h4.innerText = categoryInfo.unitPrice +"SEK";
   h4.classList.add()
   return h4
 }
-
+var choosenProducts;
 function createPutButton(categoryInfo){
   var putButton = document.createElement("button");
   putButton.innerText = "Add Product To Shoppingcart";
@@ -100,24 +103,46 @@ function createPutButton(categoryInfo){
   return putButton
 }
 //Here we want to add 
-var choosenProductArray = [];
-function addProduct(categoryInfo){
-  choosenProductArray.push(categoryInfo)
+//var choosenProductArray = [];
+function addProduct(product){
+  product.numberChoosen = 1;
+/*   var productIsAlreadyInCart = false;
+  for(var i = 0; i<choosenProductArray.length; i++) {
+    if(choosenProductArray[i].productName == product.productName){
+      alert("We have the product")
+      productIsAlreadyInCart = true;
+      break;
+    }
+  }
+  if (!productIsAlreadyInCart) {
+    alert("It is false")
+    product.numberChoosen = 1;
+    choosenProductArray.push(product)
+  } else {
+    product.numberChoosen++;
+  } */
   $.ajax({
     type:'JSON',
     method: 'POST',
     url: '../Api/productRequests/addProduct.php',
-    data: {choosenProducts: JSON.stringify(choosenProductArray)},
+    data: {choosenProduct: JSON.stringify(product)},
     success: data => {
-      console.log(data);
+     console.log(data)
+/*      var session = JSON.parse(data);
+      var shoppingCart = document.getElementById('shoppingCart');
+      shoppingCart.innerText = " "+ session.length;
+      reloadPage() */
     },
     error: error => {
       alert(error);
     }
   })
-  console.log(choosenProductArray)
+  console.log(product)
+  
 }
-
+/* function reloadPage() {
+  console.log("hej")
+} */
 //Here we check where is the header if it is from start page the we add view otherwise no
 function redirectForm() {
   var url = new URL (window.location.href);
@@ -142,11 +167,10 @@ function redirectTheShoppingCart(url){
     }else {
         url = window.location.href = './view/shoppingCart.php';
     }
-  
     return url;
-      
-    
 }
+
+
 function myAccFunc() {
     var x = document.getElementById("demoAcc");
     if (x.className.indexOf("w3-show") == -1) {
@@ -155,9 +179,3 @@ function myAccFunc() {
       x.className = x.className.replace(" w3-show", "");
     }
   }
-
-
-  
-  
-  // Click on the "Jeans" link on page load to open the accordion for demo purposes
-  //document.getElementById("myBtn").click();
