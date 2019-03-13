@@ -27,7 +27,7 @@ if($method){
                     return;
                 }    
             }
-            echo json_encode("Det gick inte att loggas in");
+            echo json_encode("Please chech your login credentials!");
             return;               
         }
         //Here we register new user
@@ -53,7 +53,7 @@ if($method){
                $allUsers = $user->logInUser();
                foreach($allUsers as $person) {
                    if (password_verify($password, $person->password) && $person->mail == $mail) {
-                           echo json_encode("Du finns redan i systement.");
+                           echo json_encode("You are already in the system.");
                            die();
                    }
           
@@ -67,14 +67,14 @@ if($method){
                 //Here we check the insert of new admin and stop the inster if there is one
                 $getAllAdmin = $admin->logInAdmin();
                 
-                if($getAllAdmin == "Det gick inte") {
+                if($getAllAdmin == "Could not do it") {
                     if (password_verify($password, $hash)){
                         $addedNewAdmin = $admin->insertNewAdmin($hash, $mail);
                         echo json_encode($addedNewAdmin);
                     }
                     
                 } else {
-                    echo json_encode("Vi har redan en admin!");
+                    echo json_encode("We already have an Admin!");
 
                 }
     

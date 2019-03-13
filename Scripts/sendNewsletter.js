@@ -35,7 +35,7 @@ function insertNewsletter(){
 
     var url = new URL (window.location.href);
     var categoryName = url.searchParams.get("categoryName");
-    
+
     function checkUrl(url){
         var url;
         if(categoryName) {
@@ -51,7 +51,7 @@ function insertNewsletter(){
         if(response){
             alert("Thanks for choosing our newsletter!");
         }else{
-            alert("det gick fel!");
+            alert("Somethig went wrong!");
         }
     })
 }
