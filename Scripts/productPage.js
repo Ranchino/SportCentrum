@@ -26,40 +26,11 @@ function getTheseProducts(){
     });
 
 }
+
 //Here we print out all products
 function printOutProducts(categoryInfo) {
-
   var section = document.querySelector("section#content");
-  //var template = document.querySelector("template");
   for(var i = 0; i<categoryInfo.length; i++){
-/*     var clone = template.content.cloneNode(true);
-    var h1 = clone.querySelectorAll("h1");
-    h1[0].innerHTML = categoryInfo[i].productName;
-
-    var img = clone.querySelectorAll("img");
-
-
-    var button = clone.querySelectorAll("button");
-    button[0].innerHTML = "Add To ShoppingCart";
-    var test = JSON.stringify(categoryInfo[i])
-    button[0].onclick=function() { addProductToSession(test) }
-    //Based on the category we set the picture src on that map
-    if(categoryInfo[i].categoryName == "children"){
-      img[0].src = "../Images/kidsClothes/"+categoryInfo[i].pictureUrl;
-    }else if(categoryInfo[i].categoryName == "women") {
-      img[0].src = "../Images/womensClothes/"+categoryInfo[i].pictureUrl;
-    } else if(categoryInfo[i].categoryName == "men") {
-      img[0].src = "../Images/mensClothes/"+categoryInfo[i].pictureUrl;
-    }else {
-      img[0].src = "../Images/accessories/"+categoryInfo[i].pictureUrl;
-    }
-    var h2 = clone.querySelectorAll("h2");
-    h2[0].innerHTML = categoryInfo[i].unitPrice + " SEK";
-    //template.parentNode.appendChild(clone)
-
-    template.appendChild(clone) */
-
-
     var divForSingleProduct = createSingleDiv();
     divForSingleProduct.appendChild(createTitle(categoryInfo[i]));
     divForSingleProduct.appendChild(createImg(categoryInfo[i]))
@@ -67,8 +38,6 @@ function printOutProducts(categoryInfo) {
     divForSingleProduct.appendChild(createPutButton(categoryInfo[i]));
     section.appendChild(divForSingleProduct);
   }
-
-
 }
 function createSingleDiv(){
   var singlDiv = document.createElement("div");
@@ -107,48 +76,27 @@ function createPutButton(categoryInfo){
   putButton.onclick = function(){ addProduct(categoryInfo)}
   return putButton
 }
-//Here we want to add 
-//var choosenProductArray = [];
+//Here we want to add product to session
 function addProduct(product){
   product.numberChoosen = 1;
-/*   var productIsAlreadyInCart = false;
-  for(var i = 0; i<choosenProductArray.length; i++) {
-    if(choosenProductArray[i].productName == product.productName){
-      alert("We have the product")
-      productIsAlreadyInCart = true;
-      break;
-    }
-  }
-  if (!productIsAlreadyInCart) {
-    alert("It is false")
-    product.numberChoosen = 1;
-    choosenProductArray.push(product)
-  } else {
-    product.numberChoosen++;
-  } */
   $.ajax({
     type:'JSON',
     method: 'POST',
     url: '../Api/productRequests/addProduct.php',
     data: {choosenProduct: JSON.stringify(product)},
     success: data => {
-     console.log(data)
-/*      var session = JSON.parse(data);
-      var shoppingCart = document.getElementById('shoppingCart');
-      shoppingCart.innerText = " "+ session.length;
-      reloadPage() */
+    location.reload();
+     alert(data)
+
     },
     error: error => {
       alert(error);
     }
   })
-  console.log(product)
-  
 }
-/* function reloadPage() {
-  console.log("hej")
-} */
-//Here we check where is the header if it is from start page the we add view otherwise no
+
+
+//Here we check where is the header if it is from start page we add view otherwise no
 function redirectForm() {
   var url = new URL (window.location.href);
   var categoryName = url.searchParams.get("categoryName");
