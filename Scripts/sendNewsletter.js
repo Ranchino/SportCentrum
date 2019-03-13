@@ -29,8 +29,13 @@ function insertNewsletter(){
     formdata.append("mail", mail);
     formdata.append("phone", phone);
     
+    if(firstname === "" || lastname === "" || mail === "" || phone === "") {
+        window.alert("Please fill in the required fields!");
+    } else {
+
     var url = new URL (window.location.href);
     var categoryName = url.searchParams.get("categoryName");
+
     function checkUrl(url){
         var url;
         if(categoryName) {
@@ -41,11 +46,13 @@ function insertNewsletter(){
         }
         return url;
     }
-    makeRequest( checkUrl(url), "POST", formdata, function(response) {
+
+    makeRequest(checkUrl(url), "POST", formdata, function(response) {
         if(response){
-            alert("Nu är du ansluten till nyhetsbrev!");
+            alert("Thanks for choosing our newsletter!");
         }else{
-            alert("det gick fel!");
+            alert("Somethig went wrong!");
         }
-    });
+    })
+}
 }

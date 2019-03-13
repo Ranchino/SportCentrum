@@ -9,7 +9,7 @@ class Shipper  {
     }
     public function getShippersLists()
     {
-      $query =  $this->database->connection->prepare("SELECT CompanyName, SippingPrice, ShippingMethod FROM shippers");
+      $query =  $this->database->connection->prepare("SELECT * FROM shippers");
       $query->execute();
       $result = $query->fetchAll(PDO::FETCH_OBJ);
 

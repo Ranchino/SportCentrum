@@ -11,8 +11,33 @@ function w3_open() {
   }
 
   function submitContactForm() {
-    alert("Your message has been recieved!");
-  } 
+    document.getElementById = 'contactName';
+    document.getElementById = 'contactMail';
+    document.getElementById = 'contactSubject';
+    document.getElementById = 'contactMessage';
+
+    if(contactName.value.length == 0 || 
+      contactMail.value.length == 0 || 
+      contactSubject.value.length == 0 || 
+      contactMessage.value.length == 0) {
+      alert("Fill in the required field!");
+    } else {
+      alert("We will contact you soon!");
+      document.location.reload()
+  }
+} 
+
+
+function specialTreatmentVip() {
+  document.getElementById = 'specialTreatmet';
+  if(specialTreatmet.value.length == 0) {
+    alert("Please fill in a valid email!")
+  }else (specialTreatmet.value = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+  {
+    alert("Success!")
+    document.location.reload()
+  }
+}
 
   // Get the modal
 var modal = document.getElementById('id01');

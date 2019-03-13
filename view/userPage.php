@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css-files/styleSheet.css">
     <link rel="stylesheet" href="../css-files/style-mobile.css">
     <link rel="stylesheet" href="../css-files/style-tablet.css">
+    <link rel="stylesheet" href="../css-files/widerTablet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./Scripts/productPage.js"></script>
     <script src="./Scripts/w3-school.js"></script>

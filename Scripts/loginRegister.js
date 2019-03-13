@@ -22,10 +22,10 @@ function test(){
             var info = data
             if(categoryName) {
                 if(info == "1") {
-                    alert("Välkommen User!")
+                    alert("Welcome User!")
                     window.location.href ="./userPage.php";
                 } else if(info == "0") {
-                    alert("Välkommen Admin!")
+                    alert("Welcome Admin!")
                     window.location.href ="./adminPage.php";
                 }else {
                     alert(data)
@@ -35,10 +35,10 @@ function test(){
             }else {
                
                 if(info == "1") {
-                    alert("Välkommen User!")
+                    alert("Welcome User!")
                     window.location.href ="./view/userPage.php";
                 } else if(info == "0") {
-                    alert("Välkommen Admin!")
+                    alert("Welcome Admin!")
                     window.location.href ="./view/adminPage.php";
                 }else {
                     alert(data)
@@ -75,10 +75,10 @@ function registerNewUser() {
             if(data == "true") {
                 if(categoryName){
                     //Here we just want to refresh the
-                    alert("Nu har vi registerat dig");
+                    alert("Register completed!");
                     init()
                 }else{
-                    alert("Nu har vi registerat dig");
+                    alert("Register completed!");
                     window.location.href ="./index.php";
                     
                 }
