@@ -3,7 +3,7 @@
     <h1>Subscribe</h1>
     <p>To get special offers and VIP treatment:</p>
     <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+    <button type="button" class="w3-button w3-red w3-margin-bottom" onclick="specialTreatmentVip()">Subscribe</button>
   </div>
 
 

@@ -27,6 +27,12 @@ function w3_open() {
   }
 } 
 
+
+function specialTreatmentVip() {
+  alert("Error 404, not found :/")
+  document.location.reload()
+}
+
   // Get the modal
 var modal = document.getElementById('id01');
 
