@@ -1,0 +1,18 @@
+tr {
+    border: 1px solid blue;
+}
+
+th {
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+td {
+    border: 1px solid black;
+}
+
+table .w3-table .w3-striped .w3-white {
+    flex-direction: column;
+}
+
+

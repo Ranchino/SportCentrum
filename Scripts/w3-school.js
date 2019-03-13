@@ -10,6 +10,29 @@ function w3_open() {
     document.getElementById("myOverlay").style.display = "none";
   }
 
+  function submitContactForm() {
+    document.getElementById = 'contactName';
+    document.getElementById = 'contactMail';
+    document.getElementById = 'contactSubject';
+    document.getElementById = 'contactMessage';
+
+    if(contactName.value.length == 0 || 
+      contactMail.value.length == 0 || 
+      contactSubject.value.length == 0 || 
+      contactMessage.value.length == 0) {
+      alert("Fill in the required field!");
+    } else {
+      alert("We will contact you soon!");
+      document.location.reload()
+  }
+} 
+
+
+function specialTreatmentVip() {
+  alert("Error 404, not found :/")
+  document.location.reload()
+}
+
   // Get the modal
 var modal = document.getElementById('id01');
 
@@ -41,3 +64,23 @@ function switchToLoginForm() {
     $('#registerAccount').hide();
     $('.signInHere').hide();
 }
+
+
+// fade in back-top
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 800) {
+            $('.go-back-tag').fadeOut();
+        } else {
+            $('.go-back-tag').fadeIn();
+        }
+    });
+
+    // scroll body to 0px on click
+/*     $('.go-back-tag').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1600);
+        return false;
+    }); */
+});

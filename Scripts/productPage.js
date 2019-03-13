@@ -11,11 +11,16 @@ function getTheseProducts(){
         success: data => {
           document.getElementById("linksOption").value = categoryName;
           var title = document.querySelector("h2.title");
-          title.innerHTML = "" + categoryName +"s Clothing";
-          allInfo = data;
-          printOutProducts(allInfo)
-         
-          
+          if(categoryName == "women") {
+            title.innerHTML = "" + "Womens Clothing";
+          } else if (categoryName == "men") {
+            title.innerHTML = "" + "Mens Clothing";
+          } else if (categoryName == "children") {
+            title.innerHTML = "" + "Childrens Clothing";
+          } else {
+            title.innerHTML = "" + "Accessories Clothing";
+          }
+          printOutProducts(data)
         },
         error: error => { console.log(error)}
     });

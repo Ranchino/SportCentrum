@@ -1,4 +1,4 @@
-@media screen and (min-width: 767px) and (max-width: 1025px) { 
+@media screen and (min-width: 767px) and (max-width: 1023px) { 
     section div {
         width: 100%;
         justify-content: center;
@@ -13,8 +13,16 @@
     .go-back-tag {
         font-weight: 900;
         margin-left: 1.3em;
-        margin-top: -1.3em;
+        margin-top: -3.3em;
+        text-decoration: none;
+        background-color: #4CAF50;
     }
+
+    #sportcentrum-title {
+        text-decoration: none;
+        font-size: 1em;
+        font-family: "Roboto", sans-serif;
+      }
       
     h4 {
         font-weight: bold;

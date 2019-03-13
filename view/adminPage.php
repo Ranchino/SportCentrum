@@ -7,12 +7,15 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./css-files/adminStyleSheet.css">
-<link rel="stylesheet" href="./css-files/style-mobile.css">
-<link rel="stylesheet" href="./css-files/style-tablet.css">
+<link rel="stylesheet" href="../css-files/adminStyleSheet.css">
+<link rel="stylesheet" href="../css-files/adminStyleMobile.css">
+<link rel="stylesheet" href="../css-files/adminStyleTablet.css">
+<link rel="stylesheet" href="../css-files/style-mobile.css">
+<link rel="stylesheet" href="../css-files/style-tablet.css">
 <script src="../Scripts/productPage.js"></script>
 <script src="../Scripts/newsletterView.js"></script>
-<script src="./Scripts/w3-school.js"></script>
+<script src="../Scripts/orderView.js"></script>
+<script src="../Scripts/w3-school.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body class="w3-light-grey" onload="refreshPage()">
@@ -54,7 +57,7 @@
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Delete Products</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Change Products</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Update Products in stock</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+    <button onclick=viewOrder() class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</button>
     <button onclick=viewNewsletter() class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  Newsletter</button>
     
   </div>
@@ -115,19 +118,51 @@
     </div>
   </div>
 
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div id="tempForm" style='text-align:center'> 
+        <template id="templeSub">
+          <h3><b>Newsletter subscribers:</b></h3>
+            <table class="w3-table w3-striped w3-white" id="newsletter" >
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-Mail</th>
+                <th>Phone number</th>
+              </tr>
+            </table>
+        </template>
+      </div>
+    </div>
+  </div>
 
-  <div id="content">
-    <template id="newsTemp">
-      <h3>Newsletter subscribers:</h3>
-        <table id="newsletter">
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>E-Mail</th>
-            <th>Phone number</th>
-          </tr>
-        </table>
-    </template>
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div id="orderForm" style='text-align:center'> 
+        <template id="templeOrder">
+          <h3><b>All orders:</b></h3>
+          <div class="w3-responsive">
+            <table class="w3-table w3-striped w3-white" id="orders" >
+              <tr>
+                <th>Order ID</th>
+                <th>Shipper ID</th>
+                <th>Customer ID</th>
+                <th>Ship FirstName</th>
+                <th>Ship LastName</th>
+                <th>Ship Adress</th>
+                <th>Ship PostelCode</th>
+                <th>Ship City</th>
+                <th>Ship Mail</th>
+                <th>Ship PhoneNo</th>
+                <th>Ship Date</th>
+                <th>Total Price</th>
+                <th>Order Date</th>
+              </tr>
+            </table>
+          </div>
+        </template>
+      </div>
+    </div>
   </div>
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">

@@ -14,15 +14,19 @@
     } */
     ?>
     </i>
+    <a id="sportcentrum-title" href="index.php">
+    SportCentrum
+</a><br>
+<!--     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()"></i> -->
 
   </div>
-  <div class="w3-padding-64 w3-large w3-text-grey">
+  <div class="w3-padding-32 w3-large w3-text-grey">
 
 
     <form id="productPage" style="margin-left: 0.5em; margin-bottom: 0.1em;">
         <select name='categoryName' style="background-color: white;" id="linksOption">
-            <option value='women'>Women</option>
-            <option value='men'>Men</option>
+          <option value='men'>Men</option>
+          <option value='women'>Women</option>
             <option value='children'>Children</option>
             <option value='accessories'>Accessories</option>
             <option value='allProducts'>All Products</option>
@@ -70,13 +74,13 @@ color: white;" >
   }
 } */
 ?>
-  <a class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a class="w3-bar-item w3-button w3-padding" href="#footer">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24 w3-wide">SportCentrum</div>
+  <a id="sportcentrum-title" class="w3-bar-item w3-padding-24 w3-wide" href="index.php">SportCentrum</a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 

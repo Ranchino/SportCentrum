@@ -5,6 +5,20 @@
       text-align: center;
       margin-bottom: 1em;
     }
+
+    #sportcentrum-title {
+      text-decoration: none;
+      font-size: 1em;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .fa-shopping-cart {
+      margin-top: 0.5em;
+    }
+
+    .w3-sidebar {
+      margin-left: 0;
+    }
     
     h2.title {
       width: auto;
@@ -15,9 +29,13 @@
     .go-back-tag {
       font-weight: 900;
       font-family: "Roboto", sans-serif;
-      font-size: 1.3em;
+      font-size: 1em;
       margin-left: 0.5em;
-      margin-top: -2em;
+      margin-top: -3.5em;
+      background-color: #4CAF50;
+      border-radius: 0.3em;
+      opacity: 0.9;
+      text-decoration: none;
     }
     
     h4 {
