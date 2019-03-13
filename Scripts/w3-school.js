@@ -29,8 +29,14 @@ function w3_open() {
 
 
 function specialTreatmentVip() {
-  alert("Error 404, not found :/")
-  document.location.reload()
+  document.getElementById = 'specialTreatmet';
+  if(specialTreatmet.value.length == 0) {
+    alert("Please fill in a valid email!")
+  }else (specialTreatmet.value = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+  {
+    alert("Success!")
+    document.location.reload()
+  }
 }
 
   // Get the modal
