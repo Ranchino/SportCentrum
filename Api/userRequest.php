@@ -27,7 +27,7 @@ if($method){
                     return;
                 }    
             }
-            echo json_encode("Please chech your login credentials!");
+            echo json_encode("Please check your login credentials!");
             return;               
         }
         //Here we register new user
