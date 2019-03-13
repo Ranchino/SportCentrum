@@ -16,6 +16,8 @@
 <script src="../Scripts/productPage.js"></script>
 <script src="../Scripts/w3-school.js"></script>
 <script src="../Scripts/loginRegister.js"></script>
+<script src="../Scripts/sendNewsletter.js"></script>
+
 
 
 <body class="w3-content" onload="getTheseProducts()">
