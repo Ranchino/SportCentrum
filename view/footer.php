@@ -3,7 +3,7 @@
     <h1>Subscribe</h1>
     <p>To get special offers and VIP treatment:</p>
     <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+    <button type="button" class="w3-button w3-red w3-margin-bottom" onclick="specialTreatmentVip()">Subscribe</button>
   </div>
 
 
@@ -14,11 +14,11 @@
         <h4>Contact</h4>
         <p>Questions? Go ahead.</p>
         <form id="formu">
-          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
-          <button type="submit" class="w3-button w3-block w3-black" onclick="submitContactForm()">Send</button>
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" id ="contactName" name="Name"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" id="contactMail" name="Email"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" id="contactSubject" name="Subject"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" id="contactMessage" name="Message"></p>
+          <button type="button" type="submit" class="w3-button w3-block w3-black" onclick="submitContactForm()">Send</button>
     </form>
       </div>
 
@@ -64,7 +64,7 @@
         <p><input class="w3-input w3-border" type="text" placeholder="Surname" name="firstName" id="firstName"></p>
         <p><input class="w3-input w3-border" type="text" placeholder="Lastname" name="lastName" id="lastName"></p>
         <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" name="mail" id="mail"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Phonenumber" name="phoneNo" id="phone"></p>
+        <p><input class="w3-input w3-border" type="number" placeholder="Phonenumber" name="phoneNo" id="phone"></p>
         <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" type="submit" name="sendNewsletter" onclick="insertNewsletter()">Subscribe</button>
       </form>
     </div>

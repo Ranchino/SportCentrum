@@ -11,8 +11,27 @@ function w3_open() {
   }
 
   function submitContactForm() {
-    alert("Your message has been recieved!");
-  } 
+    document.getElementById = 'contactName';
+    document.getElementById = 'contactMail';
+    document.getElementById = 'contactSubject';
+    document.getElementById = 'contactMessage';
+
+    if(contactName.value.length == 0 || 
+      contactMail.value.length == 0 || 
+      contactSubject.value.length == 0 || 
+      contactMessage.value.length == 0) {
+      alert("Fill in the required field!");
+    } else {
+      alert("We will contact you soon!");
+      document.location.reload()
+  }
+} 
+
+
+function specialTreatmentVip() {
+  alert("Error 404, not found :/")
+  document.location.reload()
+}
 
   // Get the modal
 var modal = document.getElementById('id01');
