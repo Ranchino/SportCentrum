@@ -3,9 +3,16 @@
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
-    <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart"></i>
-
-<!--     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()"></i> -->
+    <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart">
+    <?php
+    if(isset($_SESSION['choosen'])) {
+      //unset($_SESSION['choosen']);
+      echo json_encode(count($_SESSION['choosen']));
+    }else {
+      echo json_encode(0);
+    }
+    ?>
+    </i>
 
   </div>
   <div class="w3-padding-32 w3-large w3-text-grey">

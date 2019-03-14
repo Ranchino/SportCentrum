@@ -125,6 +125,7 @@
 <h1>Please Check Your Added Products!</h1>
     <section id="content">
     </section>
+    <button type="button" onclick="wantToCheckOut()"> Check Out!</button>
 
     <?php include_once("../view/footer.php") ?>
 </body>

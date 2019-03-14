@@ -1,25 +1,25 @@
 //Here we bring the products from session that we choosen from productPage and save in the session
 function checkChoosenProducts(){
     $.ajax({
-      type:"JSON",
-      method:"POST",
+      dataType:"json",
+      type:"POST",
       url:'../Api/productRequests/viewSavedProduct.php',
       data:{savedProduct: 'saved'},
       success: data => {
-        var savedData = JSON.parse(data);
+        var savedData = data;
         console.log(savedData)
+        
         var shoppingCart = document.getElementById('shoppingCart');
         shoppingCart.innerText = " "+ savedData.length;
         printOutChoosenProducts(savedData)
       },
       error: error => {
-        alert(error)
+        console.log(error)
       }
     })
   }
 
   function printOutChoosenProducts(data){
-    console.log(data)
     var section = document.getElementById('content');
     for(var i = 0; i<data.length; i++) {
         var divForSingleProduct = createDiv();
@@ -77,6 +77,30 @@ function checkChoosenProducts(){
   }
 
   function deleteProduct(product){
-    console.log(product)
+    $.ajax({
+      dataType:'json',
+      type:'put',
+      url:'../Api/productRequests/updateProduct.php',
+      data:{wantToUpdate: JSON.stringify(product)},
+      success: data => {
+        if(data ==  true){
+          alert("Now we decrement it by -1");
+          location.reload();
+        }
+        if(data ==  false){
+          alert("Now we delete it competley");
+          location.reload();
+        }
+      
+      },
+      error: error => {
+        console.log(error)
+      }
+    })
   }
+
+
+function wantToCheckOut() {
+  alert("Hej")
+}
  
