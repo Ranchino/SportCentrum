@@ -41,9 +41,7 @@ __Fyra utvecklare:__
 
 ## Kravspec:
 - [x] Alla sidor skall vara responsiva. (G)
-- color: string = 000000
-     The color of the text in hexadecimal format (6 chars).
-     This can optionally be prefixed with a pound symbol (#).
+- string = hwehajheawe
 - [x] Arbetet ska implementeras med objektorienterade principer. (G)
 - [ ] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
 - [ ] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
