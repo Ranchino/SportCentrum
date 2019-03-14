@@ -70,7 +70,7 @@ function checkChoosenProducts(){
   }
   function createDeleteButton(categoryInfo){
     var putButton = document.createElement("button");
-    putButton.innerText = "Delete Product From Shoppingcart";
+    putButton.innerText = "Delete";
     putButton.style.backgroundColor= "red";
     putButton.onclick = function(){ deleteProduct(categoryInfo)}
     return putButton

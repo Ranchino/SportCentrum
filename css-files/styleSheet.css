@@ -76,6 +76,8 @@ input[type=text], input[type=password] {
   /* Center the image and position the close button */
   .container {
     padding: 16px;
+    text-align: center;
+    width: auto;
   }
 
   .title {
@@ -83,6 +85,10 @@ input[type=text], input[type=password] {
     text-align: center;
     margin-bottom: 2em;
   }
+
+  button, input {
+     overflow: none;
+}
 
   section h4 {
     width: 100%;
@@ -101,8 +107,8 @@ input[type=text], input[type=password] {
   }
 
   h1.h1-collection-style-text {
-    background-color: white; 
-    color: black; 
+    background-color: #4CAF50; 
+    color: white; 
     border-radius: 10px; 
     opacity: 0.9;
   }
@@ -130,6 +136,47 @@ input[type=text], input[type=password] {
     height: auto; 
     margin-bottom: 10em;
     margin-left: 0;
+  }
+
+  img {
+    border-radius: 1em;
+  }
+
+  .w3-bar-block .w3-bar-item {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .w3-bar-block .w3-bar-item:hover {
+    background-color: #4CAF50!important;
+    color: white!important;
+  }
+  
+  .w3-wide{
+    letter-spacing: 0px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  #mySidebar {
+    margin-left: 0em;
+  }
+
+  .subscribe-footer {
+    background-color: #4CAF50!important;
+    margin-bottom: 2em;
+    margin-top: 4em;
+    width: 50%;
+  }
+
+  .w3-modal-content {
+    border-radius: 1em;
+    font-family: "Montserrat", sans-serif;
+
+  }
+
+  .w3-red:hover {
+    background-color: white!important;
+    color: red!important;
   }
 
   .go-back-tag {

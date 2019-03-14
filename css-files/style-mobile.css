@@ -31,11 +31,25 @@
       font-family: "Roboto", sans-serif;
       font-size: 1em;
       margin-left: 0.5em;
-      margin-top: -3.5em;
       background-color: #4CAF50;
       border-radius: 0.3em;
       opacity: 0.9;
       text-decoration: none;
+    }
+
+    p.w3-right {
+      margin-top: -3em;
+    }
+
+    .subscribe-footer {
+      background-color: #4CAF50!important;
+      margin-bottom: 2em;
+      margin-top: 4em!important;
+      width: 100%;
+    }
+
+    .w3-top {
+      position: relative;
     }
     
     h4 {
@@ -62,7 +76,7 @@
     h1.h1-collection-style-text {
       font-size: 1.5em;
       margin-left: -1em;
-      margin-top: -1em;
+      margin-top: -0.5em;
       font-family: "Roboto", sans-serif;
     }
     
@@ -75,7 +89,6 @@
       opacity: 0.9;
       font-family: "Roboto", sans-serif;
     }
-    
 }
     
     
