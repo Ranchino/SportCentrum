@@ -40,7 +40,8 @@ __Fyra utvecklare:__
 4. Peter Cavar 
 
 ## Kravspec:
-- [ ] Alla sidor skall vara responsiva. (G)
+- [✓] Alla sidor skall vara responsiva. (G)
+  + vi har använt semantic för att göra sidorna responsiva
 - [ ] Arbetet ska implementeras med objektorienterade principer. (G)
 - [ ] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
 - [ ] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
