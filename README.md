@@ -46,7 +46,7 @@ __Fyra utvecklare:__
 - [x] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
 - [x] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
 - [x] All data som programmet utnyttjar ska vara sparat i en MYSQL databas (produkter, beställningar, konton mm). (G)
-- [ ] Det ska finnas ett normaliserat diagram över databasen i gitrepot. (G)
+- ["x"] Det ska finnas ett normaliserat diagram över databasen i gitrepot. (G)
 - [ ] Man ska kunna logga in som administratör i systemet. (G)
 - [ ] Inga Lösenord får sparas i klartext i databasen. (G)
 - [ ] En besökare ska kunna beställa produkter från sidan, detta ska uppdatera lagersaldot i databasen. (G)
