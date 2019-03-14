@@ -44,15 +44,20 @@ __Fyra utvecklare:__
 > Vi använde media query för att få responsiva sidor
 - [x] Arbetet ska implementeras med objektorienterade principer. (G)
 - [x] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
-> Vi skapade Er Diagram med hjälp av en sida som kallas www.draw.io som vi delade upp så alla kunde medverka 
+> Vi skapade Er Diagram med hjälp av en sida som kallas www.draw.io som vi delade upp så alla kunde medverka i.
 - [x] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
+> ”Vår affärsidé är att erbjuda sport- och sportmodesprodukter av hög kvalité, med god funktion och snygg design för hela familjen till bästa pris.”
 - [x] All data som programmet utnyttjar ska vara sparat i en MYSQL databas (produkter, beställningar, konton mm). (G)
+> 
 - [x] Det ska finnas ett normaliserat diagram över databasen i gitrepot. (G)
+> vi har pushat upp den normaliserat diagrammen i över databsen som en bild.
 - [x] Man ska kunna logga in som administratör i systemet. (G)
+> Vi har skapa en function med Javascript som kallas för registerNewUser() så ny använder kan registrera sig och 
 - [x] Inga Lösenord får sparas i klartext i databasen. (G)
 - [ ] En besökare ska kunna beställa produkter från sidan, detta ska uppdatera lagersaldot i databasen. (G)
 - [ ] Administratörer ska kunna uppdatera antalet produkter i lager från admin delen av sidan. (G)
 - [x] Administratörer ska kunna se en lista på alla gjorda beställningar. (G)
+> Här har vi gjort i PHP en class som heter orderClass.PHP som har en function i sig som kallas getAllOrders() med hjälp av denna fucntion får admin se en lista över beställingar.
 - [x] Sidans produkter ska delas upp i kategorier, en produkt ska tillhöra minst en kategori, men kan tillhöra flera. (G)
 - [ ] Från hemsidan ska man kunna se en lista över alla produkter, och man ska kunna lista bara dom produkter som tillhör en kategori. (G)
 - [x] Besökare ska kunna lägga produkterna i en kundkorg, som är sparad i session på servern. (G)
