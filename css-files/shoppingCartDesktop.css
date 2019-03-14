@@ -3,7 +3,6 @@ body {
 }
 
 .w3-sidebar {
-    margin-left: 0em;
     font-family: "Roboto", sans-serif;
 }
 
@@ -22,7 +21,7 @@ body {
 #content div {
     width: 15em;
     height: 20em;
-    margin: 2em;
+    margin: 1em;
 }
 
 h1 {

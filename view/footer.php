@@ -1,5 +1,5 @@
   <!-- Subscribe section -->
-  <div class="w3-container w3-black w3-padding-32" style="border-radius: 1em;">
+  <div class="w3-container w3-black w3-padding-32 subscribe-footer" style="border-radius: 1em;">
     <h1>Subscribe</h1>
     <p>To get special offers and VIP treatment:</p>
     <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%" id="specialTreatmet"></p>

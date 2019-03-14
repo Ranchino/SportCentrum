@@ -9,8 +9,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../css-files/styleSheet.css">
+<link rel="stylesheet" href="../css-files/style-mobile.css">
+<link rel="stylesheet" href="../css-files/styleTablet.css">
 <link rel="stylesheet" href="../css-files/shoppingCart.css">
 <link rel="stylesheet" href="../css-files/shoppingCartDesktop.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../Scripts/productPage.js"></script>
 <script src="../Scripts/loginRegister.js"></script>
@@ -26,7 +29,6 @@
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart"></i>
-
 
     
     <?php
@@ -123,5 +125,7 @@
 <h1>Please Check Your Added Products!</h1>
     <section id="content">
     </section>
+
+    <?php include_once("../view/footer.php") ?>
 </body>
 </html>
