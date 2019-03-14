@@ -42,7 +42,7 @@ __Fyra utvecklare:__
 ## Kravspec:
 - [x] Alla sidor skall vara responsiva. (G)
   + vi har använt semantic för att göra sidorna responsiva
-  - ![#f03c15 hello](https://placehold.it/15/f03c15/000000?text=+) vi har använt semantic för att göra sidorna responsiva `#f03c15`
+  - ![#f03c15 hello](https://placehold.it/15/f03c15/000000?vi har använt semantic för att göra sidorna responsiva=+) `#f03c15`
 - [x] Arbetet ska implementeras med objektorienterade principer. (G)
 - [ ] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
 - [ ] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
