@@ -32,7 +32,6 @@
     <img src="./Images/menMainPicture.jpg" class ="img-for-index">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
     <h1  class="h1-collection-style-text"> New Collection 2019</h1>
-    <h4 class="h4-collection-style-text"> Get Yours Today!</h4>
      </div>
   </div>
   <!-- section is the whole content and the div has four pictures -->

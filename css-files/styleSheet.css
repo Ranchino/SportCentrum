@@ -101,8 +101,8 @@ input[type=text], input[type=password] {
   }
 
   h1.h1-collection-style-text {
-    background-color: white; 
-    color: black; 
+    background-color: #4CAF50; 
+    color: white; 
     border-radius: 10px; 
     opacity: 0.9;
   }
@@ -130,6 +130,47 @@ input[type=text], input[type=password] {
     height: auto; 
     margin-bottom: 10em;
     margin-left: 0;
+  }
+
+  img {
+    border-radius: 1em;
+    border: 1px solid #4CAF50;
+  }
+
+
+  #mySidebar {
+    border-right: 1px solid #4CAF50;
+  }
+
+  .w3-bar-block .w3-bar-item {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .w3-bar-block .w3-bar-item:hover {
+    background-color: #4CAF50!important;
+    color: white!important;
+  }
+  
+  .w3-wide{
+    letter-spacing: 0px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .w3-black {
+    background-color: #4CAF50!important;
+    margin-bottom: 1em;
+  }
+
+  .w3-modal-content {
+    border-radius: 1em;
+    font-family: "Montserrat", sans-serif;
+
+  }
+
+  .w3-red:hover {
+    background-color: white!important;
+    color: red!important;
   }
 
   .go-back-tag {
