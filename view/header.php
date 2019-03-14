@@ -5,6 +5,8 @@
     <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart"></i>
 
+<!--     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()"></i> -->
+
   </div>
   <div class="w3-padding-32 w3-large w3-text-grey">
 
