@@ -43,9 +43,9 @@ __Fyra utvecklare:__
 - [x] Alla sidor skall vara responsiva. (G)
 > vi använde semantic för att få responsiva sidor
 - [x] Arbetet ska implementeras med objektorienterade principer. (G)
-- [ ] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
-- [ ] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
-- [ ] All data som programmet utnyttjar ska vara sparat i en MYSQL databas (produkter, beställningar, konton mm). (G)
+- [x] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
+- [x] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
+- [x] All data som programmet utnyttjar ska vara sparat i en MYSQL databas (produkter, beställningar, konton mm). (G)
 - [ ] Det ska finnas ett normaliserat diagram över databasen i gitrepot. (G)
 - [ ] Man ska kunna logga in som administratör i systemet. (G)
 - [ ] Inga Lösenord får sparas i klartext i databasen. (G)
