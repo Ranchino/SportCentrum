@@ -3,18 +3,18 @@
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
-<<<<<<< HEAD
-    <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart">
-      </i>
-
-<!--     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()"></i> -->
-=======
     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart"></i>
->>>>>>> 95724c89dfd9c5f6997e87f4281e3c4f17854899
 
   </div>
   <div class="w3-padding-32 w3-large w3-text-grey">
 
+  <?php 
+
+/*   if(isset($_SESSION['choosen'])) {
+    unset($_SESSION['choosen']);
+  }
+ */
+  ?>
 
     <form id="productPage" style="margin-left: 0.5em; margin-bottom: 0.1em;">
         <select name='categoryName' style="background-color: white;" id="linksOption">
