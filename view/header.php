@@ -6,6 +6,7 @@
     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart">
     <?php
     if(isset($_SESSION['choosen'])) {
+      //unset($_SESSION['choosen']);
       echo json_encode(count($_SESSION['choosen']));
     }else {
       echo json_encode(0);

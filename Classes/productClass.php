@@ -19,9 +19,6 @@ class Product {
                     return "Det gick inte att hämta product";
                 }
                 return $result;
-    
-                
-
         
             }catch(Exception $e) {
                 echo $e->getMessage();
@@ -42,10 +39,7 @@ class Product {
                     return "Det gick inte att hämta alla product";
                 }
                 return $result;
-    
-                
 
-        
             }catch(Exception $e) {
                 echo $e->getMessage();
         
@@ -78,31 +72,6 @@ class Product {
             
         }
 
+
 }
-
-/* $query = $this->database->connection->prepare
-                ("INSERT INTO products (ProductName, categoryID, UnitInStock, UnitPrice, QuantityPerUnit, PictureUrl) VALUES (:ProductName, :categoryID, :UnitInStock, :UnitPrice, :QuantityPerUnit, :PictureUrl)");
-
-                for($count = 0; $count<count($_POST['hidden_product_name']); $count++){
-                    $data = array(
-                        ':ProductName' => $_POST['hidden_product_name'][$count], 
-                        ':categoryID' => $_POST['hidden_category_id'][$count],
-                        ':UnitInStock' => $_POST['hidden_unit_in_stock'][$count], 
-                        ':UnitPrice' => $_POST['hidden_unit_price'][$count], 
-                        ':QuantityPerUnit' => $_POST['hidden_quentity_per_unit'][$count], 
-                        ':PictureUrl' => $_POST['hidden_image_url'][$count]);
-                    $statement = $connect->prepare($query);
-                    $statement->execute($data); */
-
-
-/* SELECT productName, unitInStock, unitPrice, quantityPerUnit, pictureUrl, categoryName  FROM products 
-                INNER JOIN categories ON products.categoryID=categories.categoryID */
-/* SELECT p.ProductName, p.UnitInStock, p.UnitPrice, p.QuantityPerUnit, p.PictureUrl, c.CategoryName FROM products 
-AS p JOIN `categories` AS c ON p.categoryID=c.categoryID WHERE c.categoryID=2 */
-/* $product['productName'], 
-                    $product['unitInStock'], $product['UnitPrice'], 
-                    $product['quantityPerUnit'], $product['pictureUrl'], $product['categoryName'] */
-/*SELECT p.productName, c.categoryName 
-                FROM products AS p INNER JOIN categories AS c 
-                ON p.categoryID=c.categoryID ORDER BY p.productName;  */
 ?>
