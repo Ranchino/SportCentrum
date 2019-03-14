@@ -41,7 +41,7 @@ __Fyra utvecklare:__
 
 ## Kravspec:
 - [x] Alla sidor skall vara responsiva. (G)
-- string = hwehajheawe
+> vi använde semantic för att få responsiva sidor
 - [x] Arbetet ska implementeras med objektorienterade principer. (G)
 - [ ] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
 - [ ] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
