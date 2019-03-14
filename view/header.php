@@ -10,6 +10,13 @@
   </div>
   <div class="w3-padding-32 w3-large w3-text-grey">
 
+  <?php 
+
+/*   if(isset($_SESSION['choosen'])) {
+    unset($_SESSION['choosen']);
+  }
+ */
+  ?>
 
     <form id="productPage" style="margin-left: 0.5em; margin-bottom: 0.1em;">
         <select name='categoryName' style="background-color: white;" id="linksOption">
