@@ -42,7 +42,7 @@ __Fyra utvecklare:__
 ## Kravspec:
 - [✓] Alla sidor skall vara responsiva. (G)
   + vi har använt semantic för att göra sidorna responsiva
-- [ ] Arbetet ska implementeras med objektorienterade principer. (G)
+- [x] Arbetet ska implementeras med objektorienterade principer. (G)
 - [ ] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
 - [ ] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
 - [ ] All data som programmet utnyttjar ska vara sparat i en MYSQL databas (produkter, beställningar, konton mm). (G)
