@@ -44,7 +44,7 @@ __Fyra utvecklare:__
 > Vi använde media query för att få responsiva sidor
 - [x] Arbetet ska implementeras med objektorienterade principer. (G)
 - [x] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
-> Vi skapade Er Diagram med hjälp av en sida som kallas #Drew.io som vi delade upp så alla kunde medverka 
+> Vi skapade Er Diagram med hjälp av en sida som kallas www.draw.io som vi delade upp så alla kunde medverka 
 - [x] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
 - [x] All data som programmet utnyttjar ska vara sparat i en MYSQL databas (produkter, beställningar, konton mm). (G)
 - [x] Det ska finnas ett normaliserat diagram över databasen i gitrepot. (G)
