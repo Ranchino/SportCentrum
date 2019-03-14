@@ -163,9 +163,17 @@ input[type=text], input[type=password] {
 
   .subscribe-footer {
     background-color: #4CAF50!important;
-    margin-bottom: 2em;
-    margin-top: 4em;
-    width: 50%;
+    margin-top: 7.5em;
+    height: auto;
+  }
+
+  .storeTextFooter {
+    margin-top: 6em;
+    text-align: center!important;
+  }
+
+  .subscribe-footer .w3-padding-32 {
+    padding: 0;
   }
 
   .w3-modal-content {

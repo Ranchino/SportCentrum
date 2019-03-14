@@ -1,10 +1,3 @@
-  <!-- Subscribe section -->
-  <div class="w3-container w3-black w3-padding-32 subscribe-footer" style="border-radius: 1em;">
-    <h1>Subscribe</h1>
-    <p>To get special offers and VIP treatment:</p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%" id="specialTreatmet"></p>
-    <button type="button" class="w3-button w3-red w3-margin-bottom" onclick="specialTreatmentVip()">Subscribe</button>
-  </div>
 
 
   <!-- Footer -->
@@ -21,22 +14,20 @@
           <button type="button" type="submit" class="w3-button w3-block w3-black" onclick="submitContactForm()">Send</button>
     </form>
       </div>
-
+      
       <div class="w3-col s4">
-        <h4>About</h4>
-        <p style="text-decoration: underline;">About us</a></p>
-        <p style="text-decoration: underline;">We're hiring</a></p>
-        <p style="text-decoration: underline;">Support</a></p>
-        <p style="text-decoration: underline;">Find store</a></p>
-        <p style="text-decoration: underline;">Shipment</a></p>
-        <p style="text-decoration: underline;">Payment</a></p>
-        <p style="text-decoration: underline;">Gift card</a></p>
-        <p style="text-decoration: underline;">Return</a></p>
-        <p style="text-decoration: underline;">Help</a></p>
+          <!-- Subscribe section -->
+          <div class="w3-container w3-black w3-padding-32 subscribe-footer" style="border-radius: 1em;">
+            <h1>Subscribe</h1>
+            <p>To get special offers and VIP treatment:</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%" id="specialTreatmet"></p>
+            <button type="button" class="w3-button w3-red w3-margin-bottom" onclick="specialTreatmentVip()">Subscribe</button>
+          </div>
+
       </div>
 
-      <div class="w3-col s4 w3-justify">
-        <h4 id="store">Store</h4>
+      <div class="w3-col s4 w3-justify storeTextFooter">
+        <h2 id="store">Store</h2>
         <p><i class="fa fa-fw fa-map-marker"></i> SportCentrum</p>
         <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
         <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
