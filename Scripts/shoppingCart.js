@@ -105,6 +105,25 @@ function checkChoosenProducts(){
     })
   }
 
+function DisPlayCheckOut() {
+  document.getElementById('id09').style.display='block';
+  $.ajax({
+    dataType:'json',
+    type: 'GET',
+    url: '../Api/viewShippers.php',
+    data:{getShippers: 'shipper'},
+    success: data => {
+      console.log(data)
+      if(data == false) {
+        alert("You did not sign in!")
+      }else {
+        console.log("Du har loggats in")
+      }
+    },
+    error: err => {console.log(err)}
+  })
+}
+
 function wantToCheckOut() {
   $.ajax({
     dataType:'json',
