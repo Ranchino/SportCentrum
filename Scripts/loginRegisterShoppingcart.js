@@ -1,4 +1,4 @@
-//Because of the path in shoppingcart we needed to use a separeted loginRegister.js
+//Because of the path in shoppingcart we needed to use a separeted loginRegister.js with the same code with different pathess
 function test(){
     var test = $("#info").serialize();
     $.ajax({
@@ -10,7 +10,7 @@ function test(){
             var info = data   
             if(info == "1") {
                 alert("Welcome User!")
-                window.location.href ="../index.php";
+                window.location.href ="./shoppingCart.php";
             } else if(info == "0") {
                 alert("Welcome Admin!")
                 window.location.href ="./adminPage.php";
@@ -33,7 +33,13 @@ function registerNewUser() {
         url:'../Api/userRequest.php',
         data: registerForm, 
         success: data => { 
-             window.location.href ="./index.php";
+            if(data == "true") {
+                alert("Register completed!");
+                window.location.href ="./shoppingCart.php";
+                    
+            }else {
+                alert(data)
+            }
         },
         error: error => { alert(error)}
     });

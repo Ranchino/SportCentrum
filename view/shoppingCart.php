@@ -77,7 +77,20 @@
 
   <form id="registering">
     <div class="container" id="registerAccount">
-      <h3 style="background-color: white;">Register As User or Admin</h3>
+      <h3 style="background-color: white;">Register OBS (If there is one admin then you can not sign up for admin)</h3>
+      <label for="mail"><b>Enter Firstname</b></label>
+      <input type="text" placeholder="Enter firstname" name="firstname" required>
+      <label for="mail"><b>Enter Lastname</b></label>
+      <input type="text" placeholder="Enter lastname" name="lastname" required>
+      <label for="mail"><b>Enter adress</b></label>
+      <input type="text" placeholder="Enter adress" name="adress" required>
+      <label for="mail"><b>Enter country</b></label>
+      <input type="text" placeholder="Enter country" name="country" required>
+      <label for="mail"><b>Enter city</b></label>
+      <input type="text" placeholder="Enter city" name="city" required>
+      <label for="mail"><b>Enter phoneNo</b></label>
+      <input type="text" placeholder="Enter phoneNo" name="phoneNo" required>
+      
       <label for="mail"><b>Enter email</b></label>
       <input type="text" placeholder="Enter Username" name="mail" required>
 
@@ -122,38 +135,46 @@
 
 <div id="id09" class="modal">
   <span onclick="document.getElementById('id09').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php">
+  <form class="modal-content" id="checkOutForm">
     <div class="container">
       <h1>Almost Done!</h1>
       <p>Please fill in your checkout details.</p>
       <hr>
 
       <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Surname</label>
+            <label for="fname"><i class="fa fa-user"></i> Userrname</label>
             <input type="text" id="fname" name="firstname" placeholder="Sven">
+
             <label for="lname"><i class="fa fa-user"></i> Lastname</label>
             <input type="text" id="lname" name="lastname" placeholder="Svensson">
+
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" placeholder="john@example.com">
+
             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
             <input type="text" id="adr" name="address" placeholder="Svenssongatan 14a">
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="Göteborg">
+
+            <label for="city"> City</label>
+            <input type="text" id="city" name="city" placeholder="Goteborg">
+
             <label for="postalcode"><i class="fa fa-institution"></i> Postal code</label>
             <input type="text" id="postalcode" name="postalcode" placeholder="43350">
-            
-            
+
+            <label for="shipPhoneNO"> Phone</label>
+            <input type="text" id="shipPhoneNO" name="shipPhoneNO" placeholder="1212">
+
+            <label for="totalPrice"> Total Price In Sek</label>
+            <input type="text" id="totalPrice" name="totalPrice" placeholder="0">
             
             <p>By purchasing from our shop you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
             <div style="text-align: left;">
             <label for="orderingdate"><i class="fa fa-institution"></i> Ordering date</label>
             <input type="date" id="orderingDate" name="orderingdate">
-                  </div>
+            </div>
 
-            <div style="text-align: left;">
-      <input type="radio" name="shippingMethod" value="DHL"> DHL<br>
-      <input type="radio" name="shippingMethod" value="BRING"> BRING<br>
-      <input type="radio" name="shippingMethod" value="POSTNORD"> POSTNORD<br>
+            <div style="text-align: left;" id="ContentFraktInfo">
+
+            </div>
       </div>
 
       <div class="clearfix">

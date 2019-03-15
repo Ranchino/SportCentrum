@@ -16,6 +16,17 @@ class Shipper  {
         }
         return $result;
     }
+    public function getShipperID()
+    {
+      $query =  $this->database->connection->prepare("SELECT ShipperID, CompanyName FROM shippers");
+      $query->execute();
+      $result = $query->fetchAll(PDO::FETCH_OBJ);
+
+        if (empty($result)) {
+            return "Det gick inte att hämta shipperID";
+        }
+        return $result;
+    }
 }
 
 ?>

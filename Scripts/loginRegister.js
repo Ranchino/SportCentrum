@@ -74,9 +74,9 @@ function registerNewUser() {
         success: data => { 
             if(data == "true") {
                 if(categoryName){
-                    //Here we just want to refresh the
                     alert("Register completed!");
-                    init()
+                    window.location.href ="../index.php";
+    
                 }else{
                     alert("Register completed!");
                     window.location.href ="./index.php";

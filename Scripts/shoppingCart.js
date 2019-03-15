@@ -7,15 +7,16 @@ function checkChoosenProducts(){
       data:{savedProduct: 'saved'},
       success: data => {
         var savedData = data;
-        var checkOutButton = document.getElementById("checkOutButton");
+        //var checkOutButton = document.getElementById("checkOutButton");
         if(savedData == false) {
-          checkOutButton.style.opacity = "0";
+         // checkOutButton.style.opacity = "0";
           console.log("you did not choosen any product yet")
         }else{
           var shoppingCart = document.getElementById('shoppingCart');
           shoppingCart.innerText = " "+ savedData.length;
           printOutChoosenProducts(savedData)
-          checkOutButton.style.opacity = "1";
+          countTotalPrice(savedData)
+          //checkOutButton.style.opacity = "1";
 
         }
       },
@@ -105,6 +106,18 @@ function checkChoosenProducts(){
     })
   }
 
+//Here we count the toral price for all products
+function countTotalPrice(priceOfProducts){
+  var totalPrice = 0;
+  for(var i = 0; i<priceOfProducts.length; i++) {
+    var x = Number(priceOfProducts[i].unitPrice) * Number(priceOfProducts[i].numberChoosen)
+    totalPrice += x
+  }
+  var theWholePrice = document.getElementById("totalPrice");
+  theWholePrice.value = totalPrice;
+ 
+}
+//Here we get the first click to checkout and the fraktAlternatives which we get from the database
 function DisPlayCheckOut() {
   document.getElementById('id09').style.display='block';
   $.ajax({
@@ -113,29 +126,53 @@ function DisPlayCheckOut() {
     url: '../Api/viewShippers.php',
     data:{getShippers: 'shipper'},
     success: data => {
-      console.log(data)
-      if(data == false) {
-        alert("You did not sign in!")
-      }else {
-        console.log("Du har loggats in")
-      }
+      printOutFraktAlterNativ(data);
     },
     error: err => {console.log(err)}
   })
 }
+function printOutFraktAlterNativ(fraktInfo){
+  var ContentFraktInfo = document.getElementById("ContentFraktInfo");
+  var select = document.createElement("select");
+  select.setAttribute("name", "choiceCompany");
+  for(var i = 0; i<fraktInfo.length; i++){
+    var compnayName = document.createElement("h6");
+    compnayName.innerHTML = fraktInfo[i].CompanyName;
+    var shippingPrice = document.createElement("h6");
+    shippingPrice.innerHTML = fraktInfo[i].ShippingPrice + " SEK"; 
+    var shippingMethod = document.createElement("h6");
+    shippingMethod.innerHTML = fraktInfo[i].ShippingMethod; 
+    var space = document.createElement("h6");
+    space.innerHTML = "---------------------------------------"
+    var option = document.createElement("option");
+    option.value = fraktInfo[i].CompanyName;
+    option.innerText = fraktInfo[i].CompanyName;
+    select.appendChild(option);
 
+    ContentFraktInfo.appendChild(compnayName);
+    ContentFraktInfo.appendChild(shippingPrice);
+    ContentFraktInfo.appendChild(shippingMethod);
+    ContentFraktInfo.appendChild(space);
+    ContentFraktInfo.appendChild(select);
+
+  }
+}
+//Here we send the order by checking first if the person is singed and has something in the shoppingcart
 function wantToCheckOut() {
+  var formData  = $("#checkOutForm").serialize();
   $.ajax({
     dataType:'json',
     type: 'POST',
     url: '../Api/checkOutRequest.php',
-    data:{checkOut: 'checkOut'},
+    data:formData,
     success: data => {
-      console.log(data)
       if(data == false) {
-        alert("You did not sign in!")
+        alert("Please Sing in Or Choose Products Or you fill the info")
       }else {
-        console.log("Du har loggats in")
+        alert("Now We have Your Order!")
+        location.reload();
+        alert("Thanks For Shopping!");
+        
       }
     },
     error: err => {console.log(err)}
