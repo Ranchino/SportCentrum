@@ -68,6 +68,7 @@ __Fyra utvecklare:__
 - [x] Man ska från hemsidan kunna skriva upp sig för att få butikens nyhetsbrev genom att ange sitt namn och epostadress. (G)
 > här har vi skapat Newsletter.PHP och Newsletter.js så när en ny kund skriver up sig i nyhetsbrev får hen mail.
 - [x] Administratörer ska kunna se en lista över personer som vill ha nyhetsbrevet och deras epost adresser. (G)
+> Med hjälp av Newsletter som vi har skapat när är en person skriver upp sig i nyhets brev då sparas de i databasen sen kan admin kalla på det.
 - [ ] Besökare ska kunna välja ett av flera fraktalternativ. (G)
 - [ ] Tillgängliga fraktalternativ ska vara hämtade från databasen. (G)
 
