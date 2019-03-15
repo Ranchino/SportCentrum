@@ -1,0 +1,41 @@
+
+    h3 {
+        margin-bottom: 2em;
+    }
+
+
+    div #tempForm {
+        border: 1px solid red;
+    }
+
+    #tempForm th {
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    #tempForm td {
+        border: 1px solid black;
+    }
+
+    #products {
+        width: 100%;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    button {
+        border: 1px solid black;
+        border-radius: 1em;
+        outline: none;
+        margin-left: 1em;
+        margin-top: 2em;
+    }
+
+    a {
+        border: 1px solid black;
+        border-radius: 0.3em;
+        outline: none;
+        margin-left: 1em;
+        text-decoration: none;
+        color: black;
+    }

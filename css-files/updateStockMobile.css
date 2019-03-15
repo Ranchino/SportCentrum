@@ -1,0 +1,52 @@
+
+@media screen and (max-width: 767px) {
+    #tempForm {
+        justify-content: center;
+        width: 100%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #tempForm h3 {
+        margin: 1em;
+    }
+
+    #tempForm th {
+        border: 1px solid black;
+        border: 1px solid black;
+        display: -webkit-flex; /* Safari */
+        -webkit-flex-direction: row-reverse; /* Safari 6.1+ */
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+    }
+
+    #tempForm td {
+        border: 1px solid black;
+        width: 5em;
+    }
+
+    #products {
+        width: 100%;
+        text-align: center;
+        border: none!important;
+    }
+
+    button {
+        border: 1px solid black;
+        border-radius: 1em;
+        outline: none;
+        margin-left: 1em;
+    }
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+
+   tr {
+       border: 1px solid red;
+       width: 100%;
+   }
+
+
+}    
