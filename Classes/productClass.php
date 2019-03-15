@@ -87,14 +87,14 @@ class Product {
                 echo $e->getMessage();
             }
         }
-        public function updateProductsInStock(){
+        public function updateProductsInStock($quantity, $productID){
             try{
                 $query = $this->database->connection->prepare(" UPDATE products 
-                SET unitInStock ='" .$amount. "'WHERE productId = '".$id."';");
+                SET UnitInStock ='" .$quantity. "'WHERE ProductID = '".$productID."';");
                 
                 $result = $query->execute();
                 if (empty($result)) {
-                    return "Det finns inga ordrar!";
+                    return "Det finns inget att uppdatera!";
                 }
                 return $result;
 

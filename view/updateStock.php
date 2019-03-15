@@ -36,6 +36,9 @@
                 </tr>
                 <!-- Rows will inserted here -->
             </table>
+            <input type="text" placeholder="Select product ID" id="productID">
+            <input type="number" placeholder="Quantity" id="unitInStock">
+            <button onclick=updateProductInStock()>Change product in Stock</button>
         </template>
     </div>
 
