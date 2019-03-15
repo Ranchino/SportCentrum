@@ -68,10 +68,16 @@ function updateProductInStock(){
     var productID = document.getElementById("productID").value;
     var quantity = document.getElementById("unitInStock").value;
 
-    requestData.append("collectionType", "products");
-    requestData.append("action", "update");
-    requestData.append("productID", productID);
-    requestData.append("quantity", quantity);
+    if( productID == "" || quantity == ""){
+        alert("Fill both Product ID and quantity");
+    }else{
+        
+        requestData.append("collectionType", "products");
+        requestData.append("action", "update");
+        requestData.append("productID", productID);
+        requestData.append("quantity", quantity);
+    }
+
     
     makeRequest("../Api/productRequests/updateStockRequest.php", "POST", requestData, function(response) {
         if(response == true){
