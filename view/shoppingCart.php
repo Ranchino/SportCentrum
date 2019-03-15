@@ -8,12 +8,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="../css-files/styleSheet.css">
 <link rel="stylesheet" href="../css-files/style-mobile.css">
 <link rel="stylesheet" href="../css-files/styleTablet.css">
 <link rel="stylesheet" href="../css-files/shoppingCart.css">
 <link rel="stylesheet" href="../css-files/shoppingCartDesktop.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../Scripts/productPage.js"></script>
 <script src="../Scripts/loginRegister.js"></script>
@@ -137,8 +137,33 @@
       <p>Please fill in your checkout details.</p>
       <hr>
 
+      <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Surname</label>
+            <input type="text" id="fname" name="firstname" placeholder="Sven">
+            <label for="lname"><i class="fa fa-user"></i> Lastname</label>
+            <input type="text" id="lname" name="lastname" placeholder="Svensson">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Svenssongatan 14a">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Göteborg">
+            <label for="postalcode"><i class="fa fa-institution"></i> Postal code</label>
+            <input type="text" id="postalcode" name="postalcode" placeholder="43350">
+            
+            
+            
+            <p>By purchasing from our shop you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <div style="text-align: left;">
+            <label for="orderingdate"><i class="fa fa-institution"></i> Ordering date</label>
+            <input type="date" id="orderingDate" name="orderingdate">
+                  </div>
 
-      <p>By purchasing from our shop you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <div style="text-align: left;">
+      <input type="radio" name="shippingMethod" value="DHL"> DHL<br>
+      <input type="radio" name="shippingMethod" value="BRING"> BRING<br>
+      <input type="radio" name="shippingMethod" value="POSTNORD"> POSTNORD<br>
+      </div>
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id09').style.display='none'" class="cancelbtn">Cancel</button>
