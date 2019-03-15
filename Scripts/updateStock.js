@@ -62,19 +62,23 @@ function listAllProducts(){
         }
     });
 
-    function updateProductInStock(){
-        var requestData = new FormData();
-        var productID = document.getElementById("productID").value;
-        var quantity = document.getElementById("unitInStock").value;
+}
+function updateProductInStock(){
+    var requestData = new FormData();
+    var productID = document.getElementById("productID").value;
+    var quantity = document.getElementById("unitInStock").value;
+
+    requestData.append("collectionType", "products");
+    requestData.append("action", "update");
+    requestData.append("productID", productID);
+    requestData.append("quantity", quantity);
     
-        requestData.append("collectionType", "products");
-        requestData.append("action", "update");
-        requestData.append("productID", productID);
-        requestData.append("quantity", quantity);
-        
-        makeRequest("../Api/productRequests/updateStockRequest.php", "POST", requestData, function(response) {
-            console.log(response);
-        });
-        location.reload();
-    }
+    makeRequest("../Api/productRequests/updateStockRequest.php", "POST", requestData, function(response) {
+        if(response == true){
+            alert("Nu har du uppdaterat en produkt!");
+            location.reload();
+        }else{
+            alert("Det gick fel!");
+        }
+    });
 }

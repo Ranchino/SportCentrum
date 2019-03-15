@@ -87,7 +87,7 @@ class Product {
                 echo $e->getMessage();
             }
         }
-        public function updateProductsInStock($quantity, $productID){
+        public function updateProducts($productID, $quantity){
             try{
                 $query = $this->database->connection->prepare(" UPDATE products 
                 SET UnitInStock ='" .$quantity. "'WHERE ProductID = '".$productID."';");

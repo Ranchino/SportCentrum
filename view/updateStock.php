@@ -21,7 +21,7 @@
 
 <body>
 
-        <h1>Admin Page for products </h1>
+        <h1><b>Admin Page for products</b> </h1>
     <br>
     <br>
     <div class="button-container">
@@ -31,7 +31,10 @@
     <br>
     <div id="tempForm" style='text-align:center'> 
         <template id="productTemp">
-            <h3>All Products on webPage:</h3>
+            <h3><u>All Products on webPage:</u></h3>
+            <input type="number" placeholder="Select product ID" id="productID">
+            <input type="number" placeholder="Change unit in Stock" id="unitInStock">
+            <button onclick=updateProductInStock()>Change product in Stock</button>
             <table id ="products">
                 <tr>
                     <th>Product ID</th>
@@ -43,11 +46,7 @@
                     <th>Picture Url</th>
 
                 </tr>
-                <!-- Rows will inserted here -->
             </table>
-            <input type="text" placeholder="Select product ID" id="productID">
-            <input type="number" placeholder="Quantity" id="unitInStock">
-            <button onclick=updateProductInStock()>Change product in Stock</button>
         </template>
     </div>
 
