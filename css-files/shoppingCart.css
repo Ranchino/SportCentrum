@@ -29,14 +29,12 @@
         justify-content: center;
     }
 
-    .w3-light-grey {
-        border: 1px solid red;
-        flex-wrap: wrap;
-        flex-direction: column!important;
+    div .w3-col.s4 {
+        width: 100%;
+
     }
 
 }
-
 
 
 /* wider tablet */
@@ -87,9 +85,7 @@
 
     .subscribe-footer {
         background-color: #4CAF50!important;
-        margin-top: 8em!important;
         height: auto;
-        margin-left: 7em;
       }
 }
 
