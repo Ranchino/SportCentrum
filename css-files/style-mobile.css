@@ -19,6 +19,12 @@
     .w3-sidebar {
       margin-left: 0;
     }
+
+
+  div .w3-col.s4 {
+    width: 100%;
+
+}
     
     h2.title {
       width: auto;

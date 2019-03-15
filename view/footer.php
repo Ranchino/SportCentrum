@@ -29,11 +29,11 @@
       <div class="w3-col s4 w3-justify storeTextFooter">
         <h2 id="store">Store</h2>
         <p><i class="fa fa-fw fa-map-marker"></i> SportCentrum</p>
-        <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
-        <p><i class="fa fa-fw fa-envelope"></i> ex@mail.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> +4610-434 40</p>
+        <p><i class="fa fa-fw fa-envelope"></i> Sportcentrum@mail.com</p>
         <h4>We accept</h4>
-        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
         <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <p><i class="fab fa-cc-paypal"></i> Paypal</p>
         <br>
       </div>
     </div>

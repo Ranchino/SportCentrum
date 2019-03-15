@@ -160,12 +160,13 @@ input[type=text], input[type=password] {
     margin-left: 0em;
   }
 
+
   .subscribe-footer {
     background-color: #4CAF50!important;
     margin-top: 7.5em;
     height: auto;
   }
-
+  
   .storeTextFooter {
     margin-top: 2em;
     text-align: center!important;
@@ -219,15 +220,13 @@ input[type=text], input[type=password] {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 20px;
   }
 
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: auto; /* Could be more or less, depending on screen size */
   }
   
   /* The Close Button (x) */
