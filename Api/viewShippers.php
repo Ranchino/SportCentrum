@@ -1,8 +1,5 @@
 <?php
-
-include_once("../Classes/shippingClass.php");
-
-
+/* include_once("../Classes/shippingClass.php");
 if($_SERVER['REQUEST_METHOD'] == "GET"){
     try {
         $shipper = new Shipper();
@@ -14,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
     }
 }else {
     echo json_encode("Post inte satt ${$_SERVER['REQUEST_METHOD']}");
-}
+} */
 
 
 

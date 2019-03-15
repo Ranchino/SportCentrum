@@ -8,7 +8,7 @@ if($method){
             echo json_encode($_SESSION['choosen']);
         } else {
         
-            echo json_encode("There is not session saved");
+            echo json_encode(false);
         }
 
     }

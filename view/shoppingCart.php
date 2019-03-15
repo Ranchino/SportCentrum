@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../css-files/styleSheet.css">
 <link rel="stylesheet" href="../css-files/style-mobile.css">
-<link rel="stylesheet" href="../css-files/styleTablet.css">
+<link rel="stylesheet" href="../css-files/style-tablet.css">
 <link rel="stylesheet" href="../css-files/shoppingCart.css">
 <link rel="stylesheet" href="../css-files/shoppingCartDesktop.css">
 
@@ -19,28 +19,18 @@
 <script src="../Scripts/loginRegister.js"></script>
 <script src="../Scripts/w3-school.js"></script>
 <script src="../Scripts/shoppingCart.js"></script>
+<script src="../Scripts/loginRegisterShoppingcart.js"></script>
 
 
 
-<body onload="checkChoosenProducts()">
+<body onload="checkChoosenProducts(); CheckSignIn()">
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
+    <h3 class="w3-wide" style="color: solid black; font-size: 26px;" id="userView"> </h3>
     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart"></i>
-
-    
-    <?php
-  /*   if(isset($_SESSION['choosen'])){
-      $length = count($_SESSION['choosen']);
-      echo $length;
-    }else {
-      echo 0;
-    } */
-    ?>
-    
-
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey">
 </nav>
@@ -63,7 +53,8 @@
 
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-      <button onclick="showLoginModal()" style="width:auto;">Login</button>
+    <button onclick="showLoginModal()" style="width:auto;" id="LoginPop">Login</button>
+      <button style="width:auto; opacity: 0;" id="LogOut" onclick="makeEmptySession()">LogOut</button>
       
       
     <div id="id01" class="modal" style="background-color: white;">
@@ -125,7 +116,7 @@
 <h1>Please Check Your Added Products!</h1>
     <section id="content">
     </section>
-    <button type="button" onclick="wantToCheckOut()"> Check Out!</button>
+    <button type="button" onclick="wantToCheckOut()" id="checkOutButton"> Check Out!</button>
 
     <?php include_once("../view/footer.php") ?>
 </body>

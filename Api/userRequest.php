@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("../Classes/adminClass.php");
 include_once("../Classes/userClass.php");
 $admin = new Admin();
@@ -11,10 +12,15 @@ if($method){
             $username = $_POST['username'];
             $userInfo = $user->logInUser();
             $adminInfo = $admin->logInAdmin();
-            
             foreach($userInfo as $user) {
+                $arrayUserInfo = array();
                 if (password_verify($password, $user->password) && $user->mail == $username){
                     $theuserCheck = 1;
+                    array_push($arrayUserInfo, $user->firstName, $user->userID);
+                    foreach($arrayUserInfo as $k=>$v) {
+                        $_SESSION['userInfo'][$k]=$v;
+                    }
+                    
                     echo json_encode($theuserCheck);
                     return;  
                 }
@@ -35,6 +41,12 @@ if($method){
         if(!empty($_POST['passwordRegister']) && !empty($_POST['mail']) && !empty($_POST['rol'] )) {
             $password = $_POST['passwordRegister'];
             $rol = $_POST['rol'];
+            $firstName = $_POST['firstname'];
+            $lastName = $_POST['lastname'];
+            $adress = $_POST['adress'];
+            $country = $_POST['country'];
+            $city = $_POST['city'];
+            $phone = $_POST['phoneNo'];
             $hash = password_hash($password, PASSWORD_DEFAULT);
             
             $verifiedPass = password_verify($password, $hash);
@@ -59,7 +71,7 @@ if($method){
           
                }
                if (password_verify($password, $hash)){
-                   $addedNewUser = $user->insertNewUser($hash, $mail, $nyhetsbrev);
+                   $addedNewUser = $user->insertNewUser($hash, $mail, $nyhetsbrev, $firstName, $lastName, $adress, $country, $city, $phone);
                    echo json_encode($addedNewUser);
                }
            }else {

@@ -3,6 +3,10 @@
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
     <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
+    <h3 class="w3-wide" style="color: solid black; font-size: 26px;" id="userView"> 
+    
+    
+    </h3>
     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart">
     <?php
     if(isset($_SESSION['choosen'])) {
@@ -98,7 +102,8 @@ color: white;" >
 
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-      <button onclick="showLoginModal()" style="width:auto;">Login</button>
+      <button onclick="showLoginModal()" style="width:auto;" id="LoginPop">Login</button>
+      <button style="width:auto; opacity: 0;" id="LogOut" onclick="makeEmptySession()">LogOut</button>
       
       
     <div id="id01" class="modal" style="background-color: white;">
@@ -121,7 +126,20 @@ color: white;" >
 
   <form id="registering">
     <div class="container" id="registerAccount">
-      <h3 style="background-color: white;">Register As User or Admin</h3>
+      <h3 style="background-color: white;">Register OBS (If there is one admin then you can not sign up for admin)</h3>
+      <label for="mail"><b>Enter Firstname</b></label>
+      <input type="text" placeholder="Enter firstname" name="firstname" required>
+      <label for="mail"><b>Enter Lastname</b></label>
+      <input type="text" placeholder="Enter lastname" name="lastname" required>
+      <label for="mail"><b>Enter adress</b></label>
+      <input type="text" placeholder="Enter adress" name="adress" required>
+      <label for="mail"><b>Enter country</b></label>
+      <input type="text" placeholder="Enter country" name="country" required>
+      <label for="mail"><b>Enter city</b></label>
+      <input type="text" placeholder="Enter city" name="city" required>
+      <label for="mail"><b>Enter phoneNo</b></label>
+      <input type="text" placeholder="Enter phoneNo" name="phoneNo" required>
+
       <label for="mail"><b>Enter email</b></label>
       <input type="text" placeholder="Enter Username" name="mail" required>
 

@@ -21,7 +21,7 @@
 
 
 
-<body class="w3-content" style="max-width:1200px">
+<body class="w3-content" style="max-width:1200px" onload="CheckSignIn()">
 
 <?php 
   include './view/header.php';

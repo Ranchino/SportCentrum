@@ -21,7 +21,7 @@
 
 
 
-<body class="w3-content" onload="getTheseProducts()">
+<body class="w3-content" onload="getTheseProducts(); CheckSignIn()">
 
 <?php 
   include './header.php';

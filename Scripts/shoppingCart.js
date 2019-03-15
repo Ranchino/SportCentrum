@@ -7,11 +7,17 @@ function checkChoosenProducts(){
       data:{savedProduct: 'saved'},
       success: data => {
         var savedData = data;
-        console.log(savedData)
-        
-        var shoppingCart = document.getElementById('shoppingCart');
-        shoppingCart.innerText = " "+ savedData.length;
-        printOutChoosenProducts(savedData)
+        var checkOutButton = document.getElementById("checkOutButton");
+        if(savedData == false) {
+          checkOutButton.style.opacity = "0";
+          console.log("you did not choosen any product yet")
+        }else{
+          var shoppingCart = document.getElementById('shoppingCart');
+          shoppingCart.innerText = " "+ savedData.length;
+          printOutChoosenProducts(savedData)
+          checkOutButton.style.opacity = "1";
+
+        }
       },
       error: error => {
         console.log(error)
@@ -99,8 +105,23 @@ function checkChoosenProducts(){
     })
   }
 
-
 function wantToCheckOut() {
-  alert("Hej")
+  $.ajax({
+    dataType:'json',
+    type: 'POST',
+    url: '../Api/checkOutRequest.php',
+    data:{checkOut: 'checkOut'},
+    success: data => {
+      console.log(data)
+      if(data == false) {
+        alert("You did not sign in!")
+      }else {
+        console.log("Du har loggats in")
+      }
+    },
+    error: err => {console.log(err)}
+  })
 }
+
+
  

@@ -1,7 +1,5 @@
 <?php
-
 include_once("../Classes/dbcClass.php");
-
 class Shipper  {
     function __construct()
     {
@@ -9,7 +7,7 @@ class Shipper  {
     }
     public function getShippersLists()
     {
-      $query =  $this->database->connection->prepare("SELECT * FROM shippers");
+      $query =  $this->database->connection->prepare("SELECT CompanyName, ShippingPrice, ShippingMethod FROM shippers");
       $query->execute();
       $result = $query->fetchAll(PDO::FETCH_OBJ);
 
