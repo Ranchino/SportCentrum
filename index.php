@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="./css-files/styleSheet.css">
 <link rel="stylesheet" href="./css-files/style-mobile.css">
 <link rel="stylesheet" href="./css-files/style-tablet.css">
@@ -32,7 +33,6 @@
     <img src="./Images/menMainPicture.jpg" class ="img-for-index">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
     <h1  class="h1-collection-style-text"> New Collection 2019</h1>
-    <h4 class="h4-collection-style-text"> Get Yours Today!</h4>
      </div>
   </div>
   <!-- section is the whole content and the div has four pictures -->
@@ -41,7 +41,6 @@
   
   
   </section>
-
   <?php include_once("./view/footer.php") ?>
 
 </body>

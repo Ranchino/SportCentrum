@@ -15,14 +15,14 @@ if($method) {
                     if($savedProduct->productName == $addedProduct->productName) {
                         $isProductInSession = true;
                         $savedProduct->numberChoosen++;
-                        echo json_encode($_SESSION['choosen']);
+                        echo json_encode('Now we increment the amount of this product');
                         exit;
                     } 
                 }
                 //Here we check if the product is not in the session
                 if(!$isProductInSession){
                     array_push($_SESSION['choosen'], $addedProduct);
-                    echo json_encode('Now we added a new product');
+                    echo json_encode('Now we added new product to shoppingcart');
                     exit;
                 }
 
@@ -32,7 +32,7 @@ if($method) {
                 $_SESSION['choosen'] = array();
                 $product = json_decode($_POST['choosenProduct']);
                 array_push($_SESSION['choosen'], $product);
-                echo json_encode('Nu har vi den i session');
+                echo json_encode('Now we added for first to shoppingcart');
             }
 
 
@@ -47,36 +47,4 @@ if($method) {
     }
 
 }
-/* 
-/*             $choosenProducts = json_decode($_POST['choosenProducts']);        
-            if(isset($_SESSION['choosen'])) {
-  
-                echo json_encode($_SESSION['choosen']);
-
-                echo json_encode($_SESSION['choosen']);
-        } else {
-                $_SESSION['choosen'] = array();
-
-                array_push($_SESSION['choosen'], $value);
-                echo json_encode($_SESSION['choosen']);
-            } */ 
-
-/* 
-//$var = in_array($value, $_SESSION['choosen']);
-
-foreach ($_SESSION['choosen'] as $keyTwo=>$valueTwo) {
-    array_push($_SESSION['choosen'], $value);
-/*                         if($value->productName == $valueTwo->productName && $value->numberChoosen > $valueTwo->numberChoosen) {
-        
-        $_SESSION['choosen'][$key] = $value;
-        echo json_encode($_SESSION['choosen']);
-        return;
-
-    }else{
-        array_push($_SESSION['choosen'], $value);
-        echo json_encode($_SESSION['choosen']);
-        return;
-
-    } */
-
 ?>
