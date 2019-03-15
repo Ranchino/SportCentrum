@@ -71,6 +71,37 @@ class Product {
             }
             
         }
+    
+
+        public function getProductInStock(){
+            try{
+                $query = $this->database->connection->prepare("SELECT * FROM products;");
+                $query->execute();
+                $result = $query->fetchAll(PDO::FETCH_OBJ);
+                if (empty($result)) {
+                    return "Det finns inga producter!";
+                }
+                return $result;
+
+            }catch(Exception $e){
+                echo $e->getMessage();
+            }
+        }
+        public function updateProducts($productID, $quantity){
+            try{
+                $query = $this->database->connection->prepare(" UPDATE products 
+                SET UnitInStock ='" .$quantity. "'WHERE ProductID = '".$productID."';");
+                
+                $result = $query->execute();
+                if (empty($result)) {
+                    return "Det finns inget att uppdatera!";
+                }
+                return $result;
+
+            }catch(Exception $e) {
+                echo $e->getMessage();
+            }
+        }
 
 
 }

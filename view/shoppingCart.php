@@ -149,9 +149,9 @@
             <input type="text" id="lname" name="lastname" placeholder="Svensson">
 
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            
             <input type="text" id="email" name="email" placeholder="john@example.com">
-
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <label for="adr"><i class="fa fa-home"></i> Address</label>
             <input type="text" id="adr" name="address" placeholder="Svenssongatan 14a">
 
             <label for="city"> City</label>

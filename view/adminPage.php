@@ -56,7 +56,7 @@
     <a href="../view/Addproduct.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Add Products</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Delete Products</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Change Products</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Update Products in stock</a>
+    <a href="../view/updateStock.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Update Products in stock</a>
     <button onclick=viewOrder() class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</button>
     <button onclick=viewNewsletter() class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  Newsletter</button>
     
