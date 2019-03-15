@@ -29,8 +29,12 @@
         justify-content: center;
     }
 
-}
+    div .w3-col.s4 {
+        width: 100%;
 
+    }
+
+}
 
 
 /* wider tablet */
@@ -77,14 +81,11 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 767px) and (max-width: 1025px) {
 
     .subscribe-footer {
         background-color: #4CAF50!important;
-        margin-bottom: 4em;
-        margin-top: 4em!important;
-        height: 18em;
-        width: 100%;
+        height: auto;
       }
 }
 

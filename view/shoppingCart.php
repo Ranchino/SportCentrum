@@ -116,7 +116,30 @@
 <h1>Please Check Your Added Products!</h1>
     <section id="content">
     </section>
-    <button type="button" onclick="wantToCheckOut()" id="checkOutButton"> Check Out!</button>
+
+
+<button onclick="DisPlayCheckOut()" style="margin-bottom: 1em; margin-left: 1em; height: 5em; width: 10em;">Checkout</button>
+
+<div id="id09" class="modal">
+  <span onclick="document.getElementById('id09').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Almost Done!</h1>
+      <p>Please fill in your checkout details.</p>
+      <hr>
+
+
+      <p>By purchasing from our shop you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id09').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="button" onclick="wantToCheckOut()"> Check Out!</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
 
     <?php include_once("../view/footer.php") ?>
 </body>
