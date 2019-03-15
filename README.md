@@ -49,7 +49,7 @@ __Fyra utvecklare:__
 - [x] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
 > ”Vår affärsidé är att erbjuda sport- och sportmodesprodukter av hög kvalité, med god funktion och snygg design för hela familjen till bästa pris.”
 - [x] All data som programmet utnyttjar ska vara sparat i en MYSQL databas (produkter, beställningar, konton mm). (G)
-> 
+> Här har vi skapat en class som heter dbcCLASS.php som är kopplad till databasen som alla informationen spara i.
 - [x] Det ska finnas ett normaliserat diagram över databasen i gitrepot. (G)
 > vi har pushat upp den normaliserat diagrammen i över databsen som en bild.
 - [x] Man ska kunna logga in som administratör i systemet. (G)
