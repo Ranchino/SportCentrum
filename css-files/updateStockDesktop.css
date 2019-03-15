@@ -1,6 +1,14 @@
 
+    body {
+        background-color: whitesmoke;
+    }
+
     h3 {
         margin-bottom: 2em;
+    }
+
+    h1 {
+        text-align: center;
     }
 
 
@@ -29,6 +37,8 @@
         outline: none;
         margin-left: 1em;
         margin-top: 2em;
+        background-color: lightgreen;
+
     }
 
     a {
@@ -38,4 +48,10 @@
         margin-left: 1em;
         text-decoration: none;
         color: black;
+        background-color: lightgreen;
+    }
+
+    .button-container {
+        width: 100%;
+        text-align: center;
     }

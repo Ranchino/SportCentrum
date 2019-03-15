@@ -21,11 +21,13 @@
 
 <body>
 
-    
+        <h1>Admin Page for products </h1>
     <br>
     <br>
+    <div class="button-container">
     <a href="../view/adminPage.php">Go Back</a>
     <button onclick=listAllProducts()>List of all Products</button>
+</div>
     <br>
     <div id="tempForm" style='text-align:center'> 
         <template id="productTemp">
