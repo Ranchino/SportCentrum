@@ -64,6 +64,7 @@ __Fyra utvecklare:__
 > vi har dela sidan produkter i flera kategorier som vi döpte de till "Men,Women,Children OCH Accessories.
 - [ ] Från hemsidan ska man kunna se en lista över alla produkter, och man ska kunna lista bara dom produkter som tillhör en kategori. (G)
 - [x] Besökare ska kunna lägga produkterna i en kundkorg, som är sparad i session på servern. (G)
+> Vi har skapat en funktion som heter addProduct med Javascript som gör så att produkterna sparas i session.
 - [x] Man ska från hemsidan kunna skriva upp sig för att få butikens nyhetsbrev genom att ange sitt namn och epostadress. (G)
 > här har vi skapat Newsletter.PHP och Newsletter.js så när en ny kund skriver up sig i nyhetsbrev får hen mail.
 - [x] Administratörer ska kunna se en lista över personer som vill ha nyhetsbrevet och deras epost adresser. (G)
