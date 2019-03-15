@@ -57,7 +57,7 @@ __Fyra utvecklare:__
 - [x] Inga Lösenord får sparas i klartext i databasen. (G)
 > Vi använder $hash så ingen lösenord är i klartext.
 - [x] En besökare ska kunna beställa produkter från sidan, detta ska uppdatera lagersaldot i databasen. (G)
-- [ ] Administratörer ska kunna uppdatera antalet produkter i lager från admin delen av sidan. (G)
+- [x] Administratörer ska kunna uppdatera antalet produkter i lager från admin delen av sidan. (G)
 - [x] Administratörer ska kunna se en lista på alla gjorda beställningar. (G)
 > Här har vi gjort i PHP en class som heter orderClass.PHP som har en function i sig som kallas getAllOrders() med hjälp av denna fucntion får admin se en lista över beställingar.
 - [x] Sidans produkter ska delas upp i kategorier, en produkt ska tillhöra minst en kategori, men kan tillhöra flera. (G)
@@ -69,7 +69,7 @@ __Fyra utvecklare:__
 > här har vi skapat Newsletter.PHP och Newsletter.js så när en ny kund skriver up sig i nyhetsbrev får hen mail.
 - [x] Administratörer ska kunna se en lista över personer som vill ha nyhetsbrevet och deras epost adresser. (G)
 > Med hjälp av Newsletter som vi har skapat när är en person skriver upp sig i nyhets brev då sparas de i databasen sen kan admin kalla på det.
-- [ ] Besökare ska kunna välja ett av flera fraktalternativ. (G)
+- [x] Besökare ska kunna välja ett av flera fraktalternativ. (G)
 - [x] Tillgängliga fraktalternativ ska vara hämtade från databasen. (G)
 
 ***
