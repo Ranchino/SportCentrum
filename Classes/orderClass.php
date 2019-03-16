@@ -44,5 +44,27 @@
 
 
         }
+
+        public function updateProductInStockEfterOrder($amouthChoosenToUpdate) {
+            try{
+                for($i = 0; $i<count($amouthChoosenToUpdate); $i++) {
+
+                $theUpdateResultNumber = $amouthChoosenToUpdate[$i]->theupdateResult;
+                $productID = $amouthChoosenToUpdate[$i]->productId;
+
+                $query = $this->database->connection->prepare(" UPDATE products 
+                SET UnitInStock ='" .$theUpdateResultNumber. "'WHERE ProductID = '".$productID."';");
+                 $result = $query->execute();
+                }
+                if(empty($result)) {
+                    return "We could not save your order please do not send empty info";
+                }
+
+                return $result;
+
+            }catch(Exeption $e){
+                echo $e->get_message();
+            }
+        }
     }
 ?>

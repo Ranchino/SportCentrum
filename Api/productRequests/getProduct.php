@@ -12,7 +12,7 @@ if($method){
                 $catergoryChoosen = $_GET['categoryName'];
                 if($catergoryChoosen == "women" || $catergoryChoosen == "men" || $catergoryChoosen == "children" || $catergoryChoosen == "accessories"){
 
-                    $products = $product->getAllProducts($catergoryChoosen);
+                    $products = $product->getAllOfThisCategory($catergoryChoosen);
                     echo json_encode($products);
                 }else {
                     $allProducts = $product->getAll();

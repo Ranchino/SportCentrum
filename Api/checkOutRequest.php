@@ -38,10 +38,24 @@ if(isset($method) && $method == "POST") {
                 $checkResultOrder = $orderInsert->insertNewOrder($theShipperID, $shipFirstName, $ShipLastName, $ShipAdress, $shipPostalCode, $shipCity, $shipMail, 
                 $shipPhoneNo, $totalPrice, $orderDate, $userID);
               
-                //if($checkResultOrder)
                 if($checkResultOrder) {
+                    $amouthChoosenToUpdate = array();
+                    foreach($_SESSION['choosen'] as $productChoosen){
+                        $theChoosenProductID = $productChoosen->productID;
+                        $amountOrderedOfthisProduct = $productChoosen->numberChoosen;
+                        $theUpdatedUniInstockEfterOrder = $productChoosen->unitInStock - $productChoosen->numberChoosen;
+                        $object = new stdClass();
+                        $object->productId =  $theChoosenProductID;
+                        $object->theupdateResult =  $theUpdatedUniInstockEfterOrder;
+
+                        array_push($amouthChoosenToUpdate,$object);
+                        
+                    }
                     unset($_SESSION['choosen']);
-                    echo json_encode($checkResultOrder);
+                    $theReusltUpdate =$orderInsert->updateProductInStockEfterOrder($amouthChoosenToUpdate);
+
+                    echo json_encode($theReusltUpdate);
+
                 } else {
                     echo json_encode($checkResultOrder);
                 }

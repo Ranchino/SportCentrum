@@ -35,6 +35,7 @@ function printOutProducts(categoryInfo) {
     divForSingleProduct.appendChild(createTitle(categoryInfo[i]));
     divForSingleProduct.appendChild(createImg(categoryInfo[i]))
     divForSingleProduct.appendChild(createPrice(categoryInfo[i]));
+    divForSingleProduct.appendChild(createUnitInStock(categoryInfo[i]));
     divForSingleProduct.appendChild(createPutButton(categoryInfo[i]));
     section.appendChild(divForSingleProduct);
   }
@@ -66,10 +67,14 @@ function createImg(categoryInfo){
 function createPrice(categoryInfo){
   var h4 = document.createElement("h4")
   h4.innerText = categoryInfo.unitPrice +"SEK";
-  h4.classList.add()
   return h4
 }
-var choosenProducts;
+function createUnitInStock(productInfo) {
+  var h4 = document.createElement("h4")
+  h4.innerText = "Amount Of This Product: " + productInfo.unitInStock;
+  return h4
+
+}
 function createPutButton(categoryInfo){
   var putButton = document.createElement("button");
   putButton.innerText = "Add Product To Shoppingcart";
