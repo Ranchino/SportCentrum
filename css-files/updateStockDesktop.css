@@ -49,7 +49,30 @@
         text-decoration: none;
         color: black;
         background-color: lightgreen;
+        font-size: 1.3em;
+        padding: 0.2em;
     }
+
+    .product-id {
+        background-color: lightblue;
+    }
+
+    .unit-in-stock {
+        background-color: lightblue;
+    }
+
+    .placeholder-container {
+        margin-bottom: 2em;
+    }
+    
+    #productID {
+        outline: none;
+    }
+
+    #unitInStock {
+        outline: none;
+    }
+    
 
     .button-container {
         width: 100%;

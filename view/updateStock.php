@@ -24,23 +24,27 @@
         <h1><b>Admin Page for products</b> </h1>
     <br>
     <br>
+
+    <a href="../view/adminPage.php">Return to Admin page</a>
     <div class="button-container">
-    <a href="../view/adminPage.php">Go Back</a>
     <button onclick=listAllProducts()>List of all Products</button>
 </div>
     <br>
+
     <div id="tempForm" style='text-align:center'> 
         <template id="productTemp">
+            <div class="placeholder-container">
             <h3><u>All Products on webPage:</u></h3>
             <input type="number" placeholder="Select product ID" id="productID">
             <input type="number" placeholder="Change unit in Stock" id="unitInStock">
             <button onclick=updateProductInStock()>Change product in Stock</button>
+            </div>
             <table id ="products">
-                <tr>
-                    <th>Product ID</th>
+                <tr class="table-row">
+                    <th class="product-id">Product ID</th>
                     <th>category ID</th>
                     <th>Product Name</th>
-                    <th>Unit In Stock</th>
+                    <th class="unit-in-stock">Unit In Stock</th>
                     <th>Unit Price</th>
                     <th>Quantity Per Unit</th>
                     <th>Picture Url</th>

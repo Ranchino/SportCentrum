@@ -18,10 +18,10 @@
       <div class="w3-col s4">
           <!-- Subscribe section -->
           <div class="w3-container w3-black w3-padding-32 subscribe-footer" style="border-radius: 1em;">
-            <h1>Subscribe</h1>
-            <p>To get special offers and VIP treatment:</p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%" id="specialTreatmet"></p>
-            <button type="button" class="w3-button w3-red w3-margin-bottom" onclick="specialTreatmentVip()">Subscribe</button>
+            <h1>Student?</h1>
+            <p>Fill in your Mecenat code to get your discount!</p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Enter code" style="width:100%" id="specialTreatmet"></p>
+            <button type="button" class="w3-button w3-red w3-margin-bottom" onclick="specialTreatmentVip()">Give me the discount!</button>
           </div>
 
       </div>
