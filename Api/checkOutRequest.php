@@ -6,8 +6,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 if(isset($method) && $method == "POST") {
     if(isset($_SESSION['userInfo'])){
         if(isset($_SESSION['choosen'])) {
-            if(!empty($userID) && !empty($theShipperID) && !emptyp($shipFirstName) && !empty($ShipLastName) && !empty($ShipAdress) && !empty($shipPostalCode) && !empty($shipCity) && !empty($shipMail) && !empty($shipPhoneNo) && !empty( $orderDate)) {
-                $orderInsert = new Order();
+            if(!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['address']) && !empty($_POST['postalcode'] && !empty($_POST['city']) && !empty($_POST['email'] && !empty($_POST['shipPhoneNO'])))){
+                 $orderInsert = new Order();
                 //Here we check the compnayname and based on that we get the id
                 $compnayName = $_POST['choiceCompany'];
                 $shipper = new Shipper();
@@ -47,15 +47,15 @@ if(isset($method) && $method == "POST") {
                 }
 
             } else {
-                echo json_encode(false);
+                echo json_encode("You did not fill all info");
             }
 
         }else{
-            echo json_encode(false);
+            echo json_encode("We could not find your products");
         }
         
     } else {
-        echo json_encode(false);
+        echo json_encode("You did not sign in");
     }
 
 } else {

@@ -166,13 +166,13 @@ function wantToCheckOut() {
     url: '../Api/checkOutRequest.php',
     data:formData,
     success: data => {
-      if(data == false) {
-        alert("Please Sing in Or Choose Products Or you fill the info")
-      }else {
+      if(data == true) {
         alert("Now We have Your Order!")
         location.reload();
         alert("Thanks For Shopping!");
-        
+      }else {
+        alert("Please Sing in Or Choose Products Or you fill the info")
+  
       }
     },
     error: err => {console.log(err)}

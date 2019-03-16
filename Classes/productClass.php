@@ -10,13 +10,13 @@ class Product {
             try{
 
                 $query = $this->database->connection->prepare
-                (" SELECT productName, unitInStock, unitPrice, quantityPerUnit, pictureUrl, categoryName  FROM products 
+                (" SELECT productName, unitInStock, unitPrice, pictureUrl, categoryName  FROM products 
                 INNER JOIN categories ON products.categoryID=categories.categoryID WHERE categories.categoryName='$catergoryChoosen';");
                 $query->execute();
                 $query->setFetchMode(PDO::FETCH_OBJ);
                 $result = $query->fetchAll();
                 if (empty($result)) {
-                    return "Det gick inte att hämta product";
+                    return false;
                 }
                 return $result;
         
@@ -30,7 +30,7 @@ class Product {
             try{
 
                 $query = $this->database->connection->prepare
-                (" SELECT productName, unitInStock, unitPrice, quantityPerUnit, pictureUrl, categoryName  FROM products 
+                (" SELECT productName, unitInStock, unitPrice, pictureUrl, categoryName  FROM products 
                 INNER JOIN categories ON products.categoryID=categories.categoryID;");
                 $query->execute();
                 $query->setFetchMode(PDO::FETCH_OBJ);
