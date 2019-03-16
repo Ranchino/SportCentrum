@@ -82,7 +82,7 @@ __Fyra utvecklare:__
 ## Demo:
 Klicka här för att komma till [hemsidan](http://www.robertg.se/wieg18_sportcentrum)!
 
-Ladda ner och importera den. Det är viktigt att namnet heter och sportcentrum och att ni tar bort den gamla
+Ladda ner och importera den. Det är viktigt att namnet heter 'sportcentrum'.
 
 Våran Binero: http://www.robertg.se/wieg18_sportcentrum
 
