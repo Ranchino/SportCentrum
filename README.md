@@ -84,6 +84,7 @@ Klicka här för att komma till [hemsidan](https://ranchino.github.io/SportCentr
 ladda ner och importera den. Det är viktigt att namnet heter och sportcentrum och att ni tar bort den gamla
 
 
+våran Binero: http://www.robertg.se/wieg18_sportcentrum
 *** Inlogning för Admin ***
 
 
