@@ -127,7 +127,7 @@
 
 
 <h1>Please Check Your Added Products!</h1>
-    <section id="content" style="height: 30em;">
+    <section id="content" style="height: 40em;">
     </section>
 
 

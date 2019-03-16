@@ -144,7 +144,6 @@
               <tr>
                 <th>Order ID</th>
                 <th>Shipper ID</th>
-                <th>Customer ID</th>
                 <th>Ship FirstName</th>
                 <th>Ship LastName</th>
                 <th>Ship Adress</th>
@@ -152,9 +151,9 @@
                 <th>Ship City</th>
                 <th>Ship Mail</th>
                 <th>Ship PhoneNo</th>
-                <th>Ship Date</th>
                 <th>Total Price</th>
                 <th>Order Date</th>
+                <th>User ID</th>
               </tr>
             </table>
           </div>
