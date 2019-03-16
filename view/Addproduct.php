@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../Scripts/addproduct.js"></script>
+    <script src="../Scripts/uploadPicture.js"></script>
 
 
 </head>
@@ -18,6 +19,7 @@
         <br />
         <h3 align="center">Add a new products here!</a></h3>
         <h5 align="center">Insert one product at a time</a></h5>
+        <h5 align="center" style="color: red">OBS You need to upload the img first for getting the correct name efter uploading. It is for the safaty </a></h5>
         <br />
         <br />
         <br />
@@ -30,11 +32,23 @@
             <button type="button" name="add" id="add" class="btn btn-success btn-xs">Add</button>
         </div>
         <br />
-        <form method="post" id="user_form">
+        <form  method="POST" action="../Api/uploadImgRequest.php" enctype="multipart/form-data" id="formToUpload">
+        <h6>Please Select The Category For the picture!</h6>
+        <select name="categoryName">
+            <option value="women">Women</option>
+            <option value="men">Men</option>
+            <option value="children">Children</option>
+            <option value="accessories">accessories</option>
+        </select>
+        <input type="file" name="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+        </form>
+        <form method="post" id="user_form" enctype="multipart/form-data">
             <div class="table-responsive">
             <table class="table table-striped table-bordered" id="user_data">
                 <tr>
                     <th>Category ID</th>
+                    <th>UploadedImg</th>
                     <th>Product Name</th>
                     <th>Unit In Stock</th>
                     <th>Unit Price</th>
@@ -88,5 +102,6 @@
     </div>
     <div id="action_alert" title="Action">
     </div>
+
 </body>
 </html>

@@ -10,6 +10,7 @@ if($method == "POST"){
         $unitInStock = json_decode($_POST["hidden_unit_in_stock"]);
         $unitPrice = json_decode($_POST["hidden_unit_price"]);
         $imageUrl = $_POST["hidden_image_url"];
+
         $insert = $product->insertNewproducts($categoryID, $productName, $unitInStock, $unitPrice, $imageUrl);
 
         echo json_encode($insert);
