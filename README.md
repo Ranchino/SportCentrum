@@ -76,3 +76,9 @@ __Fyra utvecklare:__
 
 ## Demo:
 Klicka här för att komma till [hemsidan](https://ranchino.github.io/SportCentrum/)!
+ladda ner och importera den. Det är viktigt att namnet heter och sportcentrum och att ni tar bort den gamla
+
+
+*** Inlogning för Admin ***
+mail: admin@gmail.com 
+password: admin 
