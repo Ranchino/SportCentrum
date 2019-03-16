@@ -6,6 +6,7 @@ function checkChoosenProducts(){
       url:'../Api/productRequests/viewSavedProduct.php',
       data:{savedProduct: 'saved'},
       success: data => {
+        console.log(data)
         var savedData = data;
         //var checkOutButton = document.getElementById("checkOutButton");
         if(savedData == false) {
@@ -166,12 +167,13 @@ function wantToCheckOut() {
     url: '../Api/checkOutRequest.php',
     data:formData,
     success: data => {
+      console.log(data)
       if(data == true) {
         alert("Now We have Your Order!")
         location.reload();
         alert("Thanks For Shopping!");
       }else {
-        alert("Please Sing in Or Choose Products Or you fill the info")
+        alert(data)
   
       }
     },

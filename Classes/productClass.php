@@ -5,12 +5,12 @@ class Product {
         $this->database = new DatabaseController();
     }
 
-        public function getAllProducts($catergoryChoosen) {
+        public function getAllOfThisCategory($catergoryChoosen) {
             
             try{
 
                 $query = $this->database->connection->prepare
-                (" SELECT productName, unitInStock, unitPrice, pictureUrl, categoryName  FROM products 
+                (" SELECT productName, unitInStock, unitPrice, pictureUrl, categoryName, productID FROM products 
                 INNER JOIN categories ON products.categoryID=categories.categoryID WHERE categories.categoryName='$catergoryChoosen';");
                 $query->execute();
                 $query->setFetchMode(PDO::FETCH_OBJ);
@@ -30,7 +30,7 @@ class Product {
             try{
 
                 $query = $this->database->connection->prepare
-                (" SELECT productName, unitInStock, unitPrice, pictureUrl, categoryName  FROM products 
+                (" SELECT productName, unitInStock, unitPrice, pictureUrl, categoryName, productID FROM products 
                 INNER JOIN categories ON products.categoryID=categories.categoryID;");
                 $query->execute();
                 $query->setFetchMode(PDO::FETCH_OBJ);
