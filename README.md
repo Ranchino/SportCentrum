@@ -85,6 +85,11 @@ ladda ner och importera den. Det är viktigt att namnet heter och sportcentrum o
 
 
 våran Binero: http://www.robertg.se/wieg18_sportcentrum
+
+
+
+
+
 *** Inlogning för Admin ***
 
 
