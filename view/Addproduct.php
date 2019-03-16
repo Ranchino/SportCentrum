@@ -48,7 +48,6 @@
             <table class="table table-striped table-bordered" id="user_data">
                 <tr>
                     <th>Category ID</th>
-                    <th>UploadedImg</th>
                     <th>Product Name</th>
                     <th>Unit In Stock</th>
                     <th>Unit Price</th>
