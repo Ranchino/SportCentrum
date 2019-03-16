@@ -47,32 +47,51 @@ __Fyra utvecklare:__
 - [x] Skapa ett konceptuellt ER diagram, detta ska lämnas in vid idégodkännandet. (G)
 > Vi skapade Er Diagram med hjälp av en sida som kallas www.draw.io som vi delade upp så alla kunde medverka i.
 - [x] Beskriv er företagsidé i en kort textuell presentation, detta ska lämnas in vid idégodkännandet. (G)
-> ”Vår affärsidé är att erbjuda sport- och sportmodesprodukter av hög kvalité, med god funktion och snygg design för hela familjen till bästa pris.”
+> ”Vår affärsidé är att erbjuda sport- och sportmodesprodukter av hög kvalité, med god function och snygg design för hela familjen till bästa pris.”
 - [x] All data som programmet utnyttjar ska vara sparat i en MYSQL databas (produkter, beställningar, konton mm). (G)
-> Här har vi skapat en class som heter dbcCLASS.php som är kopplad till databasen som alla informationen spara i.
+> Här har vi skapat en class som heter dbcCLASS.php som är kopplad till databasen som har all informationen sparat i.
 - [x] Det ska finnas ett normaliserat diagram över databasen i gitrepot. (G)
-> vi har pushat upp den normaliserat diagrammen i över databsen som en bild.
+> vi har pushat upp den normaliserat diagrammen över till databsen som en bild.
 - [x] Man ska kunna logga in som administratör i systemet. (G)
-> Vi har skapa en function med Javascript som kallas för registerNewUser() så ny användare kan registrera sig och 
+> Här har vi skapat en class som heter adminClass.php så en admin kan registrera sig i.
 - [x] Inga Lösenord får sparas i klartext i databasen. (G)
 > Vi använder $hash så ingen lösenord är i klartext.
 - [x] En besökare ska kunna beställa produkter från sidan, detta ska uppdatera lagersaldot i databasen. (G)
+> när user är inloggad och gör beställing då dra det från unit in stock i databasen.
 - [x] Administratörer ska kunna uppdatera antalet produkter i lager från admin delen av sidan. (G)
+> admin kan göra det när Admin är inloggad i admin sidan då kan man uppdatera antal produkter.
 - [x] Administratörer ska kunna se en lista på alla gjorda beställningar. (G)
-> Här har vi gjort i PHP en class som heter orderClass.PHP som har en function i sig som kallas getAllOrders() med hjälp av denna fucntion får admin se en lista över beställingar.
+> Här har vi gjort i PHP en class som heter orderClass.PHP som har en function i sig som kallas getAllOrders() med hjälp av denna function får admin se en lista över beställingar.
 - [x] Sidans produkter ska delas upp i kategorier, en produkt ska tillhöra minst en kategori, men kan tillhöra flera. (G)
-> vi har dela sidan produkter i flera kategorier som vi döpte de till "Men,Women,Children OCH Accessories.
+> vi har delat sidans produkter i flera kategorier som vi döpte de till "Men,Women,Children OCH Accessories.
 - [x] Från hemsidan ska man kunna se en lista över alla produkter, och man ska kunna lista bara dom produkter som tillhör en kategori. (G)
+> Det kan man göra när man trycker på dropdown meny.
 - [x] Besökare ska kunna lägga produkterna i en kundkorg, som är sparad i session på servern. (G)
-> Vi har skapat en funktion som heter addProduct med Javascript som gör så att produkterna sparas i session.
+> Vi har skapat en function som heter addProduct med Javascript som gör så att produkterna sparas i session. Det är varje gång man tycker på köp kanppen då uppdateras kundvagnen.
 - [x] Man ska från hemsidan kunna skriva upp sig för att få butikens nyhetsbrev genom att ange sitt namn och epostadress. (G)
-> här har vi skapat Newsletter.PHP och Newsletter.js så när en ny kund skriver up sig i nyhetsbrev får hen mail.
+> här har vi skapat Newsletter.PHP och Newsletter.js så när en ny kund skriver up sig i nyhetsbrev får hen mail. Och det ser man i våran sida som en knapp som vi döpte den till newsletter.
 - [x] Administratörer ska kunna se en lista över personer som vill ha nyhetsbrevet och deras epost adresser. (G)
-> Med hjälp av Newsletter som vi har skapat när är en person skriver upp sig i nyhets brev då sparas de i databasen sen kan admin kalla på det.
+> Med hjälp av Newsletter som vi har skapat när är en person skriver upp sig i nyhetsbrev då sparas de i databasen sen kan admin kalla på det.
 - [x] Besökare ska kunna välja ett av flera fraktalternativ. (G)
+> Det ser man efter man har gjort en beställing då kan man välja olika fraktalternativ.
 - [x] Tillgängliga fraktalternativ ska vara hämtade från databasen. (G)
+> Det hämtas från databasen.
 
 ***
 
 ## Demo:
 Klicka här för att komma till [hemsidan](https://ranchino.github.io/SportCentrum/)!
+ladda ner och importera den. Det är viktigt att namnet heter och sportcentrum och att ni tar bort den gamla
+
+
+våran Binero: http://www.robertg.se/wieg18_sportcentrum
+
+
+
+
+
+*** Inlogning för Admin ***
+
+
+> mail: admin@gmail.com 
+> password: admin 

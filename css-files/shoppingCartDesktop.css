@@ -2,8 +2,14 @@ body {
     margin: 0 auto;
 }
 
+.w3-justify {
+  text-align: center!important;
+}
+
 .w3-sidebar {
     font-family: "Roboto", sans-serif;
+    height: 20em;
+    overflow: hidden;
 }
 
 #content {
@@ -35,6 +41,12 @@ h1 {
 
 h4 {
     font-size: 0.9em;
+}
+
+
+.checkoutButton {
+  margin-top: 5em;
+  margin-bottom: 1em;
 }
 
 .open-button {

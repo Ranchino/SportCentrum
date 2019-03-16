@@ -1,5 +1,5 @@
-<!-- Footer -->
-  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer" style="border-radius: 1em;">
+ <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer" style="border-radius: 1em; width: 100%; border: 1px solid black; text-align: center;">
     <div class="w3-row-padding">
       <div class="w3-col s4">
         <h4>Contact</h4>
@@ -15,7 +15,7 @@
       
       <div class="w3-col s4">
           <!-- Subscribe section -->
-          <div class="w3-container w3-black w3-padding-32 subscribe-footer" style="border-radius: 1em;">
+          <div class="w3-container w3-black w3-padding-32 subscribe-footer" style="border-radius: 1em; margin-top: 7em;">
             <h1>Student?</h1>
             <p>Fill in your Mecenat code to get your discount!</p>
             <p><input class="w3-input w3-border" type="text" placeholder="Enter code" style="width:100%" id="specialTreatmet"></p>

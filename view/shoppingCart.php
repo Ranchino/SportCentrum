@@ -127,11 +127,11 @@
 
 
 <h1>Please Check Your Added Products!</h1>
-    <section id="content">
+    <section id="content" style="height: 30em;">
     </section>
 
 
-<button onclick="DisPlayCheckOut()" style="margin-bottom: 1em; margin-left: 1em; height: 5em; width: 10em;">Checkout</button>
+<button onclick="DisPlayCheckOut()" class="checkoutButton">Checkout</button>
 
 <div id="id09" class="modal">
   <span onclick="document.getElementById('id09').style.display='none'" class="close" title="Close Modal">&times;</span>

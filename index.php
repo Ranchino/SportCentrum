@@ -29,7 +29,7 @@
 ?>
 
    <!-- Image header -->
-   <div class="w3-display-container w3-container">
+   <div class="w3-display-container w3-container" style="height: 40em;">
     <img src="./Images/menMainPicture.jpg" class ="img-for-index">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
     <h1  class="h1-collection-style-text"> New Collection 2019</h1>

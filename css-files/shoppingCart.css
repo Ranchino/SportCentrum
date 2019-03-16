@@ -31,7 +31,10 @@
 
     div .w3-col.s4 {
         width: 100%;
+    }
 
+    .w3-justify {
+        text-align: center!important;
     }
 
 }
@@ -79,12 +82,13 @@
     #section div {
         text-align: center;
     }
+
+
 }
 
 @media screen and (min-width: 767px) and (max-width: 1025px) {
 
     .subscribe-footer {
-        background-color: #4CAF50!important;
         height: auto;
       }
 
