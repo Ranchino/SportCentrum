@@ -6,12 +6,11 @@ function checkChoosenProducts(){
       url:'../Api/productRequests/viewSavedProduct.php',
       data:{savedProduct: 'saved'},
       success: data => {
-        console.log(data)
         var savedData = data;
         //var checkOutButton = document.getElementById("checkOutButton");
         if(savedData == false) {
          // checkOutButton.style.opacity = "0";
-          console.log("you did not choosen any product yet")
+          alert("you did not choosen any product yet")
         }else{
           var shoppingCart = document.getElementById('shoppingCart');
           shoppingCart.innerText = " "+ savedData.length;
