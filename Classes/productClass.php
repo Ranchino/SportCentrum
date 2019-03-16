@@ -45,19 +45,18 @@ class Product {
         
             }
         }
-        public function insertNewproducts($categoryID, $productName, $unitInStock, $unitPrice, $quentityPerUnit, $imageUrl){
+        public function insertNewproducts($categoryID, $productName, $unitInStock, $unitPrice, $imageUrl){
             try{
-                $query = $this->database->connection->prepare
-                ("INSERT INTO products (ProductName, categoryID, UnitInStock, UnitPrice, QuantityPerUnit, PictureUrl) VALUES (:ProductName, :categoryID, :UnitInStock,:UnitPrice, :QuantityPerUnit, :PictureUrl)");
+                 $query = $this->database->connection->prepare("INSERT INTO products (categoryID, ProductName, UnitInStock, UnitPrice, PictureUrl) 
+                VALUES (:categoryID,:productName,:unitInStock,:unitPrice,:pictureUrl);");
                     $data = array(
-                        ':ProductName' => $productName, 
-                        ':categoryID' => $categoryID,
-                        ':UnitInStock' => $unitInStock, 
-                        ':UnitPrice' => $unitPrice, 
-                        ':QuantityPerUnit' => $quentityPerUnit, 
-                        ':PictureUrl' => $imageUrl);
-                    
+                        ':categoryID'=> $categoryID,
+                        ':productName'=> $productName, 
+                        ':unitInStock'=> $unitInStock, 
+                        ':unitPrice'=> $unitPrice,  
+                        ':pictureUrl'=> $imageUrl);
                     $result = $query->execute($data);
+        
                     if(empty($result)){
                         return "Det gick inte att inserta";
                     }

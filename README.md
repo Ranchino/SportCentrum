@@ -80,11 +80,11 @@ __Fyra utvecklare:__
 ***
 
 ## Demo:
-Klicka här för att komma till [hemsidan](https://ranchino.github.io/SportCentrum/)!
-ladda ner och importera den. Det är viktigt att namnet heter och sportcentrum och att ni tar bort den gamla
+Klicka här för att komma till [hemsidan](http://www.robertg.se/wieg18_sportcentrum)!
 
+Ladda ner och importera den. Det är viktigt att namnet heter och sportcentrum och att ni tar bort den gamla
 
-våran Binero: http://www.robertg.se/wieg18_sportcentrum
+Våran Binero: http://www.robertg.se/wieg18_sportcentrum
 
 
 
@@ -93,5 +93,5 @@ våran Binero: http://www.robertg.se/wieg18_sportcentrum
 *** Inlogning för Admin ***
 
 
-> mail: admin@gmail.com 
-> password: admin 
+- Mail: admin@gmail.com 
+- Password: admin 

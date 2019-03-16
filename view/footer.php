@@ -1,6 +1,4 @@
-
-
-  <!-- Footer -->
+ <!-- Footer -->
   <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer" style="border-radius: 1em; width: 100%; border: 1px solid black; text-align: center;">
     <div class="w3-row-padding">
       <div class="w3-col s4">

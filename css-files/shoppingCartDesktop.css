@@ -17,6 +17,13 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 4em;
+    height: auto!important;
+}
+
+.clearfix {
+  margin-bottom: 2em;
+  margin-left: 1.5em;
+  background-color: white;
 }
 
 #content img {

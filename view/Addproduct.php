@@ -38,7 +38,6 @@
                     <th>Product Name</th>
                     <th>Unit In Stock</th>
                     <th>Unit Price</th>
-                    <th>Quentity Per Unit</th>
                     <th>Image</th>
                     <th>Details</th>
                     <th>Remove</th>
@@ -55,10 +54,10 @@
         <div class="form-group">
             <label for="sel1">Select Category ID</label>
             <select class="form-control" name="category_id" id="category_id">
-                <option value="1">1 - Men</option>
+                <option value="3">1 - Men</option>
                 <option value="2">2 - Women</option>
-                <option value="3">3 - Children</option>
-                <option value="4">4 - Accessories</option>
+                <option value="4">3 - Children</option>
+                <option value="5">4 - Accessories</option>
             </select>
             <span id="error_category_id" class="text-danger"></span>
         </div>
@@ -76,11 +75,6 @@
             <label>Enter: Unit Price in KR</label>
             <input type="text" name="unit_price" id="unit_price" class="form-control" />
             <span id="error_unit_price" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label>Enter: Quentity per Unit</label>
-            <input type="number" name="quentity_per_unit" id="quentity_per_unit" class="form-control" />
-            <span id="error_quentity_per_unit" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label>Enter: Image URL</label>

@@ -1,4 +1,4 @@
-//Here we bring the products from session that we choosen from productPage and save in the session
+//Here we bring the products from session that we choosen from the productPage and save in the session
 function checkChoosenProducts(){
     $.ajax({
       dataType:"json",
@@ -6,12 +6,11 @@ function checkChoosenProducts(){
       url:'../Api/productRequests/viewSavedProduct.php',
       data:{savedProduct: 'saved'},
       success: data => {
-        console.log(data)
         var savedData = data;
         //var checkOutButton = document.getElementById("checkOutButton");
         if(savedData == false) {
          // checkOutButton.style.opacity = "0";
-          console.log("you did not choosen any product yet")
+          alert("you did not choosen any product yet")
         }else{
           var shoppingCart = document.getElementById('shoppingCart');
           shoppingCart.innerText = " "+ savedData.length;
@@ -101,13 +100,11 @@ function checkChoosenProducts(){
         }
       
       },
-      error: error => {
-        console.log(error)
-      }
+      error: error => {console.log(error)}
     })
   }
 
-//Here we count the toral price for all products
+//Here we count the total price for all products
 function countTotalPrice(priceOfProducts){
   var totalPrice = 0;
   for(var i = 0; i<priceOfProducts.length; i++) {

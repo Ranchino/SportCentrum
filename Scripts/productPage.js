@@ -1,5 +1,4 @@
 var categoryName;
-var allInfo;
 function getTheseProducts(){
   var url = new URL (window.location.href);
   categoryName = url.searchParams.get("categoryName");
@@ -94,9 +93,7 @@ function addProduct(product){
      alert(data)
 
     },
-    error: error => {
-      alert(error);
-    }
+    error: error => { alert(error);}
   })
 }
 
