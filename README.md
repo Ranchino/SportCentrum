@@ -80,5 +80,7 @@ ladda ner och importera den. Det är viktigt att namnet heter och sportcentrum o
 
 
 *** Inlogning för Admin ***
-mail: admin@gmail.com 
-password: admin 
+
+
+> mail: admin@gmail.com 
+> password: admin 
