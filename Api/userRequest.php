@@ -13,6 +13,7 @@ if($method){
             $userInfo = $user->logInUser();
             $adminInfo = $admin->logInAdmin();
             foreach($userInfo as $user) {
+                //Here we save the user inside the session
                 $arrayUserInfo = array();
                 if (password_verify($password, $user->password) && $user->mail == $username){
                     $theuserCheck = 1;
@@ -76,7 +77,7 @@ if($method){
                }
            }else {
 
-                //Here we check the insert of new admin and stop the inster if there is one
+                //Here we check if we have admin in the database and if no we insert it for the first time
                 $getAllAdmin = $admin->logInAdmin();
                 
                 if($getAllAdmin == "Could not do it") {

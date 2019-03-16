@@ -23,7 +23,7 @@ class Admin {
             ":password"=>$hash,
         ));
         if (empty($result)) {
-            return "Det gick inte att lägga till new admin";
+            return "Could not do it";
         }
         return $result;
 
