@@ -5,14 +5,12 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method == "POST"){
     $product = new Product();
     if(isset($_POST["hidden_category_id"])){
-        $categoryID = $_POST["hidden_category_id"];
+        $categoryID = json_decode($_POST["hidden_category_id"]);
         $productName = $_POST["hidden_product_name"];
-        $unitInStock = $_POST["hidden_unit_in_stock"];
-        $unitPrice = $_POST["hidden_unit_price"];
-        $quentityPerUnit = $_POST["hidden_quentity_per_unit"];
+        $unitInStock = json_decode($_POST["hidden_unit_in_stock"]);
+        $unitPrice = json_decode($_POST["hidden_unit_price"]);
         $imageUrl = $_POST["hidden_image_url"];
-        
-        $insert = $product->insertNewproducts($categoryID, $productName, $unitInStock, $unitPrice, $quentityPerUnit, $imageUrl);
+        $insert = $product->insertNewproducts($categoryID, $productName, $unitInStock, $unitPrice, $imageUrl);
 
         echo json_encode($insert);
 

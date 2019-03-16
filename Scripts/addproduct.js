@@ -13,7 +13,6 @@ $(document).ready(function(){
         $('#product_name').val('');
         $('#unit_in_stock').val('');
         $('#unit_price').val('');
-        $('#quentity_per_unit').val('');
         $('#image_url').val('');
         $('#error_category_id').text('');
         $('#error_product_name').text('');
@@ -25,7 +24,6 @@ $(document).ready(function(){
         $('#product_name').css('border-color', '');
         $('#unit_in_stock').css('border-color', '');
         $('#unit_price').css('border-color', '');
-        $('#quentity_per_unit').css('border-color', '');
         $('#image_url').css('border-color', '');
         $('#save').text('Save');
         $('#user_dialog').dialog('open');
@@ -36,13 +34,11 @@ $(document).ready(function(){
         var error_product_name = '';
         var error_unit_in_stock = '';
         var error_unit_price = '';
-        var error_quentity_per_unit = '';
         var error_image_url = '';
         var category_id = '';
         var product_name = '';
         var unit_in_stock = '';
         var unit_price = '';
-        var quentity_per_unit = '';
         var image_url = '';
         if ($('#category_id').val() == '') {
                 error_category_id = 'Category ID is required';
@@ -92,18 +88,6 @@ $(document).ready(function(){
                 unit_price = $('#unit_price').val();
             }
 
-            if ($('#quentity_per_unit').val() == '') {
-                error_quentity_per_unit = 'Quentity Per Unit is required';
-                $('#error_quentity_per_unit').text(error_quentity_per_unit);
-                $('#quentity_per_unit').css('border-color', '#cc0000');
-                quentity_per_unit = '';
-            } else {
-                error_quentity_per_unit = '';
-                $('#error_quentity_per_unit').text(error_quentity_per_unit);
-                $('#quentity_per_unit').css('border-color', '');
-                quentity_per_unit = $('#quentity_per_unit').val();
-            }
-
             if ($('#image_url').val() == '') {
                 error_image_url = 'Image URL is required';
                 $('#error_image_url').text(error_image_url);
@@ -115,7 +99,7 @@ $(document).ready(function(){
                 $('#image_url').css('border-color', '');
                 image_url = $('#image_url').val();
             }
-        if (error_category_id != '' || error_product_name != '' || error_unit_in_stock != '' || error_unit_price != '' || error_quentity_per_unit != '' || error_image_url != '') {
+        if (error_category_id != '' || error_product_name != '' || error_unit_in_stock != '' || error_unit_price != '' || error_image_url != '') {
             return false;
         }else{
             if($('#save').text() == 'Save'){
@@ -125,7 +109,6 @@ $(document).ready(function(){
                 output += '<td>' +product_name+ ' <input type="hidden" name="hidden_product_name" id="product_name' + count + '" value="' + product_name + '" /></td>';
                 output += '<td>' +unit_in_stock+ ' <input type="hidden" name="hidden_unit_in_stock" id="unit_in_stock' + count + '" value="' + unit_in_stock + '" /></td>';
                 output += '<td>' +unit_price+ ' <input type="hidden" name="hidden_unit_price" id="unit_price' + count + '" value="' + unit_price + '" /></td>';
-                output += '<td>' +quentity_per_unit+ ' <input type="hidden" name="hidden_quentity_per_unit" id="quentity_per_unit' + count + '" value="' + quentity_per_unit + '" /></td>';
                 output += '<td>' +image_url+ ' <input type="hidden" name="hidden_image_url" id="image_url' + count + '" value="' + image_url + '" /></td>';
                 output += '<td><button type="button" name="view_details" class="btn btn-warning btn-xs view_details" id="'+count+'">View</button></td>';
                 output += '<td><button type="button" name="remove_details" class="btn btn-danger btn-xs remove_details" id="'+count+'">Remove</button></td>';
@@ -137,7 +120,6 @@ $(document).ready(function(){
                 output += '<td>' + product_name + ' <input type="hidden" name="hidden_product_name[]" id="product_name' + row_id + '" value="' + product_name + '" /></td>';
                 output += '<td>' + unit_in_stock + ' <input type="hidden" name="hidden_unit_in_stock[]" id="unit_in_stock' + row_id + '" class="unit_in_stock" value="' + unit_in_stock + '" /></td>';
                 output += '<td>' + unit_price + ' <input type="hidden" name="hidden_unit_price[]" id="unit_price' + row_id + '" value="' + unit_price + '" /></td>';
-                output += '<td>' + quentity_per_unit + ' <input type="hidden" name="hidden_quentity_per_unit[]" id="quentity_per_unit' + row_id + '" class="quentity_per_unit" value="' + quentity_per_unit + '" /></td>';
                 output += '<td>' + image_url + ' <input type="hidden" name="hidden_image_url[]" id="image_url' + row_id + '" value="' + image_url + '" /></td>';
                 output += '<td><button type="button" name="view_details" class="btn btn-warning btn-xs view_details" id="'+row_id+'">View</button></td>';
                 output += '<td><button type="button" name="remove_details" class="btn btn-danger btn-xs remove_details" id="'+row_id+'">Remove</button></td>';
@@ -154,13 +136,11 @@ $(document).ready(function(){
         var product_name = $('#product_name' + row_id + '').val();
         var unit_in_stock = $('#unit_in_stock' + row_id + '').val();
         var unit_price = $('#unit_price' + row_id + '').val();
-        var quentity_per_unit = $('#quentity_per_unit' + row_id + '').val();
         var image_url = $('#image_url' + row_id + '').val();
         $('#category_id').val(category_id);
         $('#product_name').val(product_name);
         $('#unit_in_stock').val(unit_in_stock);
         $('#unit_price').val(unit_price);
-        $('#quentity_per_unit').val(quentity_per_unit);
         $('#image_url').val(image_url);
         $('#save').text('Edit');
         $('#hidden_row_id').val(row_id);
@@ -191,7 +171,7 @@ $(document).ready(function(){
             var form_data = $(this).serialize();
             $.ajax({    
                 url:"../Api/productRequests/insertProductRequest.php",
-                method:"POST",
+                type:"POST",
                 data:form_data,
                 success:function(data){
                     if(data == "true") {
