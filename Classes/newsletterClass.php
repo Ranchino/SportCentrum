@@ -8,9 +8,8 @@
         public function getAllNewsletters(){
             $query = $this->database->connection->prepare("SELECT * FROM newletters UNION
             SELECT FirstName, LastName, Mail, PhoneNO 
-            FROM customers
-            LEFT JOIN user ON customers.UserID = user.UserID
-            WHERE user.Nyhetsbrev = 1;");
+            FROM user
+            WHERE NyhetsBrev = 1;");
             $query->execute();
             $result = $query->fetchAll(PDO::FETCH_OBJ);
             if (empty($result)) {
