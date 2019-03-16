@@ -102,7 +102,7 @@ color: white;" >
 
   <header class="w3-container w3-xlarge">
     <p class="w3-right">
-      <button onclick="showLoginModal()" style="width:auto;" id="LoginPop">Login</button>
+      <button onclick="showLoginModal()" style="width:auto;" id="LoginPop">Login</button><br>
       <button style="width:auto; opacity: 0;" id="LogOut" onclick="makeEmptySession()">LogOut</button>
       
       

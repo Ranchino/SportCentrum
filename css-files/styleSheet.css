@@ -15,6 +15,10 @@ body {
   text-align: center;
 }
 
+.w3-justify {
+  text-align: center!important;
+}
+
 
 .w3-sidebar a {
     font-family: "Roboto", sans-serif;
@@ -121,12 +125,15 @@ input[type=text], input[type=password] {
   .img-for-index {
     width:100%; 
     height: auto; 
-    margin-bottom: 10em;
     margin-left: 0;
   }
 
   img {
     border-radius: 1em;
+  }
+
+  .storeTextFooter {
+    margin-top: 8em;
   }
 
   .w3-bar-block .w3-bar-item {
