@@ -5,12 +5,10 @@
     <h3 class="w3-wide" style="color: solid black; font-size: 26px;">SportCentrum</h3>
     <h3 class="w3-wide" style="color: solid black; font-size: 26px;" id="userView"> 
     
-    
     </h3>
     <i class="fa fa-shopping-cart" style="font-size:40px;" onclick="redirectTheShoppingCart()" id="shoppingCart">
     <?php
     if(isset($_SESSION['choosen'])) {
-      //unset($_SESSION['choosen']);
       echo json_encode(count($_SESSION['choosen']));
     }else {
       echo json_encode(0);
@@ -20,15 +18,6 @@
 
   </div>
   <div class="w3-padding-32 w3-large w3-text-grey">
-
-  <?php 
-
-/*   if(isset($_SESSION['choosen'])) {
-    unset($_SESSION['choosen']);
-  }
- */
-  ?>
-
     <form id="productPage" style="margin-left: 0.5em; margin-bottom: 0.1em;">
         <select name='categoryName' style="background-color: white;" id="linksOption">
           <option value='men'>Men</option>
@@ -40,46 +29,6 @@
         <input type='submit' value='Search' name='submit' onclick="redirectForm()" style="border-radius: 0.5em; font-family: Montserrat, sans-serif; outline: none; font-size: 12px; background-color: #4CAF50;
 color: white;" >
     </form>
-
-<?php
-
-/* if(isset($_GET['submit'])){
-  $var = $_GET['linkSite'];
-  //When there is view in the url
-  if (stripos($_SERVER['REQUEST_URI'],'/view/') !== false) {
-    if($var == "women"){
-      header("Location: ./womenSite.php");
-    }
-    if($var == "children"){
-      header("Location: ./childrenSite.php");
-    }
-    if($var == "men"){
-      header("Location: ../index.php");
-    }
-    if($var == "accessories"){
-      header("Location: ./accessoriesSite.php");
-    }
-  }
-  //When there is no view 
-  else {
-    if($var == "women"){
-      header("Location: ./view/womenSite.php?linkSite=$var");
-    
-    }
-    if($var == "children"){
-      header("Location: ./view/childrenSite.php");
-    }
-    if($var == "men"){
-      header("Location: ./index.php");
-    }
-    if($var == "accessories"){
-      header("Location: ./view/accessoriesSite.php");
-    }
-
-    
-  }
-} */
-?>
   <a class="w3-bar-item w3-button w3-padding" href="#footer">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
 </nav>

@@ -163,7 +163,7 @@ function CheckSignIn(){
         data: {action: "getSession"}, 
         success: data => { 
             if(data == false) {
-                console.log("Nu har du loggats ut")
+                //console.log("Nu har du loggats ut")
             }else {
 
                 var userView = document.getElementById("userView");
