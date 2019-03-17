@@ -39,7 +39,6 @@
                   <th>Product Name</th>
                   <th class="unit-in-stock">Unit In Stock</th>
                   <th>Unit Price</th>
-                  <th>Quantity Per Unit</th>
                   <th>Picture Url</th>
                </tr>
             </table>
