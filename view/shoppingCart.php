@@ -118,17 +118,16 @@
     </div>
 </div>
 
+</p>
 
-    </p>
-  </header>
+</header>
 
-  <a href="../index.php" class="go-back-tag">Go Back </a>
+<a href="../index.php" class="go-back-tag">Go Back </a>
 
 
 
 <h1>Please Check Your Added Products!</h1>
-    <section id="content" style="height: 40em;">
-    </section>
+  <section id="content" style="height: 40em;"></section>
 
 
 <button onclick="DisPlayCheckOut()" class="checkoutButton">Checkout</button>
@@ -187,6 +186,9 @@
 
 
 
-    <?php include_once("../view/footer.php") ?>
+<?php 
+include_once("../view/footer.php") 
+?>
+
 </body>
 </html>

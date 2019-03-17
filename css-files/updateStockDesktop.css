@@ -1,80 +1,80 @@
 
-    body {
-        background-color: whitesmoke;
-    }
+body {
+    background-color: whitesmoke;
+}
 
-    h3 {
-        margin-bottom: 2em;
-    }
+h3 {
+    margin-bottom: 2em;
+}
 
-    h1 {
-        text-align: center;
-    }
+h1 {
+    text-align: center;
+}
 
 
-    div #tempForm {
-        border: 1px solid red;
-    }
+div #tempForm {
+    border: 1px solid red;
+}
 
-    #tempForm th {
-        text-align: center;
-        border: 1px solid black;
-    }
+#tempForm th {
+    text-align: center;
+    border: 1px solid black;
+}
 
-    #tempForm td {
-        border: 1px solid black;
-    }
+#tempForm td {
+    border: 1px solid black;
+}
 
-    #products {
-        width: 100%;
-        text-align: center;
-        border: 1px solid black;
-    }
+#products {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+}
 
-    button {
-        border: 1px solid black;
-        border-radius: 1em;
-        outline: none;
-        margin-left: 1em;
-        margin-top: 2em;
-        background-color: lightgreen;
+button {
+    border: 1px solid black;
+    border-radius: 1em;
+    outline: none;
+    margin-left: 1em;
+    margin-top: 2em;
+    background-color: lightgreen;
 
-    }
+}
 
-    a {
-        border: 1px solid black;
-        border-radius: 0.3em;
-        outline: none;
-        margin-left: 1em;
-        text-decoration: none;
-        color: black;
-        background-color: lightgreen;
-        font-size: 1.3em;
-        padding: 0.2em;
-    }
+a {
+    border: 1px solid black;
+    border-radius: 0.3em;
+    outline: none;
+    margin-left: 1em;
+    text-decoration: none;
+    color: black;
+    background-color: lightgreen;
+    font-size: 1.3em;
+    padding: 0.2em;
+}
 
-    .product-id {
-        background-color: lightblue;
-    }
+.product-id {
+    background-color: lightblue;
+}
 
-    .unit-in-stock {
-        background-color: lightblue;
-    }
+.unit-in-stock {
+    background-color: lightblue;
+}
 
-    .placeholder-container {
-        margin-bottom: 2em;
-    }
-    
-    #productID {
-        outline: none;
-    }
+.placeholder-container {
+    margin-bottom: 2em;
+}
 
-    #unitInStock {
-        outline: none;
-    }
-    
+#productID {
+    outline: none;
+}
 
-    .button-container {
-        width: 100%;
-        text-align: center;
-    }
+#unitInStock {
+    outline: none;
+}
+
+
+.button-container {
+    width: 100%;
+    text-align: center;
+}

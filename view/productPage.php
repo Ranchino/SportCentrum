@@ -26,12 +26,12 @@
 
 <?php 
   include './header.php';
-  ?>
+?>
 
-  <a href="../index.php" class="go-back-tag">Go Back </a>
-  <h2 class="title"></h2>
-<h1 class="title"></h1>
-<section id="content">
+<a href="../index.php" class="go-back-tag">Go Back </a>
+  <h2 class="title"></h2> 
+    <h1 class="title"></h1>
+      <section id="content">
 </section>
 
 <?php 

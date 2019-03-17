@@ -4,11 +4,11 @@ body {
 
 
 .go-back-user-page {
-    border-radius: 0.5em;
-    font-size: 0.8em;
-    background-color: lightgreen;
-    outline: none;
-    margin: 1em;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  background-color: lightgreen;
+  outline: none;
+  margin: 1em;
 }
 
 .user-page-form {
@@ -21,25 +21,25 @@ body {
 
 
 .w3-sidebar a {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body,h1,h2,h3,h4,h5,h6,.w3-wide {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .w3-sidebar a {
-    font-family: "Roboto", sans-serif
+  font-family: "Roboto", sans-serif
 }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
   }
   
   /* Set a style for all buttons */
@@ -78,8 +78,8 @@ input[type=text], input[type=password] {
   }
 
   button, input {
-     overflow: none;
-}
+    overflow: none;
+  }
 
   section h4 {
     width: 100%;

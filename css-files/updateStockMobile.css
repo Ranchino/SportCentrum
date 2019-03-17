@@ -1,7 +1,5 @@
-
 @media screen and (max-width: 767px) {
     #tempForm {
-
         margin-top: 2em;
         margin-bottom: 2em;
     }
@@ -35,8 +33,6 @@
     a {
         font-size: 0.8em!important;
     }
-
-    
 }
 
 
@@ -46,6 +42,4 @@
        border: 1px solid red;
        width: 100%;
    }
-
-
 }    

@@ -14,6 +14,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="../Scripts/updateStock.js"></script>
    </head>
+
    <body>
       <h1><b>Admin Page for products</b> </h1>
       <br>
@@ -45,5 +46,6 @@
          </template>
       </div>
    </body>
+   
 </html>
 

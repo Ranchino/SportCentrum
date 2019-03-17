@@ -128,15 +128,14 @@
   </div>
 </div>
 
-    <?php
+<?php
 
     if(isset($_POST['isClicked'])){
           header("Location: ../index.php");
-          die();   
-        
+          die(); 
     }
-    ?>
-    
+?>
+
     <!-- Here we are going to specify the user and select the order and data for this user -->
 </body>
 </html>

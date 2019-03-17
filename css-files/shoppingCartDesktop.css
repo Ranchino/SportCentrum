@@ -7,17 +7,17 @@ body {
 }
 
 .w3-sidebar {
-    font-family: "Roboto", sans-serif;
-    height: 20em;
-    overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  height: 20em;
+  overflow: hidden;
 }
 
 #content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 4em;
-    height: auto!important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4em;
+  height: auto!important;
 }
 
 .clearfix {
@@ -27,10 +27,10 @@ body {
 }
 
 #content img {
-    height: 12em;
-    width: 12em;
-    border-top: 1px solid green;
-    border-bottom: 1px solid green;
+  height: 12em;
+  width: 12em;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
 }
 
 #content div {
@@ -57,13 +57,13 @@ h4 {
 }
 
 .open-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    right: 2px;
-    margin-bottom: 1em;
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  right: 2px;
+  margin-bottom: 1em;
   }
 
   
