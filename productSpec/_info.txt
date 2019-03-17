@@ -1,0 +1,7 @@
+När ni gör sökning av produkter i documenten, 
+använd "product code" och jämför med 
+namn på .jpg bilder. 
+
+"product code" ska motsvara de 
+första sifforna i namnet på .jpg 
+bilderna över produkter.

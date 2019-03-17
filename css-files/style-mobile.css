@@ -1,0 +1,91 @@
+@media screen and (max-width: 992px) {
+  section div {
+    width: 100%; 
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  #sportcentrum-title {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .fa-shopping-cart {
+    margin-top: 0.5em;
+  }
+
+  .w3-sidebar {
+    margin-left: 0;
+  }
+
+
+  div .w3-col.s4 {
+  width: 100%;
+  }
+  
+  h2.title {
+    width: auto;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .go-back-tag {
+    font-weight: 900;
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    margin-left: 0.5em;
+    background-color: #4CAF50;
+    border-radius: 0.3em;
+    opacity: 0.9;
+    text-decoration: none;
+  }
+
+  p.w3-right {
+    margin-top: -3em;
+  }
+
+  .w3-top {
+    position: relative;
+  }
+  
+  h4 {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  div img {
+      width: 20em;
+      height: 20em;
+  }
+  
+  .title {
+    width: 100%;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  section div {
+    padding: 1em;
+  }
+  
+  h1.h1-collection-style-text {
+    font-size: 1.5em;
+    margin-left: -1em;
+    margin-top: -0.5em;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  h4.h4-collection-style-text {
+    background-color: white; 
+    color: black; 
+    border-radius: 10px; 
+    width: 100%; 
+    margin-left: -1em;
+    opacity: 0.9;
+    font-family: "Roboto", sans-serif;
+  }
+}
+    
+    

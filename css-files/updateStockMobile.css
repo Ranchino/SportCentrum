@@ -1,0 +1,45 @@
+@media screen and (max-width: 767px) {
+    #tempForm {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #tempForm h3 {
+        margin: 1em;
+    }
+
+    #tempForm th {
+        font-size: 0.8em;
+    }
+
+    #tempForm td {
+        border: 1px solid black;
+        width: 5em;
+    }
+
+    #products {
+        width: 100%;
+        text-align: center;
+        border: none!important;
+    }
+
+    button {
+        border: 1px solid black;
+        border-radius: 1em;
+        outline: none;
+        margin-left: 1em;
+    }
+
+    a {
+        font-size: 0.8em!important;
+    }
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+
+   tr {
+       border: 1px solid red;
+       width: 100%;
+   }
+}    

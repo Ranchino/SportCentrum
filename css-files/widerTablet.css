@@ -1,0 +1,8 @@
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    body {
+      margin: 0 auto; 
+    } 
+    .w3-sidebar {
+      margin-left: 0.1em;
+    }
+}
