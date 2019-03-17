@@ -15,31 +15,31 @@ if($method == "POST") {
         $allowedFormat = array("jpeg", "jpg", "png");
         if(in_array($fileLastPartLowerCse,$allowedFormat )) {
             if($fileError == 0) {
-                $fileNewName = uniqid('', true).".".$fileLastPartLowerCse;
+                //$fileNewName = uniqid('', true).".".$fileLastPartLowerCse;
                 $categoryName = $_POST["categoryName"];
                 if($categoryName == "women") {
 
-                    $fileDestination1 = "../Images/womensClothes/".$fileNewName;
+                    $fileDestination1 = "../Images/womensClothes/".$fileName;
                     move_uploaded_file($fileTmp, $fileDestination1);
-                    echo "The file src: ". $fileNewName ."<br>". " The catgory chossen: ".$categoryName;
+                    echo "The file src: ".$fileName."<br>". " The catgory chossen: ".$categoryName;
     
                     exit;
                 } elseif ($categoryName == "men") {
 
-                    $fileDestination2 = "../Images/mensClothes/".$fileNewName;
+                    $fileDestination2 = "../Images/mensClothes/".$fileName;
                     move_uploaded_file($fileTmp, $fileDestination2);
-                    echo "The file src: ". $fileNewName ."<br>"." The catgory chossen: ".$categoryName;
+                    echo "The file src: ". $fileName ."<br>"." The catgory chossen: ".$categoryName;
                     exit;
                 }elseif ($categoryName == "children") {
 
-                    $fileDestination3 = "../Images/kidsClothes/".$fileNewName;
+                    $fileDestination3 = "../Images/kidsClothes/".$fileName;
                     move_uploaded_file($fileTmp, $fileDestination3);
-                    echo "The file src: ". $fileNewName ."<br>"."The catgory chossen: ".$categoryName;
+                    echo "The file src: ".$fileName ."<br>"."The catgory chossen: ".$categoryName;
                     exit;
                 }else {
-                    $fileDestination4 = "../Images/accessories/".$fileNewName;
+                    $fileDestination4 = "../Images/accessories/".$fileName;
                     move_uploaded_file($fileTmp, $fileDestination4);
-                    echo "The file src: ". $fileNewName ."<br>". " The catgory chossen: ".$categoryName;
+                    echo "The file src: ". $fileName ."<br>". " The catgory chossen: ".$categoryName;
                     exit;
                 }
                 
