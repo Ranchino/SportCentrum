@@ -21,25 +21,25 @@ if($method == "POST") {
 
                     $fileDestination1 = "../Images/womensClothes/".$fileName;
                     move_uploaded_file($fileTmp, $fileDestination1);
-                    echo "The file src: ".$fileName."<br>". " The catgory chossen: ".$categoryName;
+                    echo "<h1 style='font-size: 1.5em;'>The file src: ".$fileName."<br>". " The catgory chossen: ".$categoryName."</h1>";
     
                     exit;
                 } elseif ($categoryName == "men") {
 
                     $fileDestination2 = "../Images/mensClothes/".$fileName;
                     move_uploaded_file($fileTmp, $fileDestination2);
-                    echo "The file src: ". $fileName ."<br>"." The catgory chossen: ".$categoryName;
+                    echo "<h1 style='font-size: 1.5em;'>The file src: ".$fileName."<br>". " The catgory chossen: ".$categoryName."</h1>";
                     exit;
                 }elseif ($categoryName == "children") {
 
                     $fileDestination3 = "../Images/kidsClothes/".$fileName;
                     move_uploaded_file($fileTmp, $fileDestination3);
-                    echo "The file src: ".$fileName ."<br>"."The catgory chossen: ".$categoryName;
+                    echo "<h1 style='font-size: 1.5em;'>The file src: ".$fileName."<br>". " The catgory chossen: ".$categoryName."</h1>";
                     exit;
                 }else {
                     $fileDestination4 = "../Images/accessories/".$fileName;
                     move_uploaded_file($fileTmp, $fileDestination4);
-                    echo "The file src: ". $fileName ."<br>". " The catgory chossen: ".$categoryName;
+                    echo "<h1 style='font-size: 1.5em;'>The file src: ".$fileName."<br>". " The catgory chossen: ".$categoryName."</h1>";
                     exit;
                 }
                 

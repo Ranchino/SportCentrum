@@ -19,7 +19,7 @@
         <br />
         <h3 align="center">Add a new products here!</a></h3>
         <h5 align="center">Insert one product at a time</a></h5>
-        <h5 align="center" style="color: red">OBS You need to upload the img first for getting the correct name efter uploading. It is for the safaty </a></h5>
+        <h5 align="center" style="color: red">OBS the name Of picture and Category should match when you insert it.</a></h5>
         <br />
         <br />
         <br />
