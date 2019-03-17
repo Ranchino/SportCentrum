@@ -67,10 +67,10 @@
         <div class="form-group">
             <label for="sel1">Select Category ID</label>
             <select class="form-control" name="category_id" id="category_id">
-                <option value="3">1 - Men</option>
                 <option value="2">2 - Women</option>
-                <option value="4">3 - Children</option>
-                <option value="5">4 - Accessories</option>
+                <option value="3">3 - Men</option>
+                <option value="4">4 - Children</option>
+                <option value="5">5 - Accessories</option>
             </select>
             <span id="error_category_id" class="text-danger"></span>
         </div>
