@@ -67,22 +67,21 @@ __Fyra utvecklare:__
 - [x] Från hemsidan ska man kunna se en lista över alla produkter, och man ska kunna lista bara dom produkter som tillhör en kategori. (G)
 > Det kan man göra genom en dropdown meny där även alla produkter finns tillgängliga som en submeny.
 - [x] Besökare ska kunna lägga produkterna i en kundkorg, som är sparad i session på servern. (G)
-> Vi har skapat en function som heter addProduct med Javascript som gör så att produkterna sparas i session på server side.
+> Vi har skapat en function som heter addProduct som är en api och gör en anrop till php och sparar produkter i session på server.
 - [x] Man ska från hemsidan kunna skriva upp sig för att få butikens nyhetsbrev genom att ange sitt namn och epostadress. (G)
 > Här har vi skapat nyhetsbrev där man både kan vara besökare men också registrera sig som användare och få möjligheten till om man signa upp sig som premunant.
 - [x] Administratörer ska kunna se en lista över personer som vill ha nyhetsbrevet och deras epost adresser. (G)
 > Admin i sin dashbord trycka på knappen newsletter för att få fram alla som har skrivit upp sig för nyhetsbrev, besökare som användare.
 - [x] Besökare ska kunna välja ett av flera fraktalternativ. (G)
-> När man skall slutföra sitt köp i kundkorgen så får man upp olika fraktalternativ att välja mellan i en dropdown meny.
+> När man skall slutföra sitt köp i kundkorgen så får man upp olika fraktalternativ att välja mellan i en dropdown meny som vi hämtar dem via en api från databasen.
 - [x] Tillgängliga fraktalternativ ska vara hämtade från databasen. (G)
-> Datan hämtas från tabellen shippers i databasen .
+> Datan hämtas från tabellen shippers i databasen via våra api.
 
 ***
 
 ## Demo:
 Klicka här för att komma till [hemsidan](http://www.robertg.se/wieg18_sportcentrum)!
 
-Ladda ner och importera den. Det är viktigt att namnet heter 'sportcentrum'.
 
 Våran Binero: http://www.robertg.se/wieg18_sportcentrum
 
