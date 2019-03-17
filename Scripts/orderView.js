@@ -28,7 +28,6 @@ function viewOrder(){
             var tableRowOrder = document.createElement("tr");
             var tdOrderID = document.createElement("td");
             var tdShipperID = document.createElement("td");
-            var tdCustomerID = document.createElement("td");
             var tdShippFirstName = document.createElement("td");
             var tdShippLastName = document.createElement("td");
             var tdShippAdress = document.createElement("td");
@@ -36,14 +35,13 @@ function viewOrder(){
             var tdShippCity = document.createElement("td");
             var tdShippMail = document.createElement("td");
             var tdShippPhoneNO = document.createElement("td");
-            var tdShippDate = document.createElement("td");
             var tdTotalPrice = document.createElement("td");
             var tdOrderDate = document.createElement("td");
+            var tdUserID = document.createElement("td");
 
 
             tableRowOrder.appendChild(tdOrderID);
             tableRowOrder.appendChild(tdShipperID);
-            tableRowOrder.appendChild(tdCustomerID);
             tableRowOrder.appendChild(tdShippFirstName);
             tableRowOrder.appendChild(tdShippLastName);
             tableRowOrder.appendChild(tdShippAdress);
@@ -51,14 +49,13 @@ function viewOrder(){
             tableRowOrder.appendChild(tdShippCity);
             tableRowOrder.appendChild(tdShippMail);
             tableRowOrder.appendChild(tdShippPhoneNO);
-            tableRowOrder.appendChild(tdShippDate);
             tableRowOrder.appendChild(tdTotalPrice);
             tableRowOrder.appendChild(tdOrderDate);
+            tableRowOrder.appendChild(tdUserID);
 
 
             tdOrderID.innerText = order.OrderID;
             tdShipperID.innerText = order.ShipperID;
-            tdCustomerID.innerText = order.CustomerID;
             tdShippFirstName.innerText = order.ShipFirstName;
             tdShippLastName.innerText = order.ShipLastName;
             tdShippAdress.innerText = order.ShippAdress;
@@ -66,9 +63,9 @@ function viewOrder(){
             tdShippCity.innerText = order.ShipCity;
             tdShippMail.innerText = order.ShipMail;
             tdShippPhoneNO.innerText = order.ShipPhoneNO;
-            tdShippDate.innerText = order.ShipDate;
             tdTotalPrice.innerText = order.TotalPrice;
             tdOrderDate.innerText = order.OrderDate;
+            tdUserID.innerText = order.UserID;
 
 
             orderTable.appendChild(tableRowOrder);

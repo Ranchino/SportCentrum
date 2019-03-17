@@ -17,7 +17,7 @@
 <script src="../Scripts/orderView.js"></script>
 <script src="../Scripts/w3-school.js"></script>
 
-<body class="w3-light-grey" onload="refreshPage()">
+<body class="w3-light-grey">
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
@@ -143,7 +143,6 @@
               <tr>
                 <th>Order ID</th>
                 <th>Shipper ID</th>
-                <th>Customer ID</th>
                 <th>Ship FirstName</th>
                 <th>Ship LastName</th>
                 <th>Ship Adress</th>
@@ -151,9 +150,9 @@
                 <th>Ship City</th>
                 <th>Ship Mail</th>
                 <th>Ship PhoneNo</th>
-                <th>Ship Date</th>
                 <th>Total Price</th>
                 <th>Order Date</th>
+                <th>User ID</th>
               </tr>
             </table>
           </div>

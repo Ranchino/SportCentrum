@@ -8,10 +8,7 @@ function checkChoosenProducts(){
       success: data => {
         var savedData = data;
         //var checkOutButton = document.getElementById("checkOutButton");
-        if(savedData == false) {
-         // checkOutButton.style.opacity = "0";
-          alert("you did not choosen any product yet")
-        }else{
+        if(savedData != false) {
           var shoppingCart = document.getElementById('shoppingCart');
           shoppingCart.innerText = " "+ savedData.length;
           printOutChoosenProducts(savedData)
