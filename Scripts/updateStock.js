@@ -37,7 +37,6 @@ function listAllProducts(){
             var tdProductName = document.createElement("td");
             var tdUnitInStock = document.createElement("td");
             var tdUnitPrice = document.createElement("td");
-            var tdQuentityPerUnit = document.createElement("td");
             var tdPictureUrl = document.createElement("td");
 
             tableRow.appendChild(tdProductID);
@@ -45,7 +44,6 @@ function listAllProducts(){
             tableRow.appendChild(tdProductName);
             tableRow.appendChild(tdUnitInStock);
             tableRow.appendChild(tdUnitPrice);
-            tableRow.appendChild(tdQuentityPerUnit);
             tableRow.appendChild(tdPictureUrl);
 
             tdProductID.innerText = prod.ProductID;
@@ -53,7 +51,6 @@ function listAllProducts(){
             tdProductName.innerText = prod.ProductName;
             tdUnitInStock.innerText = prod.UnitInStock;
             tdUnitPrice.innerText = prod.UnitPrice;
-            tdQuentityPerUnit.innerText = prod.QuantityPerUnit;
             tdPictureUrl.innerText = prod.PictureUrl;
 
             productTable.appendChild(tableRow);
