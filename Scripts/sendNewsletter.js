@@ -22,7 +22,6 @@ function insertNewsletter(){
     var mail = document.getElementById("mail").value;
     var phone = document.getElementById("phone").value;
 
-    console.log(firstname, lastname, mail, phone);
 
     formdata.append("firstname", firstname);
     formdata.append("lastname", lastname);

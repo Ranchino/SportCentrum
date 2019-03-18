@@ -177,7 +177,7 @@ $(document).ready(function(){
                     if(data == "true") {
                         alert("Nu har laggt in ny produkt");
                     }else{
-                        alert("Det fick fel!");
+                        alert("Det gick fel!");
                     }
                     $('#user_data').find("tr:gt(0)").remove();
                     //$('#action_alert').html('<p>Data Inserted Successfully</p>');
